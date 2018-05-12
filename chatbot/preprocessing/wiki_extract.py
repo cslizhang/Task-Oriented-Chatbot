@@ -10,7 +10,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 from chatbot.utils.log import get_logger
 from chatbot.utils.wrapper import time_counter
 
-logger = get_logger("word2vec")
+logger = get_logger("Wiki Extract")
 
 
 @time_counter
@@ -21,7 +21,7 @@ def wiki_extract(input_file, output_file):
         for i, text in enumerate(wiki.get_texts()):
             f.write(" ".join(text) + "\n")
             if i % 10000 == 0:
-                logger.info("Saved %d articles")
+                logger.info("Saved %d articles" % i)
     logger.info("Finished extract wiki, Saved in %s" % output_file)
 
 

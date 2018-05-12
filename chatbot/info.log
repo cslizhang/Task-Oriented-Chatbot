@@ -22,3 +22,31 @@ test - WARNING - 2018-05-11 14:15:36,864 - warning
 2018-05-12 16:43:01,874 - INFO - timing - cut2 running 0.05 min
 2018-05-12 16:43:18,244 - INFO - timing - cut2 running 0.15 min
 2018-05-12 16:52:32,137 - INFO - timing - cut running 0.02 min
+2018-05-12 18:51:15,250 - INFO - word2vec - saved %d articles
+2018-05-12 18:51:28,049 - INFO - word2vec - saved %d articles
+2018-05-12 18:51:38,493 - INFO - word2vec - saved %d articles
+2018-05-12 18:51:47,924 - INFO - word2vec - saved %d articles
+2018-05-12 18:51:57,531 - INFO - word2vec - saved %d articles
+2018-05-12 18:52:07,621 - INFO - word2vec - saved %d articles
+2018-05-12 18:52:17,952 - INFO - word2vec - saved %d articles
+2018-05-12 18:52:27,586 - INFO - word2vec - saved %d articles
+2018-05-12 18:52:37,286 - INFO - word2vec - saved %d articles
+2018-05-12 18:52:46,928 - INFO - word2vec - saved %d articles
+2018-05-12 18:52:57,786 - INFO - word2vec - saved %d articles
+2018-05-12 18:53:11,796 - INFO - word2vec - saved %d articles
+2018-05-12 18:53:24,355 - INFO - word2vec - saved %d articles
+2018-05-12 18:53:37,300 - INFO - word2vec - saved %d articles
+2018-05-12 18:53:50,773 - INFO - word2vec - saved %d articles
+2018-05-12 18:54:04,844 - INFO - word2vec - saved %d articles
+2018-05-12 18:54:18,335 - INFO - word2vec - saved %d articles
+2018-05-12 18:54:30,971 - INFO - word2vec - saved %d articles
+2018-05-12 18:54:44,991 - INFO - word2vec - saved %d articles
+2018-05-12 18:55:51,071 - INFO - word2vec - saved %d articles
+2018-05-12 18:56:18,241 - INFO - word2vec - saved %d articles
+2018-05-12 18:56:39,267 - INFO - word2vec - saved %d articles
+2018-05-12 18:56:55,719 - INFO - word2vec - saved %d articles
+2018-05-12 18:57:12,259 - INFO - word2vec - saved %d articles
+2018-05-12 18:57:29,368 - INFO - word2vec - saved %d articles
+2018-05-12 18:57:48,192 - INFO - word2vec - saved %d articles
+2018-05-12 18:58:04,657 - INFO - word2vec - saved %d articles
+2018-05-12 18:58:22,216 - INFO - word2vec - saved %d articles
