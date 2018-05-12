@@ -2,3 +2,6 @@
 __pycache__
 .DS_Store
 *.xml
+*.bz2
+*.corpus
+./idea/
