@@ -1,0 +1,27 @@
+test - INFO - 2018-05-11 14:08:37,520 - info
+test - WARNING - 2018-05-11 14:08:37,521 - warning
+test - DEBUG - 2018-05-11 14:08:37,521 - debug
+test - INFO - 2018-05-11 14:15:36,864 - info
+test - WARNING - 2018-05-11 14:15:36,864 - warning
+test - DEBUG - 2018-05-11 14:15:36,865 - debug
+2018-05-11 15:38:32,788 - INFO - test - info
+2018-05-11 15:38:32,790 - WARNING - test - warning
+2018-05-11 15:38:32,790 - DEBUG - test - debug
+2018-05-12 14:02:10,812 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:04:17,841 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:04:38,900 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:06:33,545 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:07:54,831 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:08:06,495 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:15:20,799 - WARNING - /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/preprocessing/seg.py - cut function only support list, but str input
+2018-05-12 14:24:53,965 - INFO - timing - cutrunning 0.00 min
+2018-05-12 14:25:05,766 - INFO - timing - cutrunning 0.02 min
+2018-05-12 14:25:19,918 - INFO - timing - cutrunning 0.02 min
+2018-05-12 14:25:23,120 - INFO - timing - cutrunning 0.05 min
+2018-05-12 14:43:44,202 - INFO - timing - cut running 0.02 min
+2018-05-12 14:43:47,332 - INFO - timing - cut running 0.05 min
+2018-05-12 16:42:41,381 - INFO - timing - cut running 0.02 min
+2018-05-12 16:42:44,597 - INFO - timing - cut running 0.05 min
+2018-05-12 16:43:01,874 - INFO - timing - cut2 running 0.05 min
+2018-05-12 16:43:18,244 - INFO - timing - cut2 running 0.15 min
+2018-05-12 16:52:32,137 - INFO - timing - cut running 0.02 min
