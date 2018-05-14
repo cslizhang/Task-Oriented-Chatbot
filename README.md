@@ -17,7 +17,7 @@ A framework for Task-Oriented-Chatbot.
 ## Reference Paper & Blog
 
 + [Chatbot Framework]()
-+ [Text Classification](./docs/Reference/TextClassification.md)
++ [Text Classification](./docs/reference/TextClassification.md)
 + [Named Entity Recognition]()
 + [Dialog Management]()
-
++ [Parameter Optimization]()
