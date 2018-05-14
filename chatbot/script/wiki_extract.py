@@ -27,9 +27,8 @@ def wiki_extract(input_file, output_file):
 
 if __name__ == "__main__":
     import argparse
-
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input_file", type=str)
-    parser.add_argument("-o", "--output_file", type=str)
+    parser.add_argument("-i", "--input", type=str)
+    parser.add_argument("-o", "--output", type=str)
     args = parser.parse_args()
     wiki_extract(args.input_file, args.output_file)
