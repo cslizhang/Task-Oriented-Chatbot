@@ -18,10 +18,18 @@ logger = get_logger("Text Preprocessing T2S")
 
 @time_counter
 def traditional2simple(input_path, output_path):
-    print(os.path.exists(input_path))
+    """繁体转简体
+
+    :param input_path:
+    :param output_path:
+    :return:
+    """
+    # input check
+    assert os.path.exists(input_path)
+    # output check
     path = Path(output_path).resolve()
     path.parent.mkdir(exist_ok=True)
-    print(path)
+    # convert
     f_in = open(input_path, 'r', encoding='utf8')
     f_out = open(output_path, 'w', encoding='utf8')
     cc = opencc.OpenCC('t2s')
