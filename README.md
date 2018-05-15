@@ -14,7 +14,7 @@ A framework for Task-Oriented-Chatbot.
 
 待施工
 
-## Reference Paper & Blog
+## References
 
 + [Chatbot Framework]()
 + [Text Classification](./docs/references/TextClassification.md)
