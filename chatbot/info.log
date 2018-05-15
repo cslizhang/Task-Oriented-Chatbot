@@ -93,3 +93,63 @@ test - WARNING - 2018-05-11 14:15:36,864 - warning
 2018-05-14 14:38:27,941 - INFO - Text Preprocessing T2S - t2s 310000 lines complete
 2018-05-14 14:38:30,357 - INFO - Text Preprocessing T2S - Finished Text T2S
 2018-05-14 14:38:30,357 - INFO - Time Counter - traditional2simple running 1.95 min
+2018-05-15 14:03:50,103 - INFO - Time Counter - cut running 0.01 min
+2018-05-15 14:04:39,847 - INFO - Time Counter - cut running 0.01 min
+2018-05-15 14:04:56,850 - INFO - Time Counter - cut running 0.01 min
+2018-05-15 14:05:18,290 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:05:51,866 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:06:02,652 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:06:28,969 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:07:25,217 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:07:45,530 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:08:09,161 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:08:14,033 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:08:27,865 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:08:50,504 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:08:54,532 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:09:05,408 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:09:46,710 - INFO - /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/preprocessing/text.py - Text cut user 8 cpu core 
+2018-05-15 14:09:46,824 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:10:18,970 - INFO - Text cut - Use 8 cpu core 
+2018-05-15 14:10:19,091 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:11:54,329 - INFO - Text cut - Use 8 cpu core 
+2018-05-15 14:11:54,447 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:12:12,378 - INFO - Text cut - Use 8 cpu core 
+2018-05-15 14:12:12,498 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:12:12,499 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:12:55,360 - INFO - Text cut - Use 8 cpu core 
+2018-05-15 14:12:55,479 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:12:55,480 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:12:55,481 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:13:35,506 - INFO - Text cut - 2 Sentences input, Use 8 cpu core 
+2018-05-15 14:13:35,620 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:13:35,620 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:13:35,620 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:13:53,669 - INFO - Text cut - 2000 Sentences input, Use 8 cpu core 
+2018-05-15 14:13:53,789 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:13:53,800 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:13:53,801 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:14:13,788 - INFO - Text cut - 2000 Sentences input, Use 8 cpu core 
+2018-05-15 14:14:13,908 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:14:13,918 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:14:13,919 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:14:50,032 - INFO - Text cut - 2000 Sentences input, Use 8 cpu core 
+2018-05-15 14:14:50,150 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:14:50,160 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:14:50,161 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:16:45,926 - INFO - Text cut - 2000 Sentences input, Use 8 cpu core 
+2018-05-15 14:16:46,047 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:16:46,058 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:16:46,059 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:27:48,680 - INFO - Text cut - 314510 Sentences input, Use 2 cpu core 
+2018-05-15 14:28:31,802 - INFO - Text cut - 314510 Sentences input, Use 8 cpu core 
+2018-05-15 14:29:27,242 - INFO - Text cut - 2000 Sentences input, Use 2 cpu core 
+2018-05-15 14:29:27,880 - INFO - Time Counter - cut running 0.01 min
+2018-05-15 14:29:27,887 - INFO - Text cut - String input, user 1 cpu core
+2018-05-15 14:29:27,888 - INFO - Time Counter - cut running 0.00 min
+2018-05-15 14:34:44,713 - INFO - Time Counter - cut running 6.22 min
+2018-05-15 14:35:01,705 - INFO - Time Counter - main running 6.54 min
+2018-05-15 16:10:38,843 - INFO - Word2vec - Start build word2vec model
+2018-05-15 16:10:38,843 - INFO - Word2vec - Finish get sentences
+2018-05-15 16:27:49,071 - INFO - Time Counter - build running 17.17 min
+2018-05-15 16:27:50,869 - INFO - Time Counter - save running 0.03 min

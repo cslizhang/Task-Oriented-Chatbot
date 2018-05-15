@@ -2,8 +2,66 @@
 # @Time    : 5/14/18 22:07
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+
 import gensim
 
+from chatbot.utils.log import get_logger
+from chatbot.utils.wrapper import time_counter
 
-class Word2vec(object):
-    pass
+
+logger = get_logger("Word2vec")
+
+
+class Word2vecExt(object):
+    def __init__(self):
+        self.model = None
+
+    def _input2sentences(self, inputs, **kwargs):
+        if isinstance(inputs, str):
+            path = Path(inputs).resolve()
+            if path.is_dir():
+                sentences = gensim.models.word2vec.PathLineSentences(inputs, **kwargs)
+            else:
+                sentences = gensim.models.word2vec.LineSentence(inputs, **kwargs)
+        elif isinstance(inputs, list):
+            # [["我", "喜欢", "你"], ...]
+            sentences = inputs
+        else:
+            raise TypeError
+        return sentences
+
+    @time_counter
+    def build(self, texts, **kwargs):
+        logger.info("Start build word2vec model")
+        sentences = self._input2sentences(texts, **kwargs)
+        logger.info("Finish get sentences")
+        self.model = gensim.models.Word2Vec(sentences, **kwargs)
+        logger.info("Finish build word2vec model")
+
+    @time_counter
+    def load(self, path):
+        self.model = gensim.models.Word2Vec.load(path)
+
+    @time_counter
+    def save(self, path):
+        self.model.save(path)
+        logger.info("Success save model in %s" % path)
+
+    @time_counter
+    def update(self, texts, update_new_words=False, **kwargs):
+        sentences = self._input2sentences(texts)
+        if not isinstance(self.model, gensim.models.Word2Vec):
+            logger.warning("Can't update word2vec model, "
+                           "Please build or load model first.")
+            return
+        if update_new_words:
+            self.model.build_vocab(sentences, update=True)
+        self.model.train(sentences, **kwargs)
+
+    def transform(self, sentences):
+        pass
+
+
