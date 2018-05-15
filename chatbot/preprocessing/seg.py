@@ -8,14 +8,14 @@ from chatbot.utils.wrapper import time_counter
 
 from pathlib import Path
 import multiprocessing as mp
-import concurrent.futures
+# import concurrent.futures
 
 import jieba
 jieba.initialize()
 
 
 logger = get_logger(__file__)
-SEG_VOCAB_PATH = Path(path.root, "data", "seg_vocab").resolve().absolute()
+SEG_VOCAB_PATH = Path(path.root, "config", "vocab_jieba_seg").resolve().absolute()
 jieba.load_userdict(str(SEG_VOCAB_PATH))
 
 

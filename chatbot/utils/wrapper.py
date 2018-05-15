@@ -8,7 +8,7 @@ from functools import wraps
 from chatbot.utils.log import get_logger
 
 
-logger = get_logger("timing")
+time_counter_logger = get_logger("Time Counter")
 
 
 def time_counter(func):
@@ -18,6 +18,6 @@ def time_counter(func):
         rst = func(*args, **kwargs)
         e = time.time()
         t = (e - s) / 60
-        logger.info(func.__name__ + " running %.2f min" % t)
+        time_counter_logger.info(func.__name__ + " running %.2f min" % t)
         return rst
     return time_it

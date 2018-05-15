@@ -53,3 +53,46 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-05-12 18:57:48,192 - INFO - word2vec - saved %d articles
 2018-05-12 18:58:04,657 - INFO - word2vec - saved %d articles
 2018-05-12 18:58:22,216 - INFO - word2vec - saved %d articles
+2018-05-12 18:58:38,288 - INFO - word2vec - saved %d articles
+2018-05-12 18:58:52,480 - INFO - word2vec - saved %d articles
+2018-05-12 18:59:09,607 - INFO - word2vec - saved %d articles
+2018-05-12 18:59:28,188 - INFO - word2vec - saved %d articles
+2018-05-12 18:59:36,096 - INFO - word2vec - Finished extract wiki, Saved in wiki.simple_cn.corpus
+2018-05-12 18:59:36,096 - INFO - timing - wiki_extract running 18.36 min
+2018-05-14 14:35:08,012 - INFO - Text Preprocessing T2S - t2s 0 lines complete
+2018-05-14 14:35:08,042 - INFO - Text Preprocessing T2S - Finished Text T2S
+2018-05-14 14:35:08,042 - INFO - Time Counter - traditional2simple running 0.00 min
+2018-05-14 14:36:36,007 - INFO - Text Preprocessing T2S - t2s 0 lines complete
+2018-05-14 14:36:44,902 - INFO - Text Preprocessing T2S - t2s 10000 lines complete
+2018-05-14 14:36:50,304 - INFO - Text Preprocessing T2S - t2s 20000 lines complete
+2018-05-14 14:36:54,970 - INFO - Text Preprocessing T2S - t2s 30000 lines complete
+2018-05-14 14:36:59,347 - INFO - Text Preprocessing T2S - t2s 40000 lines complete
+2018-05-14 14:37:03,819 - INFO - Text Preprocessing T2S - t2s 50000 lines complete
+2018-05-14 14:37:07,700 - INFO - Text Preprocessing T2S - t2s 60000 lines complete
+2018-05-14 14:37:11,318 - INFO - Text Preprocessing T2S - t2s 70000 lines complete
+2018-05-14 14:37:14,737 - INFO - Text Preprocessing T2S - t2s 80000 lines complete
+2018-05-14 14:37:18,155 - INFO - Text Preprocessing T2S - t2s 90000 lines complete
+2018-05-14 14:37:21,505 - INFO - Text Preprocessing T2S - t2s 100000 lines complete
+2018-05-14 14:37:24,676 - INFO - Text Preprocessing T2S - t2s 110000 lines complete
+2018-05-14 14:37:27,516 - INFO - Text Preprocessing T2S - t2s 120000 lines complete
+2018-05-14 14:37:31,280 - INFO - Text Preprocessing T2S - t2s 130000 lines complete
+2018-05-14 14:37:34,302 - INFO - Text Preprocessing T2S - t2s 140000 lines complete
+2018-05-14 14:37:37,910 - INFO - Text Preprocessing T2S - t2s 150000 lines complete
+2018-05-14 14:37:40,949 - INFO - Text Preprocessing T2S - t2s 160000 lines complete
+2018-05-14 14:37:44,142 - INFO - Text Preprocessing T2S - t2s 170000 lines complete
+2018-05-14 14:37:46,995 - INFO - Text Preprocessing T2S - t2s 180000 lines complete
+2018-05-14 14:37:49,627 - INFO - Text Preprocessing T2S - t2s 190000 lines complete
+2018-05-14 14:37:52,369 - INFO - Text Preprocessing T2S - t2s 200000 lines complete
+2018-05-14 14:37:55,004 - INFO - Text Preprocessing T2S - t2s 210000 lines complete
+2018-05-14 14:37:57,988 - INFO - Text Preprocessing T2S - t2s 220000 lines complete
+2018-05-14 14:38:00,983 - INFO - Text Preprocessing T2S - t2s 230000 lines complete
+2018-05-14 14:38:03,607 - INFO - Text Preprocessing T2S - t2s 240000 lines complete
+2018-05-14 14:38:07,193 - INFO - Text Preprocessing T2S - t2s 250000 lines complete
+2018-05-14 14:38:10,749 - INFO - Text Preprocessing T2S - t2s 260000 lines complete
+2018-05-14 14:38:14,030 - INFO - Text Preprocessing T2S - t2s 270000 lines complete
+2018-05-14 14:38:17,087 - INFO - Text Preprocessing T2S - t2s 280000 lines complete
+2018-05-14 14:38:19,709 - INFO - Text Preprocessing T2S - t2s 290000 lines complete
+2018-05-14 14:38:22,325 - INFO - Text Preprocessing T2S - t2s 300000 lines complete
+2018-05-14 14:38:27,941 - INFO - Text Preprocessing T2S - t2s 310000 lines complete
+2018-05-14 14:38:30,357 - INFO - Text Preprocessing T2S - Finished Text T2S
+2018-05-14 14:38:30,357 - INFO - Time Counter - traditional2simple running 1.95 min
