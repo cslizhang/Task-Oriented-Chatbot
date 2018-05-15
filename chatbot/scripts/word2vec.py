@@ -1,20 +1,35 @@
-# -*- coding: utf-8 -*-
-# @Time    : 5/13/18 09:50
+# coding:utf8
+# @Time    : 18-5-15 下午3:08
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
-# import gensim
-#
-# sentence=[["我", "很喜欢", "上学"], ["不" ,"上学", "真的", "好吗"]]
-# model = gensim.models.Word2Vec(sentence, size=10, window=5, min_count=1)
-# model.wv["很喜欢"]
-# model.most_similar("我")
-# model.save("~/project/model")
-#
-# m = gensim.models.Word2Vec.load("~/project/model")
-# m.wv["我"]
-# model.build_vocab([["他", "很喜欢", "我"]], update=True)
-# model.train([["他", "很喜欢", "上学"],], total_examples=2, epochs=10)
-# model.wv["很喜欢"]
-# model.most_similar("他")
-# x=model.wv.vocab["我"]
-# model.wv(["我", "很喜欢"])
+import argparse
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+
+from chatbot.models.word2vec import Word2vecExt
+
+
+def main(mode, file_path=None, model_load_path=None, model_save_path=None):
+    w2v = Word2vecExt()
+    if mode == "build":
+        w2v.build(file_path)
+        w2v.save(model_save_path)
+    elif mode == "update":
+        w2v.load(model_load_path)
+        w2v.update(file_path)
+        w2v.save(model_save_path)
+    else:
+        print("一切都是幻觉")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-m", "--mode", default=None)
+    parser.add_argument("-l", "--load_path", default=None)
+    parser.add_argument("-s", "--save_path", default=None)
+    parser.add_argument("-t", "--text_path", default=None)
+    args = parser.parse_args()
+    main(args.mode, args.text_path, args.load_path, args.save_path)
+
+
