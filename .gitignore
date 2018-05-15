@@ -1,7 +1,7 @@
-./idea
 __pycache__
 .DS_Store
 *.xml
 *.bz2
 *.corpus
-./idea/
+.idea
+.DS_Store
