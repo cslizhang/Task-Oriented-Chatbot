@@ -7,6 +7,7 @@ import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
 import gensim
+import numpy as np
 
 from chatbot.utils.log import get_logger
 from chatbot.utils.wrapper import time_counter
@@ -61,7 +62,24 @@ class Word2vecExt(object):
             self.model.build_vocab(sentences, update=True)
         self.model.train(sentences, **kwargs)
 
-    def transform(self, sentences):
-        pass
+    def transform(self, x):
+        if isinstance(x, list):
+            if len(x) == 0:
+                logger.warning("Input sentence length is 0")
+                return None
+            rst = []
+            for word in x:
+                try:
+                    rst.append(self.model.wv[word])
+                except KeyError:
+                    pass
+            return np.stack(rst, 0)
+        elif isinstance(x, str):
+            try:
+                return self.model.wv[x]
+            except KeyError:
+                return None
+        else:
+            raise ValueError
 
 

@@ -153,3 +153,11 @@ test - WARNING - 2018-05-11 14:15:36,864 - warning
 2018-05-15 16:10:38,843 - INFO - Word2vec - Finish get sentences
 2018-05-15 16:27:49,071 - INFO - Time Counter - build running 17.17 min
 2018-05-15 16:27:50,869 - INFO - Time Counter - save running 0.03 min
+2018-05-18 14:46:45,871 - INFO - Text cut - 20000 Sentences input, Use 2 cpu core 
+2018-05-18 14:46:46,378 - INFO - Time Counter - cut running 0.01 min
+2018-05-18 14:46:46,404 - INFO - Text cut - 20000 Sentences input, Use 4 cpu core 
+2018-05-18 14:46:46,811 - INFO - Time Counter - cut running 0.01 min
+2018-05-18 14:47:33,841 - INFO - Text cut - 20000 Sentences input, Use 2 cpu core 
+2018-05-18 14:47:34,352 - INFO - Time Counter - cut running 0.01 min
+2018-05-18 14:47:34,405 - INFO - Text cut - 20000 Sentences input, Use 2 cpu core 
+2018-05-18 14:47:34,912 - INFO - Time Counter - cut running 0.01 min
