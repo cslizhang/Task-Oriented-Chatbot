@@ -42,7 +42,7 @@ def cut(x, n_job=None):
 
 
 if __name__ == "__main__":
-    texts = ["我很好才怪\n", "市场化交易下的售电公司如何发展？"] * 1000
-    print(cut(texts, n_job=2))
-    print(cut(texts[1], n_job=2))
+    texts = ["我很好才怪\n", "市场化交易下的售电公司如何发展？"] * 10000
+    print(cut(texts, n_job=1))
+    print(cut(texts, n_job=1))
     # cut(texts)
