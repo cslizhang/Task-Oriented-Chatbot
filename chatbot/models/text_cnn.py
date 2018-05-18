@@ -6,7 +6,7 @@ import torch
 from torch import nn
 from torch import autograd
 from torch.nn import functional as F
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
 #
 # {vocab_size, embed_dim, class_num,
 #                  kernel_num, kernel_sizes, dropout,
