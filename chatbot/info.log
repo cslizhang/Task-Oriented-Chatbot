@@ -161,3 +161,35 @@ test - WARNING - 2018-05-11 14:15:36,864 - warning
 2018-05-18 14:47:34,352 - INFO - Time Counter - cut running 0.01 min
 2018-05-18 14:47:34,405 - INFO - Text cut - 20000 Sentences input, Use 2 cpu core 
 2018-05-18 14:47:34,912 - INFO - Time Counter - cut running 0.01 min
+2018-05-20 18:46:05,557 - INFO - TextCNN - TextCNN(
+  (embed): Embedding(1000, 60)
+  (conv11): Conv2d(1, 2, kernel_size=(3, 60), stride=(1, 1))
+  (conv12): Conv2d(1, 2, kernel_size=(4, 60), stride=(1, 1))
+  (conv13): Conv2d(1, 2, kernel_size=(5, 60), stride=(1, 1))
+  (dropout): Dropout(p=0.5)
+  (fc1): Linear(in_features=6, out_features=10, bias=True)
+)
+2018-05-20 21:54:23,728 - INFO - Text cut - 20000 Sentences input, Use 2 cpu core 
+2018-05-20 21:54:24,575 - INFO - Time Counter - cut running 0.01 min
+2018-05-20 21:54:24,622 - INFO - Text cut - 20000 Sentences input, Use 2 cpu core 
+2018-05-20 21:54:25,452 - INFO - Time Counter - cut running 0.01 min
+2018-05-20 21:54:41,690 - INFO - Text cut - 20000 Sentences input, Use 1 cpu core 
+2018-05-20 21:54:43,277 - INFO - Time Counter - cut running 0.03 min
+2018-05-20 21:54:43,325 - INFO - Text cut - 20000 Sentences input, Use 1 cpu core 
+2018-05-20 21:54:44,872 - INFO - Time Counter - cut running 0.03 min
+2018-05-20 21:55:03,456 - INFO - Text cut - 20000 Sentences input, Use 1 cpu core 
+2018-05-20 21:55:05,107 - INFO - Time Counter - cut running 0.03 min
+2018-05-20 21:55:05,143 - INFO - Text cut - 20000 Sentences input, Use 1 cpu core 
+2018-05-20 21:55:06,697 - INFO - Time Counter - cut running 0.03 min
+2018-05-20 21:55:10,023 - INFO - Text cut - 20000 Sentences input, Use 1 cpu core 
+2018-05-20 21:55:11,680 - INFO - Time Counter - cut running 0.03 min
+2018-05-20 21:55:11,718 - INFO - Text cut - 20000 Sentences input, Use 4 cpu core 
+2018-05-20 21:55:12,662 - INFO - Time Counter - cut running 0.02 min
+2018-05-20 21:55:34,438 - INFO - Text cut - 40000 Sentences input, Use 1 cpu core 
+2018-05-20 21:55:37,532 - INFO - Time Counter - cut running 0.05 min
+2018-05-20 21:55:37,609 - INFO - Text cut - 40000 Sentences input, Use 4 cpu core 
+2018-05-20 21:55:39,062 - INFO - Time Counter - cut running 0.02 min
+2018-05-20 21:56:49,106 - INFO - Text cut - 40000 Sentences input, Use 1 cpu core 
+2018-05-20 21:56:52,404 - INFO - Time Counter - cut running 0.05 min
+2018-05-20 21:56:52,471 - INFO - Text cut - 40000 Sentences input, Use 4 cpu core 
+2018-05-20 21:56:53,818 - INFO - Time Counter - cut running 0.02 min

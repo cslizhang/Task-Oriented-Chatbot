@@ -6,9 +6,7 @@ import sys
 
 import torch
 from torch import nn
-from torch import autograd
 from torch.nn import functional as F
-from torch.utils.data import Dataset
 from chatbot.utils.log import get_logger
 
 
@@ -36,7 +34,7 @@ class TextCNN(nn.Module):
         dropout = param['dropout']
         class_num = param['class_num']
         self.param = param
-        self.embed = nn.Embedding(vocab_size, embed_dim)
+        self.embed = nn.Embedding(vocab_size, embed_dim, padding_idx=1)
         self.conv11 = nn.Conv2d(ci, kernel_num, (kernel_size[0], embed_dim))
         self.conv12 = nn.Conv2d(ci, kernel_num, (kernel_size[1], embed_dim))
         self.conv13 = nn.Conv2d(ci, kernel_num, (kernel_size[2], embed_dim))
@@ -61,13 +59,14 @@ class TextCNN(nn.Module):
         # TODO init embed matrix with pre-trained
         x = x.unsqueeze(1)
         # x: (batch, 1, sentence_length, embed_dim)
-        x1 = self.conv_and_pool(x, self.conv13)  # (batch, kernel_num)
-        x2 = self.conv_and_pool(x, self.conv14)  # (batch, kernel_num)
-        x3 = self.conv_and_pool(x, self.conv15)  # (batch, kernel_num)
+        x1 = self.conv_and_pool(x, self.conv11)  # (batch, kernel_num)
+        x2 = self.conv_and_pool(x, self.conv12)  # (batch, kernel_num)
+        x3 = self.conv_and_pool(x, self.conv13)  # (batch, kernel_num)
         x = torch.cat((x1, x2, x3), 1)  # (batch, 3 * kernel_num)
         x = self.dropout(x)
-        logit = self.fc1(x)
-        # logit = F.log_softmax(x)
+        logit = F.log_softmax(self.fc1(x), dim=1)
+        # logit = F.softmax(self.fc1(x), dim=1)
+        # logit = self.fc1(x)
         return logit
 
 
@@ -114,29 +113,4 @@ def train(model, train_loader, eval_loader,
                 ))
             if steps % save_interval ==0:
                 pass
-
-
-def eval(model, eval_loader):
-    model.eval()
-    loss = 0
-    for (x, y) in eval_loader:
-        logit = model(x)
-        loss_batch = F.cross_entropy(logit, y, size_average=True)
-        loss += loss_batch.item()
-
-
-def predict():
-    pass
-
-
-class TextClassificationTestDataSet(Dataset):
-    def __init__(self):
-        pass
-
-    def __getitem__(self, idx):
-        pass
-
-    def __len__(self):
-        pass
-
 

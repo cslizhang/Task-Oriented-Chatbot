@@ -52,7 +52,7 @@ class Word2vecExt(object):
         logger.info("Success save model in %s" % path)
 
     @time_counter
-    def update(self, texts, update_new_words=False, **kwargs):
+    def update(self, texts, update_new_words=True, **kwargs):
         sentences = self._input2sentences(texts)
         if not isinstance(self.model, gensim.models.Word2Vec):
             logger.warning("Can't update word2vec model, "
