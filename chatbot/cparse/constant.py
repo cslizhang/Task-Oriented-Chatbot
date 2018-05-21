@@ -4,10 +4,8 @@
 # @Mail    : evilpsycho42@gmail.com
 
 
-PAD = 0
-UNK = 1
-
-WORD = {
-    PAD: '<pad>',
-    UNK: '<UNK>',
-}
+PAD = '<pad>'
+PAD_IDX = 0
+UNK = '<UNK>'
+UNK_IDX = 1
+ALL_CONSTANT = [PAD, UNK]

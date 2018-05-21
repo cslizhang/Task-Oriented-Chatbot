@@ -196,3 +196,670 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-05-20 21:56:52,404 - INFO - Time Counter - cut running 0.05 min
 2018-05-20 21:56:52,471 - INFO - Text cut - 40000 Sentences input, Use 4 cpu core 
 2018-05-20 21:56:53,818 - INFO - Time Counter - cut running 0.02 min
+2018-05-21 15:52:47,006 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 3.871686, eval loss: 3.427763, acc: 1.000000.
+2018-05-21 15:52:48,409 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.260747, eval loss: 0.506429, acc: 1.000000.
+2018-05-21 15:52:49,883 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.348742, eval loss: 0.320018, acc: 1.000000.
+2018-05-21 15:52:51,557 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.507763, eval loss: 0.238049, acc: 1.000000.
+2018-05-21 15:52:52,917 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.252858, eval loss: 0.192635, acc: 1.000000.
+2018-05-21 15:52:54,420 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.104358, eval loss: 0.154021, acc: 1.000000.
+2018-05-21 15:52:55,890 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.283972, eval loss: 0.153153, acc: 1.000000.
+2018-05-21 15:52:57,466 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.224982, eval loss: 0.120116, acc: 1.000000.
+2018-05-21 15:52:58,749 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.066998, eval loss: 0.115945, acc: 1.000000.
+2018-05-21 15:53:00,358 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.027876, eval loss: 0.092135, acc: 1.000000.
+2018-05-21 15:53:01,927 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.010490, eval loss: 0.077641, acc: 1.000000.
+2018-05-21 15:53:03,553 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.019066, eval loss: 0.075337, acc: 1.000000.
+2018-05-21 15:53:05,030 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.047005, eval loss: 0.062566, acc: 1.000000.
+2018-05-21 15:53:06,346 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.105102, eval loss: 0.055939, acc: 1.000000.
+2018-05-21 15:53:07,881 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.054110, eval loss: 0.059468, acc: 1.000000.
+2018-05-21 15:53:09,491 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.060804, eval loss: 0.057474, acc: 1.000000.
+2018-05-21 16:01:01,420 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.651237, eval loss: 4.038039, acc: 0.173530.
+2018-05-21 16:01:02,950 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.509566, eval loss: 0.521829, acc: 0.879364.
+2018-05-21 16:01:04,495 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.285008, eval loss: 0.325164, acc: 0.922265.
+2018-05-21 16:01:06,076 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.213029, eval loss: 0.260221, acc: 0.937267.
+2018-05-21 16:01:07,507 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.208102, eval loss: 0.198718, acc: 0.950523.
+2018-05-21 16:01:09,025 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.138572, eval loss: 0.158565, acc: 0.960464.
+2018-05-21 16:01:10,525 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.282093, eval loss: 0.143866, acc: 0.961004.
+2018-05-21 16:01:12,007 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.093186, eval loss: 0.125569, acc: 0.965833.
+2018-05-21 16:01:13,382 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.308096, eval loss: 0.116415, acc: 0.966681.
+2018-05-21 16:01:14,791 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.065719, eval loss: 0.082831, acc: 0.977085.
+2018-05-21 16:01:16,287 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.192677, eval loss: 0.081240, acc: 0.977137.
+2018-05-21 16:01:17,741 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.294558, eval loss: 0.070968, acc: 0.980117.
+2018-05-21 16:01:19,083 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.008948, eval loss: 0.068969, acc: 0.981581.
+2018-05-21 16:01:20,529 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.006530, eval loss: 0.062668, acc: 0.982763.
+2018-05-21 16:01:21,958 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.034395, eval loss: 0.058531, acc: 0.984818.
+2018-05-21 16:01:23,452 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.050466, eval loss: 0.062589, acc: 0.983482.
+2018-05-21 16:15:38,312 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:15:38,313 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:15:57,433 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:15:57,434 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:17:38,123 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:17:38,124 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:17:54,317 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:17:54,317 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:18:04,575 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:18:04,575 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:18:34,038 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:18:34,038 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:19:06,551 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:19:06,551 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:19:24,075 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:19:24,075 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:21:38,952 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:21:38,953 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:24:33,723 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.524317, eval loss: 4.078288, acc: 0.109436.
+2018-05-21 16:24:35,166 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.484931, eval loss: 0.533133, acc: 0.874637.
+2018-05-21 16:24:36,695 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.170079, eval loss: 0.318097, acc: 0.925553.
+2018-05-21 16:24:38,348 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.345745, eval loss: 0.232339, acc: 0.943227.
+2018-05-21 16:24:39,748 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.209734, eval loss: 0.201055, acc: 0.949084.
+2018-05-21 16:24:41,266 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.078795, eval loss: 0.152983, acc: 0.961518.
+2018-05-21 16:25:16,502 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.777945, eval loss: 4.011755, acc: 0.135253.
+2018-05-21 16:25:16,502 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.777945, eval loss: 4.011755, acc: 0.135253.
+2018-05-21 16:25:18,151 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.356010, eval loss: 0.518854, acc: 0.882318.
+2018-05-21 16:25:18,151 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.356010, eval loss: 0.518854, acc: 0.882318.
+2018-05-21 16:25:19,719 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.480742, eval loss: 0.323764, acc: 0.922342.
+2018-05-21 16:25:19,719 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.480742, eval loss: 0.323764, acc: 0.922342.
+2018-05-21 16:25:21,246 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.439567, eval loss: 0.242673, acc: 0.940684.
+2018-05-21 16:25:21,246 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.439567, eval loss: 0.242673, acc: 0.940684.
+2018-05-21 16:25:22,618 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.281025, eval loss: 0.203732, acc: 0.947851.
+2018-05-21 16:25:22,618 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.281025, eval loss: 0.203732, acc: 0.947851.
+2018-05-21 16:25:24,038 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.056017, eval loss: 0.168621, acc: 0.956483.
+2018-05-21 16:25:24,038 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.056017, eval loss: 0.168621, acc: 0.956483.
+2018-05-21 16:27:03,043 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.541018, eval loss: 3.993132, acc: 0.150590.
+2018-05-21 16:27:03,043 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.541018, eval loss: 3.993132, acc: 0.150590.
+2018-05-21 16:27:03,043 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.541018, eval loss: 3.993132, acc: 0.150590.
+2018-05-21 16:27:04,539 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.455332, eval loss: 0.522186, acc: 0.882010.
+2018-05-21 16:27:04,539 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.455332, eval loss: 0.522186, acc: 0.882010.
+2018-05-21 16:27:04,539 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.455332, eval loss: 0.522186, acc: 0.882010.
+2018-05-21 16:27:06,216 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.280197, eval loss: 0.316171, acc: 0.923703.
+2018-05-21 16:27:06,216 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.280197, eval loss: 0.316171, acc: 0.923703.
+2018-05-21 16:27:06,216 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.280197, eval loss: 0.316171, acc: 0.923703.
+2018-05-21 16:27:07,842 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.613861, eval loss: 0.241587, acc: 0.940607.
+2018-05-21 16:27:07,842 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.613861, eval loss: 0.241587, acc: 0.940607.
+2018-05-21 16:27:07,842 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.613861, eval loss: 0.241587, acc: 0.940607.
+2018-05-21 16:27:09,228 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.289935, eval loss: 0.201122, acc: 0.949726.
+2018-05-21 16:27:09,228 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.289935, eval loss: 0.201122, acc: 0.949726.
+2018-05-21 16:27:09,228 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.289935, eval loss: 0.201122, acc: 0.949726.
+2018-05-21 16:27:10,607 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.213645, eval loss: 0.168662, acc: 0.956894.
+2018-05-21 16:27:10,607 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.213645, eval loss: 0.168662, acc: 0.956894.
+2018-05-21 16:27:10,607 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.213645, eval loss: 0.168662, acc: 0.956894.
+2018-05-21 16:28:10,741 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.634135, eval loss: 4.159534, acc: 0.070517.
+2018-05-21 16:28:10,741 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.634135, eval loss: 4.159534, acc: 0.070517.
+2018-05-21 16:28:10,741 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.634135, eval loss: 4.159534, acc: 0.070517.
+2018-05-21 16:28:10,741 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.634135, eval loss: 4.159534, acc: 0.070517.
+2018-05-21 16:28:12,299 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.610100, eval loss: 0.531200, acc: 0.882729.
+2018-05-21 16:28:12,299 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.610100, eval loss: 0.531200, acc: 0.882729.
+2018-05-21 16:28:12,299 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.610100, eval loss: 0.531200, acc: 0.882729.
+2018-05-21 16:28:12,299 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.610100, eval loss: 0.531200, acc: 0.882729.
+2018-05-21 16:28:13,823 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.360396, eval loss: 0.315789, acc: 0.925476.
+2018-05-21 16:28:13,823 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.360396, eval loss: 0.315789, acc: 0.925476.
+2018-05-21 16:28:13,823 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.360396, eval loss: 0.315789, acc: 0.925476.
+2018-05-21 16:28:13,823 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.360396, eval loss: 0.315789, acc: 0.925476.
+2018-05-21 16:28:15,391 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.295560, eval loss: 0.236057, acc: 0.940273.
+2018-05-21 16:28:15,391 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.295560, eval loss: 0.236057, acc: 0.940273.
+2018-05-21 16:28:15,391 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.295560, eval loss: 0.236057, acc: 0.940273.
+2018-05-21 16:28:15,391 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.295560, eval loss: 0.236057, acc: 0.940273.
+2018-05-21 16:28:16,748 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.153994, eval loss: 0.195181, acc: 0.951139.
+2018-05-21 16:28:16,748 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.153994, eval loss: 0.195181, acc: 0.951139.
+2018-05-21 16:28:16,748 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.153994, eval loss: 0.195181, acc: 0.951139.
+2018-05-21 16:28:16,748 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.153994, eval loss: 0.195181, acc: 0.951139.
+2018-05-21 16:29:03,847 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.480377, eval loss: 3.924607, acc: 0.180106.
+2018-05-21 16:29:03,847 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.480377, eval loss: 3.924607, acc: 0.180106.
+2018-05-21 16:29:03,847 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.480377, eval loss: 3.924607, acc: 0.180106.
+2018-05-21 16:29:03,847 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.480377, eval loss: 3.924607, acc: 0.180106.
+2018-05-21 16:29:03,847 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.480377, eval loss: 3.924607, acc: 0.180106.
+2018-05-21 16:29:05,432 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.462508, eval loss: 0.519485, acc: 0.880751.
+2018-05-21 16:29:05,432 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.462508, eval loss: 0.519485, acc: 0.880751.
+2018-05-21 16:29:05,432 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.462508, eval loss: 0.519485, acc: 0.880751.
+2018-05-21 16:29:05,432 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.462508, eval loss: 0.519485, acc: 0.880751.
+2018-05-21 16:29:05,432 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.462508, eval loss: 0.519485, acc: 0.880751.
+2018-05-21 16:29:06,881 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.385888, eval loss: 0.315521, acc: 0.924628.
+2018-05-21 16:29:06,881 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.385888, eval loss: 0.315521, acc: 0.924628.
+2018-05-21 16:29:06,881 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.385888, eval loss: 0.315521, acc: 0.924628.
+2018-05-21 16:29:06,881 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.385888, eval loss: 0.315521, acc: 0.924628.
+2018-05-21 16:29:06,881 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.385888, eval loss: 0.315521, acc: 0.924628.
+2018-05-21 16:29:08,312 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.343735, eval loss: 0.253702, acc: 0.937216.
+2018-05-21 16:29:08,312 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.343735, eval loss: 0.253702, acc: 0.937216.
+2018-05-21 16:29:08,312 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.343735, eval loss: 0.253702, acc: 0.937216.
+2018-05-21 16:29:08,312 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.343735, eval loss: 0.253702, acc: 0.937216.
+2018-05-21 16:29:08,312 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.343735, eval loss: 0.253702, acc: 0.937216.
+2018-05-21 16:29:09,685 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.284066, eval loss: 0.189557, acc: 0.952347.
+2018-05-21 16:29:09,685 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.284066, eval loss: 0.189557, acc: 0.952347.
+2018-05-21 16:29:09,685 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.284066, eval loss: 0.189557, acc: 0.952347.
+2018-05-21 16:29:09,685 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.284066, eval loss: 0.189557, acc: 0.952347.
+2018-05-21 16:29:09,685 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.284066, eval loss: 0.189557, acc: 0.952347.
+2018-05-21 16:29:36,014 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.784257, eval loss: 4.147138, acc: 0.065071.
+2018-05-21 16:29:37,569 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.278084, eval loss: 0.509745, acc: 0.884193.
+2018-05-21 16:29:39,224 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.266459, eval loss: 0.340157, acc: 0.918720.
+2018-05-21 16:29:40,750 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.265924, eval loss: 0.240061, acc: 0.941917.
+2018-05-21 16:29:42,133 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.166804, eval loss: 0.201349, acc: 0.948827.
+2018-05-21 16:29:43,683 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.165663, eval loss: 0.164930, acc: 0.958769.
+2018-05-21 16:31:50,373 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.424583, eval loss: 3.922706, acc: 0.191050.
+2018-05-21 16:31:51,907 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.567344, eval loss: 0.499797, acc: 0.884348.
+2018-05-21 16:31:53,536 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.413840, eval loss: 0.316924, acc: 0.925450.
+2018-05-21 16:31:55,136 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.345117, eval loss: 0.237209, acc: 0.940273.
+2018-05-21 16:31:56,531 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.114262, eval loss: 0.201555, acc: 0.948622.
+2018-05-21 16:31:58,019 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.327677, eval loss: 0.165397, acc: 0.957896.
+2018-05-21 16:31:58,021 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_100_acc_0.9579.params.pkl
+2018-05-21 16:31:59,452 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.256906, eval loss: 0.134437, acc: 0.965397.
+2018-05-21 16:31:59,454 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_200_acc_0.9654.params.pkl
+2018-05-21 16:32:01,077 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.109762, eval loss: 0.118714, acc: 0.969969.
+2018-05-21 16:32:01,079 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_300_acc_0.9700.params.pkl
+2018-05-21 16:32:02,493 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.091724, eval loss: 0.113255, acc: 0.969019.
+2018-05-21 16:32:03,953 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.051207, eval loss: 0.085265, acc: 0.977034.
+2018-05-21 16:32:03,954 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9770.params.pkl
+2018-05-21 16:32:05,400 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.058777, eval loss: 0.076693, acc: 0.978627.
+2018-05-21 16:32:05,402 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9786.params.pkl
+2018-05-21 16:32:06,950 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.132029, eval loss: 0.071846, acc: 0.980245.
+2018-05-21 16:32:06,952 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9802.params.pkl
+2018-05-21 16:32:08,487 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.217750, eval loss: 0.074179, acc: 0.980194.
+2018-05-21 16:32:10,002 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.025915, eval loss: 0.064228, acc: 0.982660.
+2018-05-21 16:32:10,003 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9827.params.pkl
+2018-05-21 16:32:11,582 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.113192, eval loss: 0.062029, acc: 0.983019.
+2018-05-21 16:32:11,584 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9830.params.pkl
+2018-05-21 16:32:13,109 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.080765, eval loss: 0.055535, acc: 0.985332.
+2018-05-21 16:32:13,111 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_300_acc_0.9853.params.pkl
+2018-05-21 16:32:49,856 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:32:49,856 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:33:08,100 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:33:08,101 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:33:37,278 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:33:37,279 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:35:46,102 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:35:46,102 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:35:58,010 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:35:58,011 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:36:25,599 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:36:25,599 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:36:34,081 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:36:34,082 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:38:10,962 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.424079, eval loss: 3.926941, acc: 0.191641.
+2018-05-21 16:38:10,962 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.424079, eval loss: 3.926941, acc: 0.191641.
+2018-05-21 16:38:12,574 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.602022, eval loss: 0.518501, acc: 0.881470.
+2018-05-21 16:38:12,574 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.602022, eval loss: 0.518501, acc: 0.881470.
+2018-05-21 16:38:13,999 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.484040, eval loss: 0.332648, acc: 0.920903.
+2018-05-21 16:38:13,999 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.484040, eval loss: 0.332648, acc: 0.920903.
+2018-05-21 16:38:15,545 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.527324, eval loss: 0.251933, acc: 0.938500.
+2018-05-21 16:38:15,545 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.527324, eval loss: 0.251933, acc: 0.938500.
+2018-05-21 16:38:17,091 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.201380, eval loss: 0.197514, acc: 0.949983.
+2018-05-21 16:38:17,091 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.201380, eval loss: 0.197514, acc: 0.949983.
+2018-05-21 16:38:18,593 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.174830, eval loss: 0.164913, acc: 0.957562.
+2018-05-21 16:38:18,593 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.174830, eval loss: 0.164913, acc: 0.957562.
+2018-05-21 16:38:18,595 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_100_acc_0.9576.params.pkl
+2018-05-21 16:38:18,595 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_100_acc_0.9576.params.pkl
+2018-05-21 16:38:20,045 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.221413, eval loss: 0.143388, acc: 0.962263.
+2018-05-21 16:38:20,045 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.221413, eval loss: 0.143388, acc: 0.962263.
+2018-05-21 16:38:20,047 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_200_acc_0.9623.params.pkl
+2018-05-21 16:38:20,047 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_200_acc_0.9623.params.pkl
+2018-05-21 16:38:21,666 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.239923, eval loss: 0.120740, acc: 0.966116.
+2018-05-21 16:38:21,666 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.239923, eval loss: 0.120740, acc: 0.966116.
+2018-05-21 16:38:21,668 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_300_acc_0.9661.params.pkl
+2018-05-21 16:38:21,668 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_300_acc_0.9661.params.pkl
+2018-05-21 16:38:23,090 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.156941, eval loss: 0.101207, acc: 0.971691.
+2018-05-21 16:38:23,090 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.156941, eval loss: 0.101207, acc: 0.971691.
+2018-05-21 16:38:23,091 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9717.params.pkl
+2018-05-21 16:38:23,091 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9717.params.pkl
+2018-05-21 16:38:24,615 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.017349, eval loss: 0.086037, acc: 0.976469.
+2018-05-21 16:38:24,615 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.017349, eval loss: 0.086037, acc: 0.976469.
+2018-05-21 16:38:24,619 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9765.params.pkl
+2018-05-21 16:38:24,619 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9765.params.pkl
+2018-05-21 16:38:26,122 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.231394, eval loss: 0.080050, acc: 0.978704.
+2018-05-21 16:38:26,122 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.231394, eval loss: 0.080050, acc: 0.978704.
+2018-05-21 16:38:26,124 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9787.params.pkl
+2018-05-21 16:38:26,124 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9787.params.pkl
+2018-05-21 16:38:27,673 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.059132, eval loss: 0.077654, acc: 0.978832.
+2018-05-21 16:38:27,673 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.059132, eval loss: 0.077654, acc: 0.978832.
+2018-05-21 16:38:27,674 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9788.params.pkl
+2018-05-21 16:38:27,674 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9788.params.pkl
+2018-05-21 16:38:29,233 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.139670, eval loss: 0.071608, acc: 0.979860.
+2018-05-21 16:38:29,233 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.139670, eval loss: 0.071608, acc: 0.979860.
+2018-05-21 16:38:29,234 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_0_acc_0.9799.params.pkl
+2018-05-21 16:38:29,234 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_0_acc_0.9799.params.pkl
+2018-05-21 16:38:30,839 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.048587, eval loss: 0.058916, acc: 0.983482.
+2018-05-21 16:38:30,839 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.048587, eval loss: 0.058916, acc: 0.983482.
+2018-05-21 16:38:30,841 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9835.params.pkl
+2018-05-21 16:38:30,841 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9835.params.pkl
+2018-05-21 16:38:32,484 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.031065, eval loss: 0.064351, acc: 0.980759.
+2018-05-21 16:38:32,484 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.031065, eval loss: 0.064351, acc: 0.980759.
+2018-05-21 16:38:33,875 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.132378, eval loss: 0.079143, acc: 0.976674.
+2018-05-21 16:38:33,875 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.132378, eval loss: 0.079143, acc: 0.976674.
+2018-05-21 16:38:34,757 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:38:34,757 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:38:42,793 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:38:42,793 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:39:17,472 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:39:17,472 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:39:32,697 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:39:32,698 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:41:06,731 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:41:06,732 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:41:55,972 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:42:09,079 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:42:09,080 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:42:09,081 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:42:09,081 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:42:09,082 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:42:09,082 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:08,712 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:08,712 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:08,713 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:08,713 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:08,714 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:08,714 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:08,714 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:08,714 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:08,715 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:08,715 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,928 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,929 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,930 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,930 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,931 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,931 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,932 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,932 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,933 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,933 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,933 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,934 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,934 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,934 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:43:47,935 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:43:47,935 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,096 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,097 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,098 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,099 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,100 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,100 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,102 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,102 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,103 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,103 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,104 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,104 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,105 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,105 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:47:15,106 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:47:15,106 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:53:58,863 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.579754, eval loss: 4.035533, acc: 0.046549.
+2018-05-21 16:53:58,863 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.579754, eval loss: 4.035533, acc: 0.046549.
+2018-05-21 16:53:58,863 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.579754, eval loss: 4.035533, acc: 0.046549.
+2018-05-21 16:54:00,344 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.828219, eval loss: 0.546860, acc: 0.878413.
+2018-05-21 16:54:00,344 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.828219, eval loss: 0.546860, acc: 0.878413.
+2018-05-21 16:54:00,344 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.828219, eval loss: 0.546860, acc: 0.878413.
+2018-05-21 16:54:01,882 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.344703, eval loss: 0.321914, acc: 0.921931.
+2018-05-21 16:54:01,882 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.344703, eval loss: 0.321914, acc: 0.921931.
+2018-05-21 16:54:01,882 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.344703, eval loss: 0.321914, acc: 0.921931.
+2018-05-21 16:54:03,414 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.515339, eval loss: 0.240935, acc: 0.940555.
+2018-05-21 16:54:03,414 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.515339, eval loss: 0.240935, acc: 0.940555.
+2018-05-21 16:54:03,414 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.515339, eval loss: 0.240935, acc: 0.940555.
+2018-05-21 16:54:04,836 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.107038, eval loss: 0.216693, acc: 0.946027.
+2018-05-21 16:54:04,836 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.107038, eval loss: 0.216693, acc: 0.946027.
+2018-05-21 16:54:04,836 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.107038, eval loss: 0.216693, acc: 0.946027.
+2018-05-21 16:54:06,375 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.303531, eval loss: 0.175494, acc: 0.954402.
+2018-05-21 16:54:06,375 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.303531, eval loss: 0.175494, acc: 0.954402.
+2018-05-21 16:54:06,375 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.303531, eval loss: 0.175494, acc: 0.954402.
+2018-05-21 16:54:06,377 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_100_acc_0.9544.params.pkl
+2018-05-21 16:54:06,377 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_100_acc_0.9544.params.pkl
+2018-05-21 16:54:06,377 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_100_acc_0.9544.params.pkl
+2018-05-21 16:54:07,808 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.058508, eval loss: 0.145286, acc: 0.963136.
+2018-05-21 16:54:07,808 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.058508, eval loss: 0.145286, acc: 0.963136.
+2018-05-21 16:54:07,808 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.058508, eval loss: 0.145286, acc: 0.963136.
+2018-05-21 16:54:07,813 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_200_acc_0.9631.params.pkl
+2018-05-21 16:54:07,813 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_200_acc_0.9631.params.pkl
+2018-05-21 16:54:07,813 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_200_acc_0.9631.params.pkl
+2018-05-21 16:54:09,299 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.064741, eval loss: 0.136274, acc: 0.965345.
+2018-05-21 16:54:09,299 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.064741, eval loss: 0.136274, acc: 0.965345.
+2018-05-21 16:54:09,299 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.064741, eval loss: 0.136274, acc: 0.965345.
+2018-05-21 16:54:09,301 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_300_acc_0.9653.params.pkl
+2018-05-21 16:54:09,301 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_300_acc_0.9653.params.pkl
+2018-05-21 16:54:09,301 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_1_step_300_acc_0.9653.params.pkl
+2018-05-21 16:54:10,626 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.075183, eval loss: 0.109107, acc: 0.969430.
+2018-05-21 16:54:10,626 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.075183, eval loss: 0.109107, acc: 0.969430.
+2018-05-21 16:54:10,626 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.075183, eval loss: 0.109107, acc: 0.969430.
+2018-05-21 16:54:10,627 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9694.params.pkl
+2018-05-21 16:54:10,627 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9694.params.pkl
+2018-05-21 16:54:10,627 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9694.params.pkl
+2018-05-21 16:54:12,148 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.042319, eval loss: 0.089206, acc: 0.975852.
+2018-05-21 16:54:12,148 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.042319, eval loss: 0.089206, acc: 0.975852.
+2018-05-21 16:54:12,148 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.042319, eval loss: 0.089206, acc: 0.975852.
+2018-05-21 16:54:12,150 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9759.params.pkl
+2018-05-21 16:54:12,150 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9759.params.pkl
+2018-05-21 16:54:12,150 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9759.params.pkl
+2018-05-21 16:54:13,620 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.093418, eval loss: 0.077189, acc: 0.978806.
+2018-05-21 16:54:13,620 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.093418, eval loss: 0.077189, acc: 0.978806.
+2018-05-21 16:54:13,620 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.093418, eval loss: 0.077189, acc: 0.978806.
+2018-05-21 16:54:13,624 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9788.params.pkl
+2018-05-21 16:54:13,624 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9788.params.pkl
+2018-05-21 16:54:13,624 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9788.params.pkl
+2018-05-21 16:54:15,118 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.037967, eval loss: 0.073005, acc: 0.980964.
+2018-05-21 16:54:15,118 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.037967, eval loss: 0.073005, acc: 0.980964.
+2018-05-21 16:54:15,118 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.037967, eval loss: 0.073005, acc: 0.980964.
+2018-05-21 16:54:15,120 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9810.params.pkl
+2018-05-21 16:54:15,120 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9810.params.pkl
+2018-05-21 16:54:15,120 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9810.params.pkl
+2018-05-21 16:54:16,452 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.036607, eval loss: 0.068743, acc: 0.980887.
+2018-05-21 16:54:16,452 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.036607, eval loss: 0.068743, acc: 0.980887.
+2018-05-21 16:54:16,452 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.036607, eval loss: 0.068743, acc: 0.980887.
+2018-05-21 16:54:17,937 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.036736, eval loss: 0.062483, acc: 0.983174.
+2018-05-21 16:54:17,937 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.036736, eval loss: 0.062483, acc: 0.983174.
+2018-05-21 16:54:17,937 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.036736, eval loss: 0.062483, acc: 0.983174.
+2018-05-21 16:54:17,939 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9832.params.pkl
+2018-05-21 16:54:17,939 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9832.params.pkl
+2018-05-21 16:54:17,939 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9832.params.pkl
+2018-05-21 16:54:19,356 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.031891, eval loss: 0.056788, acc: 0.984227.
+2018-05-21 16:54:19,356 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.031891, eval loss: 0.056788, acc: 0.984227.
+2018-05-21 16:54:19,356 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.031891, eval loss: 0.056788, acc: 0.984227.
+2018-05-21 16:54:19,360 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9842.params.pkl
+2018-05-21 16:54:19,360 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9842.params.pkl
+2018-05-21 16:54:19,360 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9842.params.pkl
+2018-05-21 16:54:20,859 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.165535, eval loss: 0.055943, acc: 0.984098.
+2018-05-21 16:54:20,859 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.165535, eval loss: 0.055943, acc: 0.984098.
+2018-05-21 16:54:20,859 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.165535, eval loss: 0.055943, acc: 0.984098.
+2018-05-21 16:54:22,274 - INFO - TextCNN - Epoch:  4, Step:      0, train loss: 0.048155, eval loss: 0.058036, acc: 0.984381.
+2018-05-21 16:54:22,274 - INFO - TextCNN - Epoch:  4, Step:      0, train loss: 0.048155, eval loss: 0.058036, acc: 0.984381.
+2018-05-21 16:54:22,274 - INFO - TextCNN - Epoch:  4, Step:      0, train loss: 0.048155, eval loss: 0.058036, acc: 0.984381.
+2018-05-21 16:54:22,275 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_0_acc_0.9844.params.pkl
+2018-05-21 16:54:22,275 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_0_acc_0.9844.params.pkl
+2018-05-21 16:54:22,275 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_0_acc_0.9844.params.pkl
+2018-05-21 16:54:23,741 - INFO - TextCNN - Epoch:  4, Step:    100, train loss: 0.155328, eval loss: 0.067411, acc: 0.982197.
+2018-05-21 16:54:23,741 - INFO - TextCNN - Epoch:  4, Step:    100, train loss: 0.155328, eval loss: 0.067411, acc: 0.982197.
+2018-05-21 16:54:23,741 - INFO - TextCNN - Epoch:  4, Step:    100, train loss: 0.155328, eval loss: 0.067411, acc: 0.982197.
+2018-05-21 16:54:25,298 - INFO - TextCNN - Epoch:  4, Step:    200, train loss: 0.008232, eval loss: 0.059741, acc: 0.984792.
+2018-05-21 16:54:25,298 - INFO - TextCNN - Epoch:  4, Step:    200, train loss: 0.008232, eval loss: 0.059741, acc: 0.984792.
+2018-05-21 16:54:25,298 - INFO - TextCNN - Epoch:  4, Step:    200, train loss: 0.008232, eval loss: 0.059741, acc: 0.984792.
+2018-05-21 16:54:25,300 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_200_acc_0.9848.params.pkl
+2018-05-21 16:54:25,300 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_200_acc_0.9848.params.pkl
+2018-05-21 16:54:25,300 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_200_acc_0.9848.params.pkl
+2018-05-21 16:54:26,837 - INFO - TextCNN - Epoch:  4, Step:    300, train loss: 0.091437, eval loss: 0.084873, acc: 0.977984.
+2018-05-21 16:54:26,837 - INFO - TextCNN - Epoch:  4, Step:    300, train loss: 0.091437, eval loss: 0.084873, acc: 0.977984.
+2018-05-21 16:54:26,837 - INFO - TextCNN - Epoch:  4, Step:    300, train loss: 0.091437, eval loss: 0.084873, acc: 0.977984.
+2018-05-21 16:54:28,233 - INFO - TextCNN - Epoch:  5, Step:      0, train loss: 0.051030, eval loss: 0.063412, acc: 0.982429.
+2018-05-21 16:54:28,233 - INFO - TextCNN - Epoch:  5, Step:      0, train loss: 0.051030, eval loss: 0.063412, acc: 0.982429.
+2018-05-21 16:54:28,233 - INFO - TextCNN - Epoch:  5, Step:      0, train loss: 0.051030, eval loss: 0.063412, acc: 0.982429.
+2018-05-21 16:54:29,700 - INFO - TextCNN - Epoch:  5, Step:    100, train loss: 0.036683, eval loss: 0.058355, acc: 0.984741.
+2018-05-21 16:54:29,700 - INFO - TextCNN - Epoch:  5, Step:    100, train loss: 0.036683, eval loss: 0.058355, acc: 0.984741.
+2018-05-21 16:54:29,700 - INFO - TextCNN - Epoch:  5, Step:    100, train loss: 0.036683, eval loss: 0.058355, acc: 0.984741.
+2018-05-21 16:54:31,189 - INFO - TextCNN - Epoch:  5, Step:    200, train loss: 0.060006, eval loss: 0.056103, acc: 0.985640.
+2018-05-21 16:54:31,189 - INFO - TextCNN - Epoch:  5, Step:    200, train loss: 0.060006, eval loss: 0.056103, acc: 0.985640.
+2018-05-21 16:54:31,189 - INFO - TextCNN - Epoch:  5, Step:    200, train loss: 0.060006, eval loss: 0.056103, acc: 0.985640.
+2018-05-21 16:54:31,190 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_5_step_200_acc_0.9856.params.pkl
+2018-05-21 16:54:31,190 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_5_step_200_acc_0.9856.params.pkl
+2018-05-21 16:54:31,190 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_5_step_200_acc_0.9856.params.pkl
+2018-05-21 16:54:32,791 - INFO - TextCNN - Epoch:  5, Step:    300, train loss: 0.154450, eval loss: 0.062618, acc: 0.983097.
+2018-05-21 16:54:32,791 - INFO - TextCNN - Epoch:  5, Step:    300, train loss: 0.154450, eval loss: 0.062618, acc: 0.983097.
+2018-05-21 16:54:32,791 - INFO - TextCNN - Epoch:  5, Step:    300, train loss: 0.154450, eval loss: 0.062618, acc: 0.983097.
+2018-05-21 16:54:34,238 - INFO - TextCNN - Epoch:  6, Step:      0, train loss: 0.014567, eval loss: 0.046771, acc: 0.987464.
+2018-05-21 16:54:34,238 - INFO - TextCNN - Epoch:  6, Step:      0, train loss: 0.014567, eval loss: 0.046771, acc: 0.987464.
+2018-05-21 16:54:34,238 - INFO - TextCNN - Epoch:  6, Step:      0, train loss: 0.014567, eval loss: 0.046771, acc: 0.987464.
+2018-05-21 16:54:34,240 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_6_step_0_acc_0.9875.params.pkl
+2018-05-21 16:54:34,240 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_6_step_0_acc_0.9875.params.pkl
+2018-05-21 16:54:34,240 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_6_step_0_acc_0.9875.params.pkl
+2018-05-21 16:54:35,796 - INFO - TextCNN - Epoch:  6, Step:    100, train loss: 0.165657, eval loss: 0.052687, acc: 0.987207.
+2018-05-21 16:54:35,796 - INFO - TextCNN - Epoch:  6, Step:    100, train loss: 0.165657, eval loss: 0.052687, acc: 0.987207.
+2018-05-21 16:54:35,796 - INFO - TextCNN - Epoch:  6, Step:    100, train loss: 0.165657, eval loss: 0.052687, acc: 0.987207.
+2018-05-21 16:54:37,464 - INFO - TextCNN - Epoch:  6, Step:    200, train loss: 0.012592, eval loss: 0.049160, acc: 0.987387.
+2018-05-21 16:54:37,464 - INFO - TextCNN - Epoch:  6, Step:    200, train loss: 0.012592, eval loss: 0.049160, acc: 0.987387.
+2018-05-21 16:54:37,464 - INFO - TextCNN - Epoch:  6, Step:    200, train loss: 0.012592, eval loss: 0.049160, acc: 0.987387.
+2018-05-21 16:54:39,025 - INFO - TextCNN - Epoch:  6, Step:    300, train loss: 0.066479, eval loss: 0.047553, acc: 0.987875.
+2018-05-21 16:54:39,025 - INFO - TextCNN - Epoch:  6, Step:    300, train loss: 0.066479, eval loss: 0.047553, acc: 0.987875.
+2018-05-21 16:54:39,025 - INFO - TextCNN - Epoch:  6, Step:    300, train loss: 0.066479, eval loss: 0.047553, acc: 0.987875.
+2018-05-21 16:54:39,027 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_6_step_300_acc_0.9879.params.pkl
+2018-05-21 16:54:39,027 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_6_step_300_acc_0.9879.params.pkl
+2018-05-21 16:54:39,027 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_6_step_300_acc_0.9879.params.pkl
+2018-05-21 16:54:40,554 - INFO - TextCNN - Epoch:  7, Step:      0, train loss: 0.023226, eval loss: 0.049227, acc: 0.987130.
+2018-05-21 16:54:40,554 - INFO - TextCNN - Epoch:  7, Step:      0, train loss: 0.023226, eval loss: 0.049227, acc: 0.987130.
+2018-05-21 16:54:40,554 - INFO - TextCNN - Epoch:  7, Step:      0, train loss: 0.023226, eval loss: 0.049227, acc: 0.987130.
+2018-05-21 16:54:42,150 - INFO - TextCNN - Epoch:  7, Step:    100, train loss: 0.029790, eval loss: 0.041690, acc: 0.989570.
+2018-05-21 16:54:42,150 - INFO - TextCNN - Epoch:  7, Step:    100, train loss: 0.029790, eval loss: 0.041690, acc: 0.989570.
+2018-05-21 16:54:42,150 - INFO - TextCNN - Epoch:  7, Step:    100, train loss: 0.029790, eval loss: 0.041690, acc: 0.989570.
+2018-05-21 16:54:42,152 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_7_step_100_acc_0.9896.params.pkl
+2018-05-21 16:54:42,152 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_7_step_100_acc_0.9896.params.pkl
+2018-05-21 16:54:42,152 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_7_step_100_acc_0.9896.params.pkl
+2018-05-21 16:54:43,911 - INFO - TextCNN - Epoch:  7, Step:    200, train loss: 0.045682, eval loss: 0.044592, acc: 0.989467.
+2018-05-21 16:54:43,911 - INFO - TextCNN - Epoch:  7, Step:    200, train loss: 0.045682, eval loss: 0.044592, acc: 0.989467.
+2018-05-21 16:54:43,911 - INFO - TextCNN - Epoch:  7, Step:    200, train loss: 0.045682, eval loss: 0.044592, acc: 0.989467.
+2018-05-21 16:54:45,706 - INFO - TextCNN - Epoch:  7, Step:    300, train loss: 0.097363, eval loss: 0.042042, acc: 0.989904.
+2018-05-21 16:54:45,706 - INFO - TextCNN - Epoch:  7, Step:    300, train loss: 0.097363, eval loss: 0.042042, acc: 0.989904.
+2018-05-21 16:54:45,706 - INFO - TextCNN - Epoch:  7, Step:    300, train loss: 0.097363, eval loss: 0.042042, acc: 0.989904.
+2018-05-21 16:54:45,708 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_7_step_300_acc_0.9899.params.pkl
+2018-05-21 16:54:45,708 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_7_step_300_acc_0.9899.params.pkl
+2018-05-21 16:54:45,708 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_7_step_300_acc_0.9899.params.pkl
+2018-05-21 16:54:46,776 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,776 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,777 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,777 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,778 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,778 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,778 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,778 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,779 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,779 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,779 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,779 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,780 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,780 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 16:54:46,780 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 16:54:46,780 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,116 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,116 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,138 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,138 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,139 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,139 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,140 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,140 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,140 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,140 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,141 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,141 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,141 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,141 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:56:31,142 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:56:31,142 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:57:35,432 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.854158, eval loss: 4.139436, acc: 0.104221.
+2018-05-21 17:57:35,432 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.854158, eval loss: 4.139436, acc: 0.104221.
+2018-05-21 17:57:37,059 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.544907, eval loss: 0.530670, acc: 0.878696.
+2018-05-21 17:57:37,059 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.544907, eval loss: 0.530670, acc: 0.878696.
+2018-05-21 17:57:38,588 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.399304, eval loss: 0.333641, acc: 0.919696.
+2018-05-21 17:57:38,588 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.399304, eval loss: 0.333641, acc: 0.919696.
+2018-05-21 17:57:40,243 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.118674, eval loss: 0.262816, acc: 0.936522.
+2018-05-21 17:57:40,243 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.118674, eval loss: 0.262816, acc: 0.936522.
+2018-05-21 17:57:41,654 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.297420, eval loss: 0.195318, acc: 0.950035.
+2018-05-21 17:57:41,654 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.297420, eval loss: 0.195318, acc: 0.950035.
+2018-05-21 17:57:43,188 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.275293, eval loss: 0.164144, acc: 0.959077.
+2018-05-21 17:57:43,188 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.275293, eval loss: 0.164144, acc: 0.959077.
+2018-05-21 17:57:44,593 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.177551, eval loss: 0.146043, acc: 0.962699.
+2018-05-21 17:57:44,593 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.177551, eval loss: 0.146043, acc: 0.962699.
+2018-05-21 17:57:46,207 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.204462, eval loss: 0.130006, acc: 0.963958.
+2018-05-21 17:57:46,207 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.204462, eval loss: 0.130006, acc: 0.963958.
+2018-05-21 17:57:47,635 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.043066, eval loss: 0.108543, acc: 0.970329.
+2018-05-21 17:57:47,635 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.043066, eval loss: 0.108543, acc: 0.970329.
+2018-05-21 17:57:47,637 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9703.params.pkl
+2018-05-21 17:57:47,637 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_0_acc_0.9703.params.pkl
+2018-05-21 17:57:49,126 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.145052, eval loss: 0.094274, acc: 0.974593.
+2018-05-21 17:57:49,126 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.145052, eval loss: 0.094274, acc: 0.974593.
+2018-05-21 17:57:49,128 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9746.params.pkl
+2018-05-21 17:57:49,128 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9746.params.pkl
+2018-05-21 17:57:50,467 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.113027, eval loss: 0.078628, acc: 0.978961.
+2018-05-21 17:57:50,467 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.113027, eval loss: 0.078628, acc: 0.978961.
+2018-05-21 17:57:50,471 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9790.params.pkl
+2018-05-21 17:57:50,471 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9790.params.pkl
+2018-05-21 17:57:51,769 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.092763, eval loss: 0.103471, acc: 0.973181.
+2018-05-21 17:57:51,769 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.092763, eval loss: 0.103471, acc: 0.973181.
+2018-05-21 17:57:53,275 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.048633, eval loss: 0.086328, acc: 0.975904.
+2018-05-21 17:57:53,275 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.048633, eval loss: 0.086328, acc: 0.975904.
+2018-05-21 17:57:54,882 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.081899, eval loss: 0.057431, acc: 0.983893.
+2018-05-21 17:57:54,882 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.081899, eval loss: 0.057431, acc: 0.983893.
+2018-05-21 17:57:54,884 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9839.params.pkl
+2018-05-21 17:57:54,884 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9839.params.pkl
+2018-05-21 17:57:56,392 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.113962, eval loss: 0.059017, acc: 0.983944.
+2018-05-21 17:57:56,392 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.113962, eval loss: 0.059017, acc: 0.983944.
+2018-05-21 17:57:56,394 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9839.params.pkl
+2018-05-21 17:57:56,394 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9839.params.pkl
+2018-05-21 17:57:58,016 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.148273, eval loss: 0.052869, acc: 0.985306.
+2018-05-21 17:57:58,016 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.148273, eval loss: 0.052869, acc: 0.985306.
+2018-05-21 17:57:58,018 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_300_acc_0.9853.params.pkl
+2018-05-21 17:57:58,018 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_300_acc_0.9853.params.pkl
+2018-05-21 17:58:00,155 - INFO - TextCNN - Epoch:  4, Step:      0, train loss: 0.034087, eval loss: 0.053978, acc: 0.984458.
+2018-05-21 17:58:00,155 - INFO - TextCNN - Epoch:  4, Step:      0, train loss: 0.034087, eval loss: 0.053978, acc: 0.984458.
+2018-05-21 17:58:01,658 - INFO - TextCNN - Epoch:  4, Step:    100, train loss: 0.059641, eval loss: 0.042653, acc: 0.988132.
+2018-05-21 17:58:01,658 - INFO - TextCNN - Epoch:  4, Step:    100, train loss: 0.059641, eval loss: 0.042653, acc: 0.988132.
+2018-05-21 17:58:01,660 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_100_acc_0.9881.params.pkl
+2018-05-21 17:58:01,660 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_4_step_100_acc_0.9881.params.pkl
+2018-05-21 17:58:03,120 - INFO - TextCNN - Epoch:  4, Step:    200, train loss: 0.017951, eval loss: 0.046430, acc: 0.986693.
+2018-05-21 17:58:03,120 - INFO - TextCNN - Epoch:  4, Step:    200, train loss: 0.017951, eval loss: 0.046430, acc: 0.986693.
+2018-05-21 17:58:04,727 - INFO - TextCNN - Epoch:  4, Step:    300, train loss: 0.213399, eval loss: 0.051196, acc: 0.986051.
+2018-05-21 17:58:04,727 - INFO - TextCNN - Epoch:  4, Step:    300, train loss: 0.213399, eval loss: 0.051196, acc: 0.986051.
+2018-05-21 17:58:06,289 - INFO - TextCNN - Epoch:  5, Step:      0, train loss: 0.105646, eval loss: 0.049352, acc: 0.986590.
+2018-05-21 17:58:06,289 - INFO - TextCNN - Epoch:  5, Step:      0, train loss: 0.105646, eval loss: 0.049352, acc: 0.986590.
+2018-05-21 17:58:08,167 - INFO - TextCNN - Epoch:  5, Step:    100, train loss: 0.033611, eval loss: 0.044211, acc: 0.987387.
+2018-05-21 17:58:08,167 - INFO - TextCNN - Epoch:  5, Step:    100, train loss: 0.033611, eval loss: 0.044211, acc: 0.987387.
+2018-05-21 17:58:09,701 - INFO - TextCNN - Epoch:  5, Step:    200, train loss: 0.060616, eval loss: 0.080583, acc: 0.979397.
+2018-05-21 17:58:09,701 - INFO - TextCNN - Epoch:  5, Step:    200, train loss: 0.060616, eval loss: 0.080583, acc: 0.979397.
+2018-05-21 17:58:11,397 - INFO - TextCNN - Epoch:  5, Step:    300, train loss: 0.185885, eval loss: 0.114903, acc: 0.976315.
+2018-05-21 17:58:11,397 - INFO - TextCNN - Epoch:  5, Step:    300, train loss: 0.185885, eval loss: 0.114903, acc: 0.976315.
+2018-05-21 17:58:12,477 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,477 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,477 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,478 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,478 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,478 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,479 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,479 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,479 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,479 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,480 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,480 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,480 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,480 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:58:12,481 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:58:12,481 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,953 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,954 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,956 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,956 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,957 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,957 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,958 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,959 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,959 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,960 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,960 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,961 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,962 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,962 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 17:59:23,963 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 17:59:23,963 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,811 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,811 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,812 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,812 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,813 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,813 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,813 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,814 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,814 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,814 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,815 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,815 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,816 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,816 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:13,817 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:00:13,817 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:00:37,676 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.611703, eval loss: 4.021988, acc: 0.172785.
+2018-05-21 18:00:37,676 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.611703, eval loss: 4.021988, acc: 0.172785.
+2018-05-21 18:00:39,210 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.690770, eval loss: 0.516303, acc: 0.880982.
+2018-05-21 18:00:39,210 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.690770, eval loss: 0.516303, acc: 0.880982.
+2018-05-21 18:00:40,763 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.212289, eval loss: 0.315051, acc: 0.924474.
+2018-05-21 18:00:40,763 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.212289, eval loss: 0.315051, acc: 0.924474.
+2018-05-21 18:00:42,336 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.206435, eval loss: 0.239786, acc: 0.940941.
+2018-05-21 18:00:42,336 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.206435, eval loss: 0.239786, acc: 0.940941.
+2018-05-21 18:00:43,676 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.111113, eval loss: 0.212727, acc: 0.945924.
+2018-05-21 18:00:43,676 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.111113, eval loss: 0.212727, acc: 0.945924.
+2018-05-21 18:00:45,105 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.290463, eval loss: 0.166704, acc: 0.956508.
+2018-05-21 18:00:45,105 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.290463, eval loss: 0.166704, acc: 0.956508.
+2018-05-21 18:00:46,629 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.164124, eval loss: 0.134937, acc: 0.964703.
+2018-05-21 18:00:46,629 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.164124, eval loss: 0.134937, acc: 0.964703.
+2018-05-21 18:00:48,227 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.259179, eval loss: 0.129970, acc: 0.964626.
+2018-05-21 18:00:48,227 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.259179, eval loss: 0.129970, acc: 0.964626.
+2018-05-21 18:00:49,663 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.097991, eval loss: 0.115308, acc: 0.968377.
+2018-05-21 18:00:49,663 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.097991, eval loss: 0.115308, acc: 0.968377.
+2018-05-21 18:00:51,198 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.091021, eval loss: 0.085809, acc: 0.977471.
+2018-05-21 18:00:51,198 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.091021, eval loss: 0.085809, acc: 0.977471.
+2018-05-21 18:00:51,200 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9775.params.pkl
+2018-05-21 18:00:51,200 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_100_acc_0.9775.params.pkl
+2018-05-21 18:00:52,716 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.132960, eval loss: 0.079149, acc: 0.978986.
+2018-05-21 18:00:52,716 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.132960, eval loss: 0.079149, acc: 0.978986.
+2018-05-21 18:00:52,718 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9790.params.pkl
+2018-05-21 18:00:52,718 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_200_acc_0.9790.params.pkl
+2018-05-21 18:00:54,239 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.144688, eval loss: 0.074719, acc: 0.980707.
+2018-05-21 18:00:54,239 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.144688, eval loss: 0.074719, acc: 0.980707.
+2018-05-21 18:00:54,241 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9807.params.pkl
+2018-05-21 18:00:54,241 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_2_step_300_acc_0.9807.params.pkl
+2018-05-21 18:00:55,610 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.121412, eval loss: 0.074653, acc: 0.980399.
+2018-05-21 18:00:55,610 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.121412, eval loss: 0.074653, acc: 0.980399.
+2018-05-21 18:00:57,403 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.039055, eval loss: 0.064429, acc: 0.982686.
+2018-05-21 18:00:57,403 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.039055, eval loss: 0.064429, acc: 0.982686.
+2018-05-21 18:00:57,405 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9827.params.pkl
+2018-05-21 18:00:57,405 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_100_acc_0.9827.params.pkl
+2018-05-21 18:00:59,027 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.156301, eval loss: 0.059525, acc: 0.983893.
+2018-05-21 18:00:59,027 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.156301, eval loss: 0.059525, acc: 0.983893.
+2018-05-21 18:00:59,029 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9839.params.pkl
+2018-05-21 18:00:59,029 - INFO - TextCNN - save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_3_step_200_acc_0.9839.params.pkl
+2018-05-21 18:01:00,494 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.053446, eval loss: 0.070672, acc: 0.980579.
+2018-05-21 18:01:00,494 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.053446, eval loss: 0.070672, acc: 0.980579.
+2018-05-21 18:01:11,128 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,128 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,129 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,129 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,130 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,130 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,131 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,131 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,132 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,132 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,133 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,133 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,133 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,134 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:01:11,134 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:01:11,135 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,775 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,775 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,776 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,776 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,777 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,777 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,778 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,778 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,778 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,779 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,779 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,779 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,780 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,780 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,781 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,781 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:00,782 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:00,782 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,097 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,097 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,098 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,099 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,099 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,099 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,100 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,100 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,101 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,101 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,102 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,102 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,102 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,103 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,103 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,103 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,104 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,104 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 18:03:14,105 - INFO - Text cut - String input, user 1 cpu core
+2018-05-21 18:03:14,105 - INFO - Time Counter - cut running 0.00 min
