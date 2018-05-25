@@ -7,5 +7,4 @@ from pathlib import Path
 
 
 root = Path(Path(__file__).resolve().parent, "..").resolve()
-MODEL_PATH = root / "results" / "intent"
-
+MODEL_PATH = root / "results"

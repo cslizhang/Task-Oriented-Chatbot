@@ -23,15 +23,15 @@ def _cut(x):
     return list(jieba.cut(x))
 
 
-@time_counter
+# @time_counter
 def cut(x, n_job=None):
     assert isinstance(x, str) or isinstance(x, list)
     if isinstance(x, str):
-        logger.info("String input, user 1 cpu core")
+        # logger.info("String input, user 1 cpu core")
         return _cut(x)
     if n_job:
         n_job = min(CPU, n_job)
-        logger.info("%d Sentences input, Use %d cpu core " % (len(x), n_job))
+        # logger.info("%d Sentences input, Use %d cpu core " % (len(x), n_job))
         pool = mp.Pool(n_job)
         rst = pool.map(_cut, x)
         pool.close()

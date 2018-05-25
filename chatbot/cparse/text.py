@@ -4,12 +4,14 @@
 # @Mail    : evilpsycho42@gmail.com
 
 
-def read_fasttext_file(path):
+def read_fasttext_file(path, precessing_func=None):
     s = []
     label = []
     with open(path, 'r') as f:
         data = f.readlines()
     for i in data:
+        if precessing_func:
+            i = precessing_func(i)
         label.append(i.split(" ")[0])
         s.append(i.strip("\n").split(" ")[1:])
     return s, label

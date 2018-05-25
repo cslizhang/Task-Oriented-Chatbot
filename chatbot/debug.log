@@ -863,3 +863,130 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-05-21 18:03:14,104 - INFO - Time Counter - cut running 0.00 min
 2018-05-21 18:03:14,105 - INFO - Text cut - String input, user 1 cpu core
 2018-05-21 18:03:14,105 - INFO - Time Counter - cut running 0.00 min
+2018-05-21 23:00:18,543 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.730646, eval loss: 4.160922, acc: 0.120276.
+2018-05-21 23:00:24,411 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.466180, eval loss: 0.527745, acc: 0.879775.
+2018-05-21 23:00:30,241 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.335385, eval loss: 0.345641, acc: 0.920235.
+2018-05-21 23:00:35,811 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.460204, eval loss: 0.250765, acc: 0.938577.
+2018-05-21 23:00:40,949 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.229273, eval loss: 0.187994, acc: 0.951807.
+2018-05-21 23:00:52,153 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.735909, eval loss: 3.987606, acc: 0.143782.
+2018-05-22 13:41:35,199 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.414095, eval loss: 4.251238, acc: 0.069232.
+2018-05-22 13:41:35,957 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.799693, eval loss: 0.901182, acc: 0.826419.
+2018-05-22 13:41:36,914 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.523395, eval loss: 0.471949, acc: 0.900712.
+2018-05-22 13:41:37,770 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.248574, eval loss: 0.327798, acc: 0.930151.
+2018-05-22 13:41:38,546 - INFO - TextCNN - Epoch:  1, Step:      0, train loss: 0.249029, eval loss: 0.255622, acc: 0.943150.
+2018-05-22 13:41:39,487 - INFO - TextCNN - Epoch:  1, Step:    100, train loss: 0.172343, eval loss: 0.213625, acc: 0.949161.
+2018-05-22 13:41:40,301 - INFO - TextCNN - Epoch:  1, Step:    200, train loss: 0.407277, eval loss: 0.178508, acc: 0.956919.
+2018-05-22 13:41:41,126 - INFO - TextCNN - Epoch:  1, Step:    300, train loss: 0.251980, eval loss: 0.148936, acc: 0.965320.
+2018-05-22 13:41:41,926 - INFO - TextCNN - Epoch:  2, Step:      0, train loss: 0.112634, eval loss: 0.129106, acc: 0.969250.
+2018-05-22 13:41:42,752 - INFO - TextCNN - Epoch:  2, Step:    100, train loss: 0.099688, eval loss: 0.115945, acc: 0.973309.
+2018-05-22 13:41:42,757 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_2_step_100_acc_0.9733.params.pkl
+2018-05-22 13:41:43,599 - INFO - TextCNN - Epoch:  2, Step:    200, train loss: 0.066618, eval loss: 0.100523, acc: 0.977188.
+2018-05-22 13:41:43,602 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_2_step_200_acc_0.9772.params.pkl
+2018-05-22 13:41:44,441 - INFO - TextCNN - Epoch:  2, Step:    300, train loss: 0.146131, eval loss: 0.086886, acc: 0.980990.
+2018-05-22 13:41:44,445 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_2_step_300_acc_0.9810.params.pkl
+2018-05-22 13:41:45,297 - INFO - TextCNN - Epoch:  3, Step:      0, train loss: 0.098509, eval loss: 0.074971, acc: 0.983328.
+2018-05-22 13:41:45,303 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_3_step_0_acc_0.9833.params.pkl
+2018-05-22 13:41:46,123 - INFO - TextCNN - Epoch:  3, Step:    100, train loss: 0.050510, eval loss: 0.068553, acc: 0.985511.
+2018-05-22 13:41:46,127 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_3_step_100_acc_0.9855.params.pkl
+2018-05-22 13:41:46,949 - INFO - TextCNN - Epoch:  3, Step:    200, train loss: 0.067479, eval loss: 0.060705, acc: 0.986513.
+2018-05-22 13:41:46,952 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_3_step_200_acc_0.9865.params.pkl
+2018-05-22 13:41:47,824 - INFO - TextCNN - Epoch:  3, Step:    300, train loss: 0.057975, eval loss: 0.055662, acc: 0.987001.
+2018-05-22 13:41:47,828 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/FastText_epoch_3_step_300_acc_0.9870.params.pkl
+2018-05-22 13:41:48,527 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,527 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,530 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,531 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,531 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,532 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,532 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,532 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,532 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,532 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,533 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,533 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,533 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,533 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,533 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,534 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,534 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,534 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:41:48,534 - INFO - Text cut - String input, user 1 cpu core
+2018-05-22 13:41:48,534 - INFO - Time Counter - cut running 0.00 min
+2018-05-22 13:53:57,291 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.573687, eval loss: 3.976832, acc: 0.208339.
+2018-05-22 13:53:57,291 - INFO - TextCNN - Epoch:  0, Step:      0, train loss: 4.573687, eval loss: 3.976832, acc: 0.208339.
+2018-05-22 13:54:03,048 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.510787, eval loss: 0.520766, acc: 0.883115.
+2018-05-22 13:54:03,048 - INFO - TextCNN - Epoch:  0, Step:    100, train loss: 0.510787, eval loss: 0.520766, acc: 0.883115.
+2018-05-22 13:54:08,005 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.360056, eval loss: 0.337246, acc: 0.918540.
+2018-05-22 13:54:08,005 - INFO - TextCNN - Epoch:  0, Step:    200, train loss: 0.360056, eval loss: 0.337246, acc: 0.918540.
+2018-05-22 13:54:08,009 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_0_step_200_acc_0.9185.params.pkl
+2018-05-22 13:54:08,009 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_0_step_200_acc_0.9185.params.pkl
+2018-05-22 13:54:12,971 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.227869, eval loss: 0.259905, acc: 0.936497.
+2018-05-22 13:54:12,971 - INFO - TextCNN - Epoch:  0, Step:    300, train loss: 0.227869, eval loss: 0.259905, acc: 0.936497.
+2018-05-22 13:54:12,978 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_0_step_300_acc_0.9365.params.pkl
+2018-05-22 13:54:12,978 - INFO - TextCNN - save model in /Users/zhouzhirui/project/Task-Oriented-Chatbot/chatbot/results/intent/TextCNN_epoch_0_step_300_acc_0.9365.params.pkl
+2018-05-22 14:11:43,060 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 4.421163, eval loss: 4.277324, acc: 0.038046.
+2018-05-22 14:11:43,779 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 0.956743, eval loss: 0.869487, acc: 0.836669.
+2018-05-22 22:42:44,579 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 0.698014, eval loss: 0.690458, acc: 0.529200.
+2018-05-22 22:42:45,633 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.476472, eval loss: 0.555335, acc: 0.733600.
+2018-05-22 22:42:46,653 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.190324, eval loss: 0.444933, acc: 0.791000.
+2018-05-22 22:42:47,704 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.120948, eval loss: 0.450185, acc: 0.792200.
+2018-05-22 22:43:05,171 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 0.092254, eval loss: 0.464288, acc: 0.799200.
+2018-05-22 22:43:06,490 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.020572, eval loss: 0.550979, acc: 0.792000.
+2018-05-22 22:43:07,776 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.013301, eval loss: 0.664701, acc: 0.779200.
+2018-05-22 22:43:09,068 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.005658, eval loss: 0.671531, acc: 0.779400.
+2018-05-22 22:43:10,341 - INFO - Intent Model Train - Epoch:  4, Step:      0, train loss: 0.004970, eval loss: 0.727694, acc: 0.776800.
+2018-05-22 22:43:11,650 - INFO - Intent Model Train - Epoch:  5, Step:      0, train loss: 0.002655, eval loss: 0.759019, acc: 0.776200.
+2018-05-22 22:43:12,971 - INFO - Intent Model Train - Epoch:  6, Step:      0, train loss: 0.002435, eval loss: 0.794600, acc: 0.773400.
+2018-05-22 22:43:14,325 - INFO - Intent Model Train - Epoch:  7, Step:      0, train loss: 0.001640, eval loss: 0.858287, acc: 0.771400.
+2018-05-22 22:43:15,730 - INFO - Intent Model Train - Epoch:  8, Step:      0, train loss: 0.001180, eval loss: 0.835526, acc: 0.774400.
+2018-05-22 22:43:17,119 - INFO - Intent Model Train - Epoch:  9, Step:      0, train loss: 0.002214, eval loss: 0.851504, acc: 0.774000.
+2018-05-22 22:43:37,862 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 0.703634, eval loss: 0.705103, acc: 0.480800.
+2018-05-22 22:43:39,277 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.397077, eval loss: 0.530514, acc: 0.724400.
+2018-05-22 22:43:40,591 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.158887, eval loss: 0.520933, acc: 0.753400.
+2018-05-22 22:43:41,854 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.121283, eval loss: 0.472738, acc: 0.791000.
+2018-05-22 22:43:43,126 - INFO - Intent Model Train - Epoch:  4, Step:      0, train loss: 0.049311, eval loss: 0.552021, acc: 0.778800.
+2018-05-22 22:43:44,436 - INFO - Intent Model Train - Epoch:  5, Step:      0, train loss: 0.012329, eval loss: 0.598566, acc: 0.777600.
+2018-05-22 22:43:45,723 - INFO - Intent Model Train - Epoch:  6, Step:      0, train loss: 0.008812, eval loss: 0.652064, acc: 0.771800.
+2018-05-22 22:43:47,320 - INFO - Intent Model Train - Epoch:  7, Step:      0, train loss: 0.006900, eval loss: 0.685295, acc: 0.771800.
+2018-05-22 22:43:48,728 - INFO - Intent Model Train - Epoch:  8, Step:      0, train loss: 0.006265, eval loss: 0.754632, acc: 0.763400.
+2018-05-22 22:43:50,063 - INFO - Intent Model Train - Epoch:  9, Step:      0, train loss: 0.005628, eval loss: 0.773246, acc: 0.763000.
+2018-05-22 22:44:42,008 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 1.340642, eval loss: 0.717531, acc: 0.492800.
+2018-05-22 22:44:48,017 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.586878, eval loss: 0.570196, acc: 0.694400.
+2018-05-22 22:44:53,519 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.186706, eval loss: 0.594604, acc: 0.723000.
+2018-05-22 22:44:59,037 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.015150, eval loss: 0.626425, acc: 0.748400.
+2018-05-22 22:45:04,415 - INFO - Intent Model Train - Epoch:  4, Step:      0, train loss: 0.002113, eval loss: 0.684314, acc: 0.758800.
+2018-05-22 22:45:09,795 - INFO - Intent Model Train - Epoch:  5, Step:      0, train loss: 0.000920, eval loss: 0.711083, acc: 0.759000.
+2018-05-22 22:45:15,177 - INFO - Intent Model Train - Epoch:  6, Step:      0, train loss: 0.000725, eval loss: 0.732606, acc: 0.757000.
+2018-05-22 22:45:20,596 - INFO - Intent Model Train - Epoch:  7, Step:      0, train loss: 0.000370, eval loss: 0.750975, acc: 0.756400.
+2018-05-22 22:45:26,632 - INFO - Intent Model Train - Epoch:  8, Step:      0, train loss: 0.000364, eval loss: 0.764090, acc: 0.756800.
+2018-05-22 22:45:32,569 - INFO - Intent Model Train - Epoch:  9, Step:      0, train loss: 0.000235, eval loss: 0.769084, acc: 0.759200.
+2018-05-22 23:22:31,196 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 1.049895, eval loss: 0.747919, acc: 0.480800.
+2018-05-22 23:22:37,085 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.361966, eval loss: 0.537353, acc: 0.720400.
+2018-05-22 23:22:42,572 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.078514, eval loss: 0.550863, acc: 0.746000.
+2018-05-22 23:22:48,733 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.023088, eval loss: 0.688152, acc: 0.747800.
+2018-05-22 23:22:55,059 - INFO - Intent Model Train - Epoch:  4, Step:      0, train loss: 0.001630, eval loss: 0.699393, acc: 0.763400.
+2018-05-22 23:23:00,930 - INFO - Intent Model Train - Epoch:  5, Step:      0, train loss: 0.001135, eval loss: 0.715236, acc: 0.768600.
+2018-05-22 23:23:07,312 - INFO - Intent Model Train - Epoch:  6, Step:      0, train loss: 0.001021, eval loss: 0.739715, acc: 0.765400.
+2018-05-22 23:23:13,092 - INFO - Intent Model Train - Epoch:  7, Step:      0, train loss: 0.000629, eval loss: 0.752125, acc: 0.766200.
+2018-05-22 23:23:18,676 - INFO - Intent Model Train - Epoch:  8, Step:      0, train loss: 0.000408, eval loss: 0.760426, acc: 0.769400.
+2018-05-22 23:23:24,134 - INFO - Intent Model Train - Epoch:  9, Step:      0, train loss: 0.000454, eval loss: 0.772850, acc: 0.768600.
+2018-05-22 23:28:38,511 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 0.701742, eval loss: 0.697977, acc: 0.496500.
+2018-05-22 23:28:40,518 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 0.436532, eval loss: 0.471845, acc: 0.774000.
+2018-05-22 23:28:41,019 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.357200, eval loss: 0.449944, acc: 0.793000.
+2018-05-22 23:28:43,000 - INFO - Intent Model Train - Epoch:  1, Step:    100, train loss: 0.283562, eval loss: 0.443734, acc: 0.795000.
+2018-05-22 23:28:43,505 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.230743, eval loss: 0.492066, acc: 0.778000.
+2018-05-22 23:28:45,469 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.183801, eval loss: 0.515173, acc: 0.787000.
+2018-05-22 23:28:45,968 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.080466, eval loss: 0.500031, acc: 0.795500.
+2018-05-22 23:28:47,960 - INFO - Intent Model Train - Epoch:  3, Step:    100, train loss: 0.042054, eval loss: 0.562850, acc: 0.790000.
+2018-05-22 23:28:48,468 - INFO - Intent Model Train - Epoch:  4, Step:      0, train loss: 0.030962, eval loss: 0.613864, acc: 0.781000.
+2018-05-22 23:28:50,513 - INFO - Intent Model Train - Epoch:  4, Step:    100, train loss: 0.028587, eval loss: 0.654639, acc: 0.781500.
+2018-05-22 23:28:51,022 - INFO - Intent Model Train - Epoch:  5, Step:      0, train loss: 0.018045, eval loss: 0.669250, acc: 0.775000.
+2018-05-22 23:28:53,145 - INFO - Intent Model Train - Epoch:  5, Step:    100, train loss: 0.013605, eval loss: 0.726185, acc: 0.769500.
+2018-05-22 23:28:53,682 - INFO - Intent Model Train - Epoch:  6, Step:      0, train loss: 0.007002, eval loss: 0.744817, acc: 0.775000.
+2018-05-22 23:28:55,749 - INFO - Intent Model Train - Epoch:  6, Step:    100, train loss: 0.006119, eval loss: 0.779962, acc: 0.770500.
+2018-05-22 23:28:56,298 - INFO - Intent Model Train - Epoch:  7, Step:      0, train loss: 0.004519, eval loss: 0.801384, acc: 0.767500.
+2018-05-22 23:28:58,325 - INFO - Intent Model Train - Epoch:  7, Step:    100, train loss: 0.003436, eval loss: 0.818031, acc: 0.770000.
+2018-05-22 23:28:58,837 - INFO - Intent Model Train - Epoch:  8, Step:      0, train loss: 0.003817, eval loss: 0.837294, acc: 0.768500.
+2018-05-22 23:29:00,902 - INFO - Intent Model Train - Epoch:  8, Step:    100, train loss: 0.003820, eval loss: 0.830145, acc: 0.769000.
+2018-05-22 23:29:01,430 - INFO - Intent Model Train - Epoch:  9, Step:      0, train loss: 0.003770, eval loss: 0.900073, acc: 0.766000.
+2018-05-22 23:29:03,487 - INFO - Intent Model Train - Epoch:  9, Step:    100, train loss: 0.002510, eval loss: 0.923279, acc: 0.768500.

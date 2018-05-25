@@ -2,6 +2,8 @@
 # @Time    : 18-5-21 上午11:46
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
+import numpy as np
+
 from chatbot.cparse.constant import *
 from chatbot.utils.log import get_logger
 from chatbot.cparse.base import Dictionary
@@ -39,7 +41,6 @@ class Vocabulary(Dictionary):
 
 
 def get_embedding_matrix(model, dictionary):
-    import numpy as np
     matrix = []
     miss_match = 0
     idx2word_sorted = sorted(dictionary.word2idx.items(),

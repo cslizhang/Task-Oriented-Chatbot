@@ -18,29 +18,41 @@
 
 + [Zichao Yang, Diyi Yang , Chris Dyer , Xiaodong He , Alex Smola , Eduard Hovy, Hierarchical Attention Networks for Document Classification, 2016](http://www.aclweb.org/anthology/N16-1174)
 
-论文解读：Attention
+论文解读：Attention+RNN
+
++ [Jiachen Du, Lin Gui , Ruifeng Xu , Yulan He, A Convolutional Attention Model for Text Classification, 2017](http://tcci.ccf.org.cn/conference/2017/papers/1057.pdf)
+
+论文解读：Attention+CNN
 
 + [Siwei Lai, Liheng Xu, Kang Liu, Jun Zhao, Recurrent Convolutional Neural Networks for Text Classification, 2015](http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/download/9745/9552)
 
 论文解读：textRCNN
 
+
+
+Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks
+
 ## Blog
 
+## 性能对比
 
+数据集：[亚马逊评论数据](https://gist.github.com/kunalj101/ad1d9c58d338e20d09ff26bcc06c4235)，样本数10000，训练集5000， 测试集5000，评价指标：accuracy。
 
-### reference
+| 模型           | Count Vectors | Word-TF-IDF | N-Gram Vectors | Char-Vectors | Word2Vec    |
+| -------------- | ------------- | ----------- | -------------- | ------------ | ----------- |
+| 贝叶斯         | 0.7004        | 0.7024      | 0.5344         | 0.6872       |             |
+| LR             | 0.7048        | 0.7056      | 0.4896         | 0.7012       |             |
+| SVM            |               |             | 0.5296         |              |             |
+| 随机森林       | 0.6972        | 0.6972      |                |              |             |
+| xgboost        | 0.6324        | 0.6364      |                | 0.6548       |             |
+| ***FastText*** |               |             |                |              | ***0.791*** |
+| ***TextCNN***  |               |             |                |              | ***0.769*** |
 
-[A Convolutional Neural Network for Modelling Sentences](https://arxiv.org/pdf/1404.2188.pdf)
+数据集：京东对话数据，样本数20000，训练集13000，测试集7000，评价指标accuracy。
 
-[Paper-attention-layer](https://arxiv.org/pdf/1409.0473v7.pdf)
-
-[Paper-practical-bayesian-optimization-of-machine-learning-algorithms](http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf)
-
-[Blog-deeplearning-nlp-best-practices](http://ruder.io/deep-learning-nlp-best-practices/index.html)
-
-[Blog-贝叶斯优化调参之Hyperopt](https://blog.csdn.net/gdh756462786/article/details/79268685)
-
-[知乎-CNN文本分类](https://zhuanlan.zhihu.com/p/28087321)
-
-[知乎-CNN RNN Attention文本分类](https://zhuanlan.zhihu.com/p/25928551)
+| 模型           | Word2vec | Word-TF-IDF |
+| -------------- | -------- | ----------- |
+| ***FastText*** | 0.987    |             |
+| ***TextCNN***  | 0.983    |             |
+| SVM            |          | 0.945       |
 
