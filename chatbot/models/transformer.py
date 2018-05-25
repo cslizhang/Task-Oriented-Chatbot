@@ -6,6 +6,7 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
+
 import gensim
 import numpy as np
 
@@ -81,5 +82,3 @@ class Word2vecExt(object):
                 return None
         else:
             raise ValueError
-
-

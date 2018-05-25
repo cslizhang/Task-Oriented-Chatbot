@@ -990,3 +990,5 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-05-22 23:29:00,902 - INFO - Intent Model Train - Epoch:  8, Step:    100, train loss: 0.003820, eval loss: 0.830145, acc: 0.769000.
 2018-05-22 23:29:01,430 - INFO - Intent Model Train - Epoch:  9, Step:      0, train loss: 0.003770, eval loss: 0.900073, acc: 0.766000.
 2018-05-22 23:29:03,487 - INFO - Intent Model Train - Epoch:  9, Step:    100, train loss: 0.002510, eval loss: 0.923279, acc: 0.768500.
+2018-05-25 14:09:19,261 - INFO - Time Counter - load running 0.05 min
+2018-05-25 14:18:56,096 - INFO - Time Counter - load running 0.06 min
