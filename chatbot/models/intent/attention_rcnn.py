@@ -45,10 +45,6 @@ class CRAN(nn.Module):
         # lstm_out (batch, sentence, encode_dim)
 
 
-
-
-
-
 if __name__ == "__main__":
     param = {
         "vocab_size": 1000,

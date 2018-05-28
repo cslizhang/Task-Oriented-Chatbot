@@ -55,7 +55,6 @@ class LSTMAttention(nn.Module):
         return weights
 
 
-
 if __name__ == "__main__":
     param = {
         "vocab_size": 1000,

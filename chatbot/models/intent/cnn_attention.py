@@ -26,8 +26,6 @@ class SelfAttention(nn.Module):
         weights = torch.mul(x, score.unsqueeze(-1).expand_as(x))
 
 
-
-
 class CNNAttention(nn.Module):
     def __init__(self, args):
         super().__init__()
