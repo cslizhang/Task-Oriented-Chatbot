@@ -75,6 +75,7 @@ def evaluate(model, test_x, test_y):
     loss = F.cross_entropy(logit, test_y)
     pred = torch.argmax(logit, 1).detach().numpy()
     acc = accuracy_score(test_y, pred)
+    model.train()
     return loss, acc
 
 
