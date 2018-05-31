@@ -1319,3 +1319,57 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-05-27 14:08:46,703 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.075032, eval loss: 0.477404, acc: 0.793000.
 2018-05-27 14:08:50,581 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.040524, eval loss: 0.551948, acc: 0.798500.
 2018-05-27 14:08:54,367 - INFO - Intent Model Train - Epoch:  2, Step:    200, train loss: 0.061095, eval loss: 0.599382, acc: 0.810000.
+2018-05-31 15:45:42,926 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:45:42,926 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:45:42,926 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:47:11,455 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:47:11,455 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:47:11,455 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:47:11,455 - INFO - Bot - add session sid: test1_terminal
+2018-05-31 15:50:41,868 - INFO - Bot - add session sid: 周知瑞_terminal
+2018-05-31 15:50:41,868 - INFO - Bot - add session sid: 周知瑞_terminal
+2018-05-31 15:50:41,868 - INFO - Bot - add session sid: 周知瑞_terminal
+2018-05-31 15:50:41,868 - INFO - Bot - add session sid: 周知瑞_terminal
+2018-05-31 15:50:41,868 - INFO - Bot - add session sid: 周知瑞_terminal
+2018-05-31 15:50:48,391 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:50:48,391 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:50:48,391 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:50:48,391 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:50:48,391 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:50:58,739 - INFO - Bot - add session sid: 林静_terminal
+2018-05-31 15:50:58,739 - INFO - Bot - add session sid: 林静_terminal
+2018-05-31 15:50:58,739 - INFO - Bot - add session sid: 林静_terminal
+2018-05-31 15:50:58,739 - INFO - Bot - add session sid: 林静_terminal
+2018-05-31 15:50:58,739 - INFO - Bot - add session sid: 林静_terminal
+2018-05-31 15:51:08,460 - INFO - Bot - update session sid: 林静_terminal
+2018-05-31 15:51:08,460 - INFO - Bot - update session sid: 林静_terminal
+2018-05-31 15:51:08,460 - INFO - Bot - update session sid: 林静_terminal
+2018-05-31 15:51:08,460 - INFO - Bot - update session sid: 林静_terminal
+2018-05-31 15:51:08,460 - INFO - Bot - update session sid: 林静_terminal
+2018-05-31 15:51:24,172 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:51:24,172 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:51:24,172 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:51:24,172 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:51:24,172 - INFO - Bot - update session sid: 周知瑞_terminal
+2018-05-31 15:53:00,030 - INFO - Bot - add session sid: 周_terminal
+2018-05-31 15:53:00,031 - INFO - Bot - {'周_terminal': {'current_text': '哈哈', 'history_text': [], 'user_name': '周', 'last_query_time': 1527753180.0308273}}
+2018-05-31 15:53:09,238 - INFO - Bot - update session sid: 周_terminal
+2018-05-31 15:53:09,238 - INFO - Bot - {'周_terminal': {'current_text': '呵呵', 'history_text': ['呵呵'], 'user_name': '周', 'last_query_time': 1527753189.2382193}}
+2018-05-31 15:54:31,870 - INFO - Bot - add session sid: 654654_terminal
+2018-05-31 15:54:31,871 - INFO - Bot - {'周_terminal': {'current_text': '呵呵', 'history_text': ['呵呵'], 'user_name': '周', 'last_query_time': 1527753189.2382193}, '654654_terminal': {'current_text': '45646', 'history_text': [], 'user_name': '654654', 'last_query_time': 1527753271.8706017}}
+2018-05-31 15:55:32,616 - INFO - Bot - add session sid: 周_terminal
+2018-05-31 15:55:32,617 - INFO - Bot - {'周_terminal': {'current_text': 'hehe', 'history_text': ['hehe'], 'user_name': '周', 'last_query_time': 1527753332.6169488}}
+2018-05-31 15:55:43,070 - INFO - Bot - timeout remove sid: 周_terminal
+2018-05-31 15:55:50,257 - INFO - Bot - add session sid: 周_terminal
+2018-05-31 15:55:50,257 - INFO - Bot - {'周_terminal': {'current_text': '呵呵', 'history_text': ['呵呵'], 'user_name': '周', 'last_query_time': 1527753350.2570753}}
+2018-05-31 15:55:59,288 - INFO - Bot - update session sid: 周_terminal
+2018-05-31 15:55:59,288 - INFO - Bot - {'周_terminal': {'current_text': '哈哈', 'history_text': ['呵呵', '哈哈'], 'user_name': '周', 'last_query_time': 1527753359.2882423}}
+2018-05-31 15:56:05,694 - INFO - Bot - add session sid: 林静_terminal
+2018-05-31 15:56:05,694 - INFO - Bot - {'周_terminal': {'current_text': '哈哈', 'history_text': ['呵呵', '哈哈'], 'user_name': '周', 'last_query_time': 1527753359.2882423}, '林静_terminal': {'current_text': '哈哈', 'history_text': ['哈哈'], 'user_name': '林静', 'last_query_time': 1527753365.6943545}}
+2018-05-31 15:56:10,076 - INFO - Bot - update session sid: 周_terminal
+2018-05-31 15:56:10,076 - INFO - Bot - {'周_terminal': {'current_text': '哦哦', 'history_text': ['呵呵', '哈哈', '哦哦'], 'user_name': '周', 'last_query_time': 1527753370.076644}, '林静_terminal': {'current_text': '哈哈', 'history_text': ['哈哈'], 'user_name': '林静', 'last_query_time': 1527753365.6943545}}
+2018-05-31 15:56:16,084 - INFO - Bot - timeout remove sid: 林静_terminal
+2018-05-31 15:56:20,087 - INFO - Bot - timeout remove sid: 周_terminal
+2018-05-31 15:56:21,702 - INFO - Bot - add session sid: 周_terminal
+2018-05-31 15:56:21,703 - INFO - Bot - {'周_terminal': {'current_text': '哈哈', 'history_text': ['哈哈'], 'user_name': '周', 'last_query_time': 1527753381.7025096}}
+2018-05-31 15:56:32,092 - INFO - Bot - timeout remove sid: 周_terminal
