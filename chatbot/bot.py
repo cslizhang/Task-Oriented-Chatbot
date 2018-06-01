@@ -106,5 +106,5 @@ class Bot(object):
 if __name__ == "__main__":
     query_1 = {"user_name": "test1", "text": "哈哈哈", "access_type": "terminal"}
     query_2 = {"user_name": "test2", "text": "哈哈哈", "access_type": "terminal"}
-    bot = Bot(timeout=10 , timeout_check_freq=1)
+    bot = Bot(timeout=10, timeout_check_freq=1)
     bot.chat()
