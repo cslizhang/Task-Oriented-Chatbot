@@ -13,7 +13,7 @@ class User(object):
         :param jurisdiction: <Not defined now>
         """
         self.name = name
-        self.jurisdiction = jurisdiction
+        self.jurisdiction =jurisdiction if isinstance(jurisdiction, list) else list()
 
     def __str__(self):
         return "Class User <name: {}>, <jurisdiction>: {}>".format(
@@ -23,3 +23,7 @@ class User(object):
 
     def __repr__(self):
         return self.__str__()
+
+
+if __name__ == "__main__":
+    u = User(name="test")

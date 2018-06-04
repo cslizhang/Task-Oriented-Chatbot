@@ -26,19 +26,21 @@ class Context(object):
         update (msg): 根据最新的请求或回复更新上下文
         is_timeout: 判断是否超时，超时会话上下文将被删除
     """
-    def __init__(self, query):
+    def __init__(self, msg):
         """
 
-        :param query: <class Query>
+        :param inputs: <dict>
         """
-        self.user = User(query.user_name, query.jurisdiction)
-        self.interface = query.interface
-        self.start_time = query.time
-        self.last_time = query.time
+        self.user = msg.user
+        self.interface = msg.interface
+        self.start_time = msg.time
+        self.last_time = msg.time
         self.history_query = []
         self.history_response = []
-        self.current_query = query
-        self.context_id = str(hash(str(self.user) + self.interface + query.strtime))
+        self.current_query = None
+        self.current_response = None
+        self.update(msg)
+        self.context_id = str(hash(str(self.user) + self.interface + str(self.start_time.time)))
 
     def update(self, msg):
         """根据最新的Message更新上下文
@@ -60,6 +62,7 @@ class Context(object):
 
     def _update_from_response(self, resp):
         self.history_response.append(resp)
+        self.current_response = resp
 
     @property
     def is_timeout(self):
@@ -71,3 +74,24 @@ class Context(object):
             return True
         else:
             return False
+
+
+if __name__ == "__main__":
+    test_inputs1 = {
+        "text": "测试提问",
+        "user": "周知瑞",
+        "interface": "Web",
+        "jurisdiction": None,
+    }
+
+    test_inputs2= {
+        "text": "测试",
+        "user": "bot",
+        "interface": "Web",
+        "jurisdiction": None,
+    }
+    from chatbot.core.message import Query, Response
+    q = Query(test_inputs1)
+    r = Response(test_inputs2)
+    c = Context(q)
+    c.update(r)

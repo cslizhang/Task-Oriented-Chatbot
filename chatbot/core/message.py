@@ -3,32 +3,28 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 import datetime as dt
+from chatbot.core.user import User
 
 
 class BaseMessage(object):
-    def __init__(self, text, user_name, interface):
+    def __init__(self, inputs):
         """消息初始化
 
-        :param text: <String>
-        :param user_name: <String>
-        :param interface: <String>
+        :param inputs: <dict>
         """
-        self.user_name = user_name
-        self.text = text
-        self.interface = interface
+        self.text = inputs["text"]
+        self.user = User(inputs["user"], inputs["jurisdiction"])
+        self.interface = inputs["interface"]
         self.time = dt.datetime.now()
-        self.strtime = self.time.strftime("%Y-%m-%d %H:%M:%S")
 
     @property
     def type(self):
         raise NotImplementedError
 
     def __str__(self):
-        return "A {} Message <user: {}> <time: {}> <interface: {}> <text: {}>".format(
+        return "A {} Message <time: {}> <text: {}>".format(
             self.type,
-            self.user_name,
-            self.time,
-            self.interface,
+            str(self.time),
             self.text
         )
 
@@ -41,8 +37,8 @@ class BaseMessage(object):
 
 
 class Response(BaseMessage):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     @property
     def type(self):
@@ -50,13 +46,19 @@ class Response(BaseMessage):
 
 
 class Query(BaseMessage):
-    def __init__(self, jurisdiction=None, **kwargs):
-        super().__init__(**kwargs)
-        self.jurisdiction = jurisdiction
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     @property
     def type(self):
         return "Query"
 
 
-
+if __name__ == "__main__":
+    test_inputs1 = {
+        "text": "测试",
+        "user": "周知瑞",
+        "interface": "Web",
+        "jurisdiction": None,
+    }
+    query = Query(test_inputs1)
