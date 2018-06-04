@@ -2,7 +2,7 @@
 # @Time    : 18-6-2 下午2:00
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
-from chatbot.core import BaseResponse, BaseAction
+from chatbot.core.action import BaseAction
 
 
 class IntentCorpusCollect(BaseAction):

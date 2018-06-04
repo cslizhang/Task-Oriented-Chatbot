@@ -10,6 +10,22 @@ from chatbot.config.constant import TIMEOUT
 
 
 class Context(object):
+    """会话上下文，存储一个用户的本轮会话所有信息，本质上是DST(dialog state track)。
+
+    Attributes:
+        user <class User>: 用户
+        interface <String>: 用户接入的终端，在Query中会指定
+        start_time <class datetime.datetime>: 会话开始时间
+        last_time <class datetime.datetime>: 该会话用户最后一次请求时间
+        history_query <List of class Query>: 该会话历史用户请求，按时间顺序排列
+        history_response <List of class Response>: 该会话历史回复，按时间顺序排列
+        history_intent <List of class Intent>: 该会话历史意图，按时间顺序排列
+        unfinished_action <>: sdf
+        context_id <String>: 该会话上下文id
+    Methods:
+        update (msg): 根据最新的请求或回复更新上下文
+        is_timeout: 判断是否超时，超时会话上下文将被删除
+    """
     def __init__(self, query):
         """
 

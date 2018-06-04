@@ -9,10 +9,9 @@ class BaseMessage(object):
     def __init__(self, text, user_name, interface):
         """消息初始化
 
-
         :param text: <String>
         :param user_name: <String>
-        :param terminal: <String>
+        :param interface: <String>
         """
         self.user_name = user_name
         self.text = text

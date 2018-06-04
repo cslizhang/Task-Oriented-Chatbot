@@ -2,20 +2,18 @@
 # @Time    : 18-6-2 下午12:06
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
-def insert(text, name):
+import re
+import copy
+
+def insert(text, intent, name):
     path = "/home/zhouzr/project/Task-Oriented-Chatbot/corpus/intent_corpus.txt"
-    text = text.replace("\u2005", " ")
-    text = text.replace("  ", " ")
-    print(text.split(" "))
-    t = text.split(" ")
-    flag = False
-    if len(t) == 3:
-        with open(path, 'a') as f:
-            s = " ".join([name, t[1], t[2], "\n"])
-            print(s)
-            f.write(s)
-            flag = True
-    return flag
+    with open(path, 'a') as f:
+        s = " ".join([name, intent, text, "\n"])
+        f.write(s)
+
+
+ALL_INTENT = ["打招呼","再见","肯定","否定","批评","表扬","感谢",
+              "文件检索","用电查询", "留言","业务咨询","公司咨询"]
 
 
 if __name__ == "__main__":
@@ -47,39 +45,54 @@ if __name__ == "__main__":
     bot = Bot()
     my_friend = bot.friends()
     my_groups = bot.groups()
-
-
-    @bot.register(my_friend)
-    def reply_my_friend(msg):
-    #     print(type(msg.text))
-    #     return '正在测试chatbot\n输入文本:{}\n输入类型:{}\n对话id:{}\n昵称:{}'.format(
-    #         msg.text,
-    #         msg.type,
-    #         msg.id,
-    #         msg.sender.remark_name,
-
-    #     )
-        pass
-
+    print(my_groups)
 
     @bot.register(my_groups)
     def reply_my_group(msg):
-        if msg.is_at:
-            if "今天" in msg.text:
-                return """你好，chatbot需要你的帮助，优化意图识别模型\n
-                目前支持需要完善的意图有：公司咨询（地址联系方式等）、业务咨询（产品、业务范围）、数据查询（用电数据）、文件检索（政策文件）。\n
-                例子：\n
-                @周知瑞 公司咨询 你们公司地址在哪？\n
-                @周知瑞 业务咨询 你们有什么服务\n
-                @周知瑞 数据查询 上个星期3到星期2，来福士空调用了多少电？\n
-                @周知瑞 文件检索 最近一个月四川能监办，跨省跨区文件\n
-                """
-
-            elif insert(msg.text, msg.member.name):
+        text = copy.deepcopy(msg.text)
+        if text.startswith("小益"):
+            text = re.sub("^小益[,.!！，。？ ]{0,3}", "", text)
+            if text == "任务":
+                return "今日需求意图样本：文件检索，用电查询，公司咨询，业务咨询\n\n" \
+                       "如有疑问，请输入：<小益，对应类别名称>进行询问\n\n" \
+                       "添加对应类别样本，输入格式如下：\n\n<小益+空格+类别名称+空格+模拟句子>\n"
+            elif text == "提示":
+                return "目前，意图类别有：\n" \
+                       "文件检索、用电查询、留言、业务咨询、公司咨询、打招呼、再见、肯定、否定、批评、表扬、感谢\n" \
+                       "添加对应类别样本，输入格式如下：<小益+空格+类别名称+空格+模拟句子>\n"\
+                        "模拟句子里请不要包含空格哦\n"\
+                       "如有疑问，请输入：<小益，对应类别名称>进行询问"
+            elif text == "文件检索":
+                return "文件检索，指客户购售电、需求侧管理等相关电力文件的检索\n" \
+                       "例子1：<小益 文件检索 今年四川的政策文件>\n" \
+                       "例子2：<小益 文件检索 清洁能源>\n" \
+                       "例子3：<小益 文件检索 跨省跨区、水电>\n"
+            elif text == "用电查询":
+                return "用电查询，指客户对自身项目用电情况的查询（一期只支持电量查询）\n" \
+                       "例子1：<小益 用电查询 5月3号到今天来福士用电情况>\n" \
+                       "例子2：<小益 用电查询 昨天用了多少电>\n" \
+                       "例子3：<小益 用电查询 上周二到本周商场空调用电>\n"
+            elif text == "公司咨询":
+                return "公司咨询,指客户对万益或华宇，办公地点、联系方式、邮箱的咨询\n" \
+                       "例子1：<小益 公司咨询 怎么联系你们？>\n" \
+                       "例子2：<小益 公司咨询 你们在哪办公>"
+            elif text == "业务咨询":
+                return "业务咨询,指客户对万益或华宇的产品或服务咨询\n" \
+                       "例子1：<小益 公司咨询 你们卖什么？>\n" \
+                       "例子2：<小益 公司咨询 提供什么服务？>"
+            elif text in ["打招呼","再见","肯定","否定","批评","表扬","感谢", "留言"]:
+                return "当前意图暂不需要，请输入<小益，任务>查看最新需求"
+            elif (len(text.split(" ")) == 2) and (text.split(" ")[0] in ALL_INTENT):
+                insert(text.split(" ")[0], "".join(text.split(" ")[1:]), msg.member.name)
                 return "谢谢{},成功添加一条意图识别样本".format(msg.member.name)
-
             else:
-                text = " ".join(msg.text.replace("\u2005", " ").split(" ")[1:])
-                return tuling(text)
+                try:
+                    tu = tuling(text)
+                    return tu + "\n\n" + "闲聊固然有趣，但小益更希望你能帮我哦，请输入<小益，任务>进行查看"
+                except:
+                    return "小益今天聊不动拉。。小益更希望你能帮我哦，请输入<小益，任务>进行查看"
+
+        else:
+            pass
 
     bot.join()

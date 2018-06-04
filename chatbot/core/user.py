@@ -9,7 +9,8 @@ class User(object):
         """
 
         :param name: <String>
-        :param jurisdiction: <List or None>
+        # TODO
+        :param jurisdiction: <Not defined now>
         """
         self.name = name
         self.jurisdiction = jurisdiction
