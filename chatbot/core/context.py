@@ -4,65 +4,27 @@
 # @Mail    : evilpsycho42@gmail.com
 import datetime as dt
 
-from chatbot.core.user import User
-from chatbot.core.message import Query, Response
 from chatbot.config.constant import TIMEOUT
 
 
-class Context(object):
-    """会话上下文，存储一个用户的本轮会话所有信息，本质上是DST(dialog state track)。
-
-    Attributes:
-        user <class User>: 用户
-        interface <String>: 用户接入的终端，在Query中会指定
-        start_time <class datetime.datetime>: 会话开始时间
-        last_time <class datetime.datetime>: 该会话用户最后一次请求时间
-        history_query <List of class Query>: 该会话历史用户请求，按时间顺序排列
-        history_response <List of class Response>: 该会话历史回复，按时间顺序排列
-        history_intent <List of class Intent>: 该会话历史意图，按时间顺序排列
-        unfinished_action <>: sdf
-        context_id <String>: 该会话上下文id
-    Methods:
-        update (msg): 根据最新的请求或回复更新上下文
-        is_timeout: 判断是否超时，超时会话上下文将被删除
-    """
-    def __init__(self, msg):
-        """
-
-        :param inputs: <dict>
-        """
-        self.user = msg.user
-        self.interface = msg.interface
-        self.start_time = msg.time
-        self.last_time = msg.time
-        self.history_query = []
-        self.history_response = []
-        self.current_query = None
-        self.current_response = None
-        self.update(msg)
-        self.context_id = str(hash(str(self.user) + self.interface + str(self.start_time.time)))
-
-    def update(self, msg):
-        """根据最新的Message更新上下文
-
-        :param msg:  <class Query, Response>
-        :return: self
-        """
-        if isinstance(msg, Query):
-            self._update_from_query(msg)
-        elif isinstance(msg, Response):
-            self._update_from_response(msg)
-        else:
-            raise ValueError
-        return self
-
-    def _update_from_query(self, query):
-        self.history_query.append(query)
-        self.current_query = query
-
-    def _update_from_response(self, resp):
-        self.history_response.append(resp)
-        self.current_response = resp
+class Context(dict):
+    def __init__(self, user, app, skill2slot, context_id, right=None, timeout=TIMEOUT):
+        self._timeout = TIMEOUT
+        now = dt.datetime.now()
+        super().__init__(
+            user=user,
+            app=app,
+            right=right if right else [],
+            history_query=[],
+            history_resp=[],
+            history_intent=[],
+            current_query=None,
+            current_query_cut=None,
+            current_intent=None,
+            slots=skill2slot,
+            last_query_time=now,
+            context_id=context_id
+        )
 
     @property
     def is_timeout(self):
@@ -70,28 +32,12 @@ class Context(object):
 
         如果超时，上下文将被从DM中删除
         """
-        if (dt.datetime.now() - self.last_time).seconds > TIMEOUT:
+        if (dt.datetime.now() - self["last_query_time"]).seconds > self._timeout:
             return True
         else:
             return False
 
 
 if __name__ == "__main__":
-    test_inputs1 = {
-        "text": "测试提问",
-        "user": "周知瑞",
-        "interface": "Web",
-        "jurisdiction": None,
-    }
+    c = Context(user="zhouzr", app="web2.0", skill2slot=dict(), context_id="sad")
 
-    test_inputs2= {
-        "text": "测试",
-        "user": "bot",
-        "interface": "Web",
-        "jurisdiction": None,
-    }
-    from chatbot.core.message import Query, Response
-    q = Query(test_inputs1)
-    r = Response(test_inputs2)
-    c = Context(q)
-    c.update(r)

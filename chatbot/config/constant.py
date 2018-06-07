@@ -13,3 +13,6 @@ TULING_URL = "http://www.tuling123.com/openapi/api"
 TULING_KEY = "7e3bf5d6d06143e39c898672592d63ad"
 TULING_USERID = "TUNING"
 TULING_LOC = "成都"
+
+# init_context
+INIT_CONTEXT = dict()

@@ -4,5 +4,15 @@
 # @Mail    : evilpsycho42@gmail.com
 
 
-class Skill(object):
-    pass
+class BaseSkill(object):
+    def __init__(self):
+        pass
+
+    def __call__(self, *args, **kwargs):
+        raise NotImplementedError
+
+    def _check_satisfied(self, *args, **kwargs):
+        raise NotImplementedError
+
+    def _act(self, *args, **kwargs):
+        raise NotImplementedError
