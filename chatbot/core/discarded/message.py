@@ -3,7 +3,7 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 import datetime as dt
-from chatbot.core.user import User
+from chatbot.core.discarded.user import User
 
 
 class BaseMessage(object):

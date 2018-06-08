@@ -9,7 +9,7 @@ from chatbot.config.constant import TIMEOUT
 
 class Context(dict):
     def __init__(self, user, app, skill2slot, context_id, right=None, timeout=TIMEOUT):
-        self._timeout = TIMEOUT
+        self._timeout = timeout
         now = dt.datetime.now()
         super().__init__(
             user=user,
@@ -18,9 +18,10 @@ class Context(dict):
             history_query=[],
             history_resp=[],
             history_intent=[],
-            current_query=None,
-            current_query_cut=None,
-            current_intent=None,
+            query=None,
+            query_cut=None,
+            intent=None,
+            entities=None,
             slots=skill2slot,
             last_query_time=now,
             context_id=context_id
@@ -40,4 +41,3 @@ class Context(dict):
 
 if __name__ == "__main__":
     c = Context(user="zhouzr", app="web2.0", skill2slot=dict(), context_id="sad")
-

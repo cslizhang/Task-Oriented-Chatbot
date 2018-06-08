@@ -3,10 +3,10 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 import datetime as dt
-from sklearn.externals.joblib import dump, load
+from sklearn.externals.joblib import load
 import pandas as pd
 
-from chatbot.core.skill import BaseSkill
+from chatbot.core.discarded.base_skill import BaseSkill
 
 
 class FileRetrieval(BaseSkill):
@@ -27,7 +27,7 @@ class FileRetrieval(BaseSkill):
         now = dt.datetime.now().date()
         return {
             "location":
-                {"province": None},
+                {"province": None, "city": None},
             "time_interval":
                 {
                     "start": str(now.replace(year=now.year-1)),
@@ -38,34 +38,40 @@ class FileRetrieval(BaseSkill):
     def __call__(self, context):
         """ 如果满足调用条件，返回回复，否则，返回对应的问题
 
-        :param args:
-        :param kwargs:
+        :param context:
         :return:
         """
         is_satisfied, question = self._check_satisfied(context)
         if is_satisfied:
-            return self._act(context, self._k)
+            return self._act(context)
         else:
             return question
+
+    def check_update_slots(self, entities):
+        for k, v in entities.items():
+            if k in self.init_slots.keys():
+                return True
+        return False
 
     def _check_satisfied(self, context):
         return True, None
 
-    def _act(self, context, k):
+    def _act(self, context):
         q_tfidf = self._tfidf.transform([context["text_cut"]]).toarray()
-        search_result = self._ci.search(q_tfidf, k=k)[0]
+        search_result = self._ci.search(q_tfidf, k=self._k)[0]
         slot = context["slots"][self.name]
         if len(search_result) == 0:
             return self._not_find
         result = []
-        idx_time_limit = self._file[(self._file.date>=slot["time_interval"]["start"]) & \
-                               (self._file.date<=slot["time_interval"]["end"])].index.tolist()
+        idx_time_limit = self._file[(self._file.date >= slot["time_interval"]["start"]) & \
+                               (self._file.date <= slot["time_interval"]["end"])].index.tolist()
         idx_location_limit = self._file.index.tolist() if slot["location"]["province"] is None \
             else self._file[(self._file.area==slot["location"]["province"])].index.tolist()
-        idx_limit = set(idx_location_limit) or set(idx_time_limit)
+        idx_limit = set(idx_location_limit) & set(idx_time_limit)
         for (d, i) in search_result:
-            if (d<=self._limit_distance) and (i in idx_limit):
+            if (d <= self._limit_distance) and (i in idx_limit):
                 result.append(self._response_template(province=self._file.loc[i, "area"],
+                                                      time=self._file.loc[i, "date"].date(),
                                                       name=self._file.loc[i, "name"],
                                                       url=self._file.loc[i, "url"],
                                                       distance=d
@@ -80,8 +86,9 @@ class FileRetrieval(BaseSkill):
             return head + "\n".join(result)
 
     @staticmethod
-    def _response_template(province, name, url, distance):
-        return "{}：{}，{}，相似度:{:.1f}%".format(province, name, url, (1-distance)*100)
+    def _response_template(province, time, name, url, distance):
+        return "{} {}：{}，{}，相似度:{:.1f}%".format(province, time, name,
+                                             url, (1-distance)*100)
 
     @staticmethod
     def _response_head(location=None, startdate=None, enddate=None):
@@ -102,8 +109,10 @@ if __name__ == "__main__":
 
     from chatbot.preprocessing.text import cut
 
-    context = {"text_cut": " ".join(cut("直购电")),
+    context = {"text_cut": " ".join(cut("")),
      "slots":{"file_retrieval":
                   skill.init_slots
               }}
+    context["slots"]["file_retrieval"]["time_interval"]["end"]="2018-02-02"
+    context["slots"]["file_retrieval"]["time_interval"]["start"] = "2017-01-02"
     print(skill(context))

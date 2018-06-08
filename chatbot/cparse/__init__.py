@@ -4,3 +4,5 @@
 # @Mail    : evilpsycho42@gmail.com
 
 # corpus parse
+from chatbot.cparse.vocabulary import Vocabulary
+from chatbot.cparse.label import Label

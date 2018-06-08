@@ -6,38 +6,48 @@ import numpy as np
 
 from chatbot.cparse.constant import *
 from chatbot.utils.log import get_logger
-from chatbot.cparse.base import Dictionary
-
-
+from chatbot.cparse.dictionary import Dictionary
 logger = get_logger(__name__)
 
 
 class Vocabulary(Dictionary):
     def __init__(self):
-        super().__init__()
+        super(Vocabulary, self).__init__()
         self.word2idx = {PAD: PAD_IDX, UNK: UNK_IDX}
-        self.idx = len(ALL_CONSTANT)
+        self.idx2word = {v: k for k, v in self.word2idx.items()}
+        self.idx = len(self.word2idx)
 
     def transform(self, x, max_length=None):
+        """文本转换成id
 
-        if isinstance(x, str):
-            return self.word2idx.get(x, UNK_IDX)
-        elif isinstance(x, list) and isinstance(x[0], str):
-            ri = [self.word2idx.get(w, UNK_IDX) for w in x]
+        :param x: <list of string> 以空格作为分割符号的句子组成的列表
+        :param max_length: 固定返回的每个句子固定长度
+        :return: <list of list> 最小元素为单词的idx
+        """
+        rst = []
+        for sentence in x:
+            s_cut = sentence.split(" ")
+            rst_s = [self.word2idx.get(word, UNK_IDX) for word in s_cut]
             if max_length is not None:
-                ri = ri[:max_length]
-                ri = [PAD_IDX] * (max_length - len(ri)) + ri
-            result = [ri]
-            return result
-        else:
-            result = []
-            for s in x:
-                ri = [self.word2idx.get(w, UNK_IDX) for w in s]
-                if max_length is not None:
-                    ri = ri[:max_length]
-                    ri = [PAD_IDX] * (max_length - len(ri)) + ri
-                result.append(ri)
-            return result
+                rst_s = rst_s[:max_length]
+                rst_s = [PAD_IDX] * (max_length - len(rst_s)) + rst_s
+            rst.append(rst_s)
+        return rst
+
+    def reverse(self, x):
+        """
+
+        :param x: <list of list>
+        :return:
+        """
+        rst = []
+        for sentence in x:
+            rst_i = []
+            for idx in sentence:
+                rst_i.append(self.idx2word.get(idx, UNK_IDX))
+            rst_i = " ".join(rst_i)
+            rst.append(rst_i)
+        return rst
 
 
 def get_embedding_matrix(model, dictionary):
@@ -58,17 +68,23 @@ def get_embedding_matrix(model, dictionary):
                 miss_match += 1
         matrix.append(i)
     matrix = np.stack(matrix, 0)
-    logger.info("Get {}X{} embed_matrix, {:.2f}% use pre-train word2vec".format(
-        matrix.shape[0], matrix.shape[1], miss_match / matrix.shape[0] * 100
-    ))
+    # logger.info("Get {}X{} embed_matrix, {:.2f}% use pre-train word2vec".format(
+    #     matrix.shape[0], matrix.shape[1], miss_match / matrix.shape[0] * 100
+    # ))
     return matrix
 
 
 if __name__ == "__main__":
-    s1 = [["我", "吃"], ["吃", "什么"]]
-    s2 = [["我", "haha"], ["吃", "什么"]]
-    d = Vocabulary()
-    d.update(s1)
-    d.update(s2)
-    d.transform(s1, max_length=10)
-    d.save("/home/zhouzr/dict")
+    sentences1 = ["我", "我 喜欢 你"]
+    sentences2 = ["他"]
+    vocab = Vocabulary()
+    vocab.save("test")
+    vocab.fit(sentences1)
+    vocab.transform(sentences1, max_length=10)
+    vocab.training = False
+    vocab.fit(sentences2)
+    vocab.transform(sentences2)
+    vocab.reverse(vocab.transform(sentences2))
+    vocab.save("test")
+    t=Vocabulary.load("test")
+    print(t)

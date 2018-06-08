@@ -2,18 +2,10 @@
 # @Time    : 18-5-15 下午4:16
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
-import sys
-import numpy as np
-import torch
 from torch import nn
-from torch.nn import functional as F
-from sklearn.metrics import accuracy_score
 
 # sys.path.append("~/project/Tast-Oriented-Chatbot")
-from chatbot.utils.path import root, MODEL_PATH
 from chatbot.utils.log import get_logger
-from chatbot.preprocessing import text
-
 
 logger = get_logger("TextCNN")
 
@@ -69,10 +61,10 @@ class TextCNN(nn.Module):
 
 
 if __name__ == "__main__":
-    from chatbot.cparse.text import read_fasttext_file
+    from chatbot.utils.data import read_fasttext_file
     from chatbot.cparse.vocabulary import Vocabulary
     from chatbot.cparse.label import Label
-    from chatbot.models.intent.pytorch import *
+    from chatbot.intent.models.pytorch import *
     p = root.parent / "corpus" / "intent" / "fastText"
     train_x, train_y = read_fasttext_file(str(p/"demo.train.txt"))
     test_x, test_y = read_fasttext_file(str(p / "demo.train.txt"))

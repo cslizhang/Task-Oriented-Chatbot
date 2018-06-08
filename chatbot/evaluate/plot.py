@@ -16,14 +16,12 @@ def plot_confusion_matrix(y_true, y_test, classes,
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
     """
-    cn = confusion_matrix(y_true, y_test)
+    cm = confusion_matrix(y_true, y_test)
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
         print("Normalized confusion matrix")
     else:
         print('Confusion matrix, without normalization')
-
-    print(cm)
 
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)

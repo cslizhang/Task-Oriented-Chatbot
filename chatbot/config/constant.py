@@ -14,5 +14,12 @@ TULING_KEY = "7e3bf5d6d06143e39c898672592d63ad"
 TULING_USERID = "TUNING"
 TULING_LOC = "成都"
 
-# init_context
-INIT_CONTEXT = dict()
+# 字典相关
+PAD = '<PAD>'
+PAD_IDX = 0
+UNK = '<UNK>'
+UNK_IDX = 1
+
+# 标签相关
+UNDEFINE = "<UNDEFINE>"
+UNDEFINE_IDX = 0

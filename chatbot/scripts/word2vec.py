@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
-from chatbot.models.transformer import Word2vecExt
+from chatbot.preprocessing.word2vec import Word2vecExt
 
 
 def main(mode, file_path=None, model_load_path=None, model_save_path=None):

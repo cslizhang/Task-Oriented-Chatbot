@@ -1373,3 +1373,361 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-05-31 15:56:21,702 - INFO - Bot - add session sid: 周_terminal
 2018-05-31 15:56:21,703 - INFO - Bot - {'周_terminal': {'current_text': '哈哈', 'history_text': ['哈哈'], 'user_name': '周', 'last_query_time': 1527753381.7025096}}
 2018-05-31 15:56:32,092 - INFO - Bot - timeout remove sid: 周_terminal
+2018-06-07 13:31:11,924 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 4.464293, eval loss: 4.306543, acc: 0.024841.
+2018-06-07 13:31:12,518 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 0.722360, eval loss: 0.924585, acc: 0.824055.
+2018-06-07 13:31:13,052 - INFO - Intent Model Train - Epoch:  0, Step:    200, train loss: 0.462785, eval loss: 0.466292, acc: 0.902407.
+2018-06-07 13:31:13,698 - INFO - Intent Model Train - Epoch:  0, Step:    300, train loss: 0.376461, eval loss: 0.320983, acc: 0.932874.
+2018-06-07 13:31:14,180 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.344244, eval loss: 0.253460, acc: 0.942328.
+2018-06-07 13:31:14,678 - INFO - Intent Model Train - Epoch:  1, Step:    100, train loss: 0.153467, eval loss: 0.205458, acc: 0.954350.
+2018-06-07 13:31:15,255 - INFO - Intent Model Train - Epoch:  1, Step:    200, train loss: 0.151015, eval loss: 0.173665, acc: 0.961081.
+2018-06-07 13:31:15,982 - INFO - Intent Model Train - Epoch:  1, Step:    300, train loss: 0.065526, eval loss: 0.146614, acc: 0.965114.
+2018-06-07 13:31:16,429 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.084592, eval loss: 0.126787, acc: 0.971151.
+2018-06-07 13:31:17,020 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.108409, eval loss: 0.110424, acc: 0.976340.
+2018-06-07 13:31:17,588 - INFO - Intent Model Train - Epoch:  2, Step:    200, train loss: 0.143362, eval loss: 0.097603, acc: 0.977830.
+2018-06-07 13:31:18,148 - INFO - Intent Model Train - Epoch:  2, Step:    300, train loss: 0.061097, eval loss: 0.087336, acc: 0.978421.
+2018-06-07 13:31:18,773 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.076495, eval loss: 0.075779, acc: 0.982557.
+2018-06-07 13:31:19,390 - INFO - Intent Model Train - Epoch:  3, Step:    100, train loss: 0.090881, eval loss: 0.069259, acc: 0.983842.
+2018-06-07 13:31:20,024 - INFO - Intent Model Train - Epoch:  3, Step:    200, train loss: 0.188057, eval loss: 0.061613, acc: 0.985049.
+2018-06-07 13:31:20,544 - INFO - Intent Model Train - Epoch:  3, Step:    300, train loss: 0.124960, eval loss: 0.056509, acc: 0.987130.
+2018-06-07 13:36:08,862 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 4.461366, eval loss: 4.252070, acc: 0.061602.
+2018-06-07 13:36:09,377 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 0.848021, eval loss: 0.923972, acc: 0.819380.
+2018-06-07 13:36:09,864 - INFO - Intent Model Train - Epoch:  0, Step:    200, train loss: 0.438080, eval loss: 0.467363, acc: 0.901071.
+2018-06-07 13:36:10,396 - INFO - Intent Model Train - Epoch:  0, Step:    300, train loss: 0.282971, eval loss: 0.325866, acc: 0.931076.
+2018-06-07 13:36:10,851 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.207228, eval loss: 0.261212, acc: 0.943330.
+2018-06-07 13:36:11,338 - INFO - Intent Model Train - Epoch:  1, Step:    100, train loss: 0.226412, eval loss: 0.210151, acc: 0.952963.
+2018-06-07 13:36:11,865 - INFO - Intent Model Train - Epoch:  1, Step:    200, train loss: 0.468298, eval loss: 0.176769, acc: 0.958409.
+2018-06-07 13:36:12,485 - INFO - Intent Model Train - Epoch:  1, Step:    300, train loss: 0.091143, eval loss: 0.148784, acc: 0.964652.
+2018-06-07 13:36:12,914 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.147679, eval loss: 0.128192, acc: 0.971562.
+2018-06-07 13:36:13,468 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.087779, eval loss: 0.114001, acc: 0.975030.
+2018-06-07 13:36:13,995 - INFO - Intent Model Train - Epoch:  2, Step:    200, train loss: 0.091139, eval loss: 0.099048, acc: 0.976238.
+2018-06-07 13:36:14,528 - INFO - Intent Model Train - Epoch:  2, Step:    300, train loss: 0.174698, eval loss: 0.087569, acc: 0.978113.
+2018-06-07 13:36:15,070 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.019882, eval loss: 0.077155, acc: 0.982942.
+2018-06-07 13:36:15,650 - INFO - Intent Model Train - Epoch:  3, Step:    100, train loss: 0.137375, eval loss: 0.069568, acc: 0.984021.
+2018-06-07 13:36:16,173 - INFO - Intent Model Train - Epoch:  3, Step:    200, train loss: 0.064383, eval loss: 0.062596, acc: 0.986359.
+2018-06-07 13:36:16,697 - INFO - Intent Model Train - Epoch:  3, Step:    300, train loss: 0.071962, eval loss: 0.057488, acc: 0.986179.
+2018-06-07 13:37:30,850 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 4.423697, eval loss: 4.311450, acc: 0.021116.
+2018-06-07 13:37:31,458 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 1.028807, eval loss: 0.924634, acc: 0.815501.
+2018-06-07 13:37:31,973 - INFO - Intent Model Train - Epoch:  0, Step:    200, train loss: 0.492089, eval loss: 0.460526, acc: 0.900146.
+2018-06-07 13:37:32,575 - INFO - Intent Model Train - Epoch:  0, Step:    300, train loss: 0.449345, eval loss: 0.324660, acc: 0.926786.
+2018-06-07 13:37:33,093 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.366835, eval loss: 0.256073, acc: 0.943484.
+2018-06-07 13:37:33,551 - INFO - Intent Model Train - Epoch:  1, Step:    100, train loss: 0.244903, eval loss: 0.207157, acc: 0.954016.
+2018-06-07 13:37:34,062 - INFO - Intent Model Train - Epoch:  1, Step:    200, train loss: 0.139093, eval loss: 0.170869, acc: 0.960798.
+2018-06-07 13:37:34,581 - INFO - Intent Model Train - Epoch:  1, Step:    300, train loss: 0.131339, eval loss: 0.149932, acc: 0.963778.
+2018-06-07 13:37:35,014 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.051117, eval loss: 0.128518, acc: 0.968813.
+2018-06-07 13:37:35,478 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.147539, eval loss: 0.110695, acc: 0.974105.
+2018-06-07 13:37:36,036 - INFO - Intent Model Train - Epoch:  2, Step:    200, train loss: 0.075130, eval loss: 0.097384, acc: 0.977085.
+2018-06-07 13:37:36,529 - INFO - Intent Model Train - Epoch:  2, Step:    300, train loss: 0.156968, eval loss: 0.085063, acc: 0.980990.
+2018-06-07 13:37:36,994 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.081524, eval loss: 0.075283, acc: 0.983456.
+2018-06-07 13:37:37,525 - INFO - Intent Model Train - Epoch:  3, Step:    100, train loss: 0.080436, eval loss: 0.068265, acc: 0.983970.
+2018-06-07 13:37:38,042 - INFO - Intent Model Train - Epoch:  3, Step:    200, train loss: 0.071930, eval loss: 0.061460, acc: 0.986539.
+2018-06-07 13:37:38,565 - INFO - Intent Model Train - Epoch:  3, Step:    300, train loss: 0.079892, eval loss: 0.055426, acc: 0.987541.
+2018-06-07 13:52:47,170 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 4.428018, eval loss: 4.295250, acc: 0.018702.
+2018-06-07 13:52:47,733 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 1.119724, eval loss: 0.898080, acc: 0.827575.
+2018-06-07 13:52:48,225 - INFO - Intent Model Train - Epoch:  0, Step:    200, train loss: 0.335338, eval loss: 0.455529, acc: 0.901405.
+2018-06-07 13:52:48,776 - INFO - Intent Model Train - Epoch:  0, Step:    300, train loss: 0.391542, eval loss: 0.313643, acc: 0.932078.
+2018-06-07 13:52:49,240 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.157401, eval loss: 0.249165, acc: 0.945334.
+2018-06-07 13:52:49,887 - INFO - Intent Model Train - Epoch:  1, Step:    100, train loss: 0.251433, eval loss: 0.202685, acc: 0.954505.
+2018-06-07 13:52:50,417 - INFO - Intent Model Train - Epoch:  1, Step:    200, train loss: 0.322683, eval loss: 0.172110, acc: 0.962160.
+2018-06-07 13:52:50,952 - INFO - Intent Model Train - Epoch:  1, Step:    300, train loss: 0.291856, eval loss: 0.142802, acc: 0.966630.
+2018-06-07 13:52:51,363 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.108885, eval loss: 0.122398, acc: 0.970894.
+2018-06-07 13:52:51,841 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.095930, eval loss: 0.107920, acc: 0.973720.
+2018-06-07 13:52:52,489 - INFO - Intent Model Train - Epoch:  2, Step:    200, train loss: 0.057130, eval loss: 0.096193, acc: 0.976392.
+2018-06-07 13:52:52,996 - INFO - Intent Model Train - Epoch:  2, Step:    300, train loss: 0.074025, eval loss: 0.082871, acc: 0.982223.
+2018-06-07 13:52:53,407 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.039849, eval loss: 0.077224, acc: 0.980862.
+2018-06-07 13:52:53,868 - INFO - Intent Model Train - Epoch:  3, Step:    100, train loss: 0.012547, eval loss: 0.067268, acc: 0.985768.
+2018-06-07 13:52:54,352 - INFO - Intent Model Train - Epoch:  3, Step:    200, train loss: 0.030619, eval loss: 0.060446, acc: 0.986924.
+2018-06-07 13:52:54,880 - INFO - Intent Model Train - Epoch:  3, Step:    300, train loss: 0.092770, eval loss: 0.053680, acc: 0.987900.
+2018-06-07 13:54:47,343 - INFO - Intent Model Train - Epoch:  0, Step:      0, train loss: 4.426628, eval loss: 4.304698, acc: 0.032882.
+2018-06-07 13:54:47,764 - INFO - Intent Model Train - Epoch:  0, Step:    100, train loss: 1.144822, eval loss: 0.924702, acc: 0.824055.
+2018-06-07 13:54:48,220 - INFO - Intent Model Train - Epoch:  0, Step:    200, train loss: 0.492494, eval loss: 0.465454, acc: 0.900326.
+2018-06-07 13:54:48,751 - INFO - Intent Model Train - Epoch:  0, Step:    300, train loss: 0.173317, eval loss: 0.324113, acc: 0.929278.
+2018-06-07 13:54:49,254 - INFO - Intent Model Train - Epoch:  1, Step:      0, train loss: 0.192736, eval loss: 0.259547, acc: 0.940684.
+2018-06-07 13:54:49,736 - INFO - Intent Model Train - Epoch:  1, Step:    100, train loss: 0.138383, eval loss: 0.212368, acc: 0.951859.
+2018-06-07 13:54:50,224 - INFO - Intent Model Train - Epoch:  1, Step:    200, train loss: 0.100821, eval loss: 0.177524, acc: 0.958641.
+2018-06-07 13:54:50,783 - INFO - Intent Model Train - Epoch:  1, Step:    300, train loss: 0.171095, eval loss: 0.151152, acc: 0.965345.
+2018-06-07 13:54:51,232 - INFO - Intent Model Train - Epoch:  2, Step:      0, train loss: 0.124378, eval loss: 0.131663, acc: 0.968017.
+2018-06-07 13:54:51,845 - INFO - Intent Model Train - Epoch:  2, Step:    100, train loss: 0.087290, eval loss: 0.115298, acc: 0.973129.
+2018-06-07 13:54:52,454 - INFO - Intent Model Train - Epoch:  2, Step:    200, train loss: 0.109944, eval loss: 0.103767, acc: 0.974799.
+2018-06-07 13:54:52,972 - INFO - Intent Model Train - Epoch:  2, Step:    300, train loss: 0.094352, eval loss: 0.087920, acc: 0.979372.
+2018-06-07 13:54:53,471 - INFO - Intent Model Train - Epoch:  3, Step:      0, train loss: 0.069417, eval loss: 0.076186, acc: 0.983071.
+2018-06-07 13:54:54,030 - INFO - Intent Model Train - Epoch:  3, Step:    100, train loss: 0.049901, eval loss: 0.071662, acc: 0.983842.
+2018-06-07 13:54:54,549 - INFO - Intent Model Train - Epoch:  3, Step:    200, train loss: 0.074429, eval loss: 0.061390, acc: 0.986231.
+2018-06-07 13:54:55,122 - INFO - Intent Model Train - Epoch:  3, Step:    300, train loss: 0.080129, eval loss: 0.056966, acc: 0.986488.
+2018-06-07 14:32:52,877 - INFO - FastText - Epoch:  0, Step:      0, train loss: 4.394147, eval loss: 4.229908, acc: 0.078198.
+2018-06-07 14:32:53,383 - INFO - FastText - Epoch:  0, Step:    100, train loss: 1.128988, eval loss: 0.931021, acc: 0.815372.
+2018-06-07 14:32:53,942 - INFO - FastText - Epoch:  0, Step:    200, train loss: 0.467742, eval loss: 0.464256, acc: 0.904411.
+2018-06-07 14:32:54,457 - INFO - FastText - Epoch:  0, Step:    300, train loss: 0.456024, eval loss: 0.322517, acc: 0.931359.
+2018-06-07 14:32:54,961 - INFO - FastText - Epoch:  1, Step:      0, train loss: 0.309044, eval loss: 0.259033, acc: 0.940042.
+2018-06-07 14:32:55,410 - INFO - FastText - Epoch:  1, Step:    100, train loss: 0.146806, eval loss: 0.212495, acc: 0.954376.
+2018-06-07 14:32:55,964 - INFO - FastText - Epoch:  1, Step:    200, train loss: 0.126965, eval loss: 0.176551, acc: 0.958332.
+2018-06-07 14:32:56,452 - INFO - FastText - Epoch:  1, Step:    300, train loss: 0.220961, eval loss: 0.146517, acc: 0.965756.
+2018-06-07 14:32:56,976 - INFO - FastText - Epoch:  2, Step:      0, train loss: 0.225191, eval loss: 0.128792, acc: 0.968608.
+2018-06-07 14:32:57,511 - INFO - FastText - Epoch:  2, Step:    100, train loss: 0.132749, eval loss: 0.111159, acc: 0.974414.
+2018-06-07 14:32:58,086 - INFO - FastText - Epoch:  2, Step:    200, train loss: 0.096538, eval loss: 0.097356, acc: 0.977137.
+2018-06-07 14:32:58,732 - INFO - FastText - Epoch:  2, Step:    300, train loss: 0.061061, eval loss: 0.085814, acc: 0.979551.
+2018-06-07 14:32:59,166 - INFO - FastText - Epoch:  3, Step:      0, train loss: 0.056213, eval loss: 0.074882, acc: 0.982968.
+2018-06-07 14:32:59,669 - INFO - FastText - Epoch:  3, Step:    100, train loss: 0.074799, eval loss: 0.068351, acc: 0.984176.
+2018-06-07 14:33:00,155 - INFO - FastText - Epoch:  3, Step:    200, train loss: 0.044871, eval loss: 0.061397, acc: 0.986051.
+2018-06-07 14:33:00,742 - INFO - FastText - Epoch:  3, Step:    300, train loss: 0.021220, eval loss: 0.054915, acc: 0.987823.
+2018-06-07 16:30:20,873 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.466065, eval loss: 4.285085, acc: 0.069900.
+2018-06-07 16:30:21,460 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.118613, eval loss: 1.140612, acc: 0.772035.
+2018-06-07 16:30:21,971 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.664188, eval loss: 0.566865, acc: 0.889871.
+2018-06-07 16:30:22,425 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.526984, eval loss: 0.402232, acc: 0.911784.
+2018-06-07 16:30:22,900 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.406834, eval loss: 0.318183, acc: 0.926760.
+2018-06-07 16:30:23,530 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.360767, eval loss: 0.259897, acc: 0.940170.
+2018-06-07 16:30:24,031 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.674308, eval loss: 0.217464, acc: 0.948288.
+2018-06-07 16:30:24,125 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.234615, eval loss: 0.212138, acc: 0.950882.
+2018-06-07 16:30:24,587 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.326931, eval loss: 0.184067, acc: 0.957639.
+2018-06-07 16:30:25,245 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.178178, eval loss: 0.167064, acc: 0.963290.
+2018-06-07 16:30:25,843 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.067213, eval loss: 0.147401, acc: 0.966347.
+2018-06-07 16:30:26,374 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.153333, eval loss: 0.133677, acc: 0.968428.
+2018-06-07 16:30:26,852 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.103785, eval loss: 0.118778, acc: 0.973258.
+2018-06-07 16:30:27,338 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.162864, eval loss: 0.103799, acc: 0.975852.
+2018-06-07 16:30:27,432 - INFO - IntentModelTrainer - Epoch:  3, Step:      0, train loss: 0.181147, eval loss: 0.104929, acc: 0.973643.
+2018-06-07 16:30:27,897 - INFO - IntentModelTrainer - Epoch:  3, Step:    100, train loss: 0.049379, eval loss: 0.093957, acc: 0.978447.
+2018-06-07 16:30:28,398 - INFO - IntentModelTrainer - Epoch:  3, Step:    200, train loss: 0.045691, eval loss: 0.089089, acc: 0.980887.
+2018-06-07 16:30:28,936 - INFO - IntentModelTrainer - Epoch:  3, Step:    300, train loss: 0.082386, eval loss: 0.079372, acc: 0.981324.
+2018-06-07 16:30:29,478 - INFO - IntentModelTrainer - Epoch:  3, Step:    400, train loss: 0.056075, eval loss: 0.075252, acc: 0.981067.
+2018-06-07 16:30:29,990 - INFO - IntentModelTrainer - Epoch:  3, Step:    500, train loss: 0.046525, eval loss: 0.068123, acc: 0.984818.
+2018-06-07 16:30:30,445 - INFO - IntentModelTrainer - Epoch:  3, Step:    600, train loss: 0.062280, eval loss: 0.062258, acc: 0.985383.
+2018-06-07 16:30:30,531 - INFO - IntentModelTrainer - Epoch:  4, Step:      0, train loss: 0.068126, eval loss: 0.061963, acc: 0.985254.
+2018-06-07 16:30:30,984 - INFO - IntentModelTrainer - Epoch:  4, Step:    100, train loss: 0.095421, eval loss: 0.056860, acc: 0.986179.
+2018-06-07 16:30:31,513 - INFO - IntentModelTrainer - Epoch:  4, Step:    200, train loss: 0.034224, eval loss: 0.052417, acc: 0.988620.
+2018-06-07 16:30:32,085 - INFO - IntentModelTrainer - Epoch:  4, Step:    300, train loss: 0.017747, eval loss: 0.051106, acc: 0.987875.
+2018-06-07 16:30:32,618 - INFO - IntentModelTrainer - Epoch:  4, Step:    400, train loss: 0.018920, eval loss: 0.047955, acc: 0.988440.
+2018-06-07 16:30:33,128 - INFO - IntentModelTrainer - Epoch:  4, Step:    500, train loss: 0.006052, eval loss: 0.044105, acc: 0.989699.
+2018-06-07 16:30:33,625 - INFO - IntentModelTrainer - Epoch:  4, Step:    600, train loss: 0.003578, eval loss: 0.039143, acc: 0.990392.
+2018-06-07 16:31:44,898 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.359773, eval loss: 4.202407, acc: 0.093174.
+2018-06-07 16:31:44,898 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.359773, eval loss: 4.202407, acc: 0.093174.
+2018-06-07 16:33:22,564 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.449314, eval loss: 4.249491, acc: 0.106147.
+2018-06-07 16:35:32,923 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.427696, eval loss: 4.304132, acc: 0.018419.
+2018-06-07 16:36:32,218 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.430545, eval loss: 4.259928, acc: 0.059085.
+2018-06-07 16:38:14,774 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.513190, eval loss: 4.328349, acc: 0.024713.
+2018-06-07 16:38:42,281 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.391130, eval loss: 4.253664, acc: 0.063555.
+2018-06-07 16:38:42,752 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.290612, eval loss: 1.071114, acc: 0.794898.
+2018-06-07 16:38:43,161 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.637538, eval loss: 0.557045, acc: 0.882061.
+2018-06-07 16:38:43,561 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.446055, eval loss: 0.393275, acc: 0.913017.
+2018-06-07 16:38:44,006 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.488955, eval loss: 0.309721, acc: 0.932027.
+2018-06-07 16:38:44,468 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.224503, eval loss: 0.248639, acc: 0.942251.
+2018-06-07 16:38:44,955 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.280094, eval loss: 0.216586, acc: 0.948134.
+2018-06-07 16:38:45,068 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.204459, eval loss: 0.219077, acc: 0.946695.
+2018-06-07 16:38:45,545 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.082296, eval loss: 0.187565, acc: 0.954248.
+2018-06-07 16:38:46,003 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.119127, eval loss: 0.161737, acc: 0.962725.
+2018-06-07 16:38:46,601 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.236207, eval loss: 0.142532, acc: 0.966219.
+2018-06-07 16:38:47,118 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.157303, eval loss: 0.127297, acc: 0.971357.
+2018-06-07 16:38:47,612 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.145130, eval loss: 0.113808, acc: 0.972924.
+2018-06-07 16:38:48,048 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.080968, eval loss: 0.102750, acc: 0.975056.
+2018-06-07 16:38:48,160 - INFO - IntentModelTrainer - Epoch:  3, Step:      0, train loss: 0.014869, eval loss: 0.101546, acc: 0.975698.
+2018-06-07 16:38:48,578 - INFO - IntentModelTrainer - Epoch:  3, Step:    100, train loss: 0.065306, eval loss: 0.090849, acc: 0.978729.
+2018-06-07 16:38:49,100 - INFO - IntentModelTrainer - Epoch:  3, Step:    200, train loss: 0.056961, eval loss: 0.085312, acc: 0.980322.
+2018-06-07 16:38:49,726 - INFO - IntentModelTrainer - Epoch:  3, Step:    300, train loss: 0.093972, eval loss: 0.079213, acc: 0.982429.
+2018-06-07 16:38:50,441 - INFO - IntentModelTrainer - Epoch:  3, Step:    400, train loss: 0.052147, eval loss: 0.070981, acc: 0.984176.
+2018-06-07 16:38:51,083 - INFO - IntentModelTrainer - Epoch:  3, Step:    500, train loss: 0.060844, eval loss: 0.065790, acc: 0.984484.
+2018-06-07 16:38:51,669 - INFO - IntentModelTrainer - Epoch:  3, Step:    600, train loss: 0.071681, eval loss: 0.058280, acc: 0.987001.
+2018-06-07 16:38:51,769 - INFO - IntentModelTrainer - Epoch:  4, Step:      0, train loss: 0.026206, eval loss: 0.058801, acc: 0.985486.
+2018-06-07 16:38:52,364 - INFO - IntentModelTrainer - Epoch:  4, Step:    100, train loss: 0.078902, eval loss: 0.053956, acc: 0.987233.
+2018-06-07 16:38:53,060 - INFO - IntentModelTrainer - Epoch:  4, Step:    200, train loss: 0.050434, eval loss: 0.050852, acc: 0.988106.
+2018-06-07 16:38:53,596 - INFO - IntentModelTrainer - Epoch:  4, Step:    300, train loss: 0.040918, eval loss: 0.050228, acc: 0.987669.
+2018-06-07 16:38:54,157 - INFO - IntentModelTrainer - Epoch:  4, Step:    400, train loss: 0.050275, eval loss: 0.045406, acc: 0.988594.
+2018-06-07 16:38:54,766 - INFO - IntentModelTrainer - Epoch:  4, Step:    500, train loss: 0.054645, eval loss: 0.042821, acc: 0.990238.
+2018-06-07 16:38:55,462 - INFO - IntentModelTrainer - Epoch:  4, Step:    600, train loss: 0.094376, eval loss: 0.039095, acc: 0.990161.
+2018-06-07 16:46:11,770 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.493916, eval loss: 4.297663, acc: 0.014001.
+2018-06-07 16:46:12,273 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 0.744145, eval loss: 1.090333, acc: 0.789683.
+2018-06-07 16:46:12,751 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.592298, eval loss: 0.566412, acc: 0.886197.
+2018-06-07 16:46:13,181 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.522744, eval loss: 0.392624, acc: 0.914558.
+2018-06-07 16:46:13,630 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.272897, eval loss: 0.308087, acc: 0.933131.
+2018-06-07 16:46:14,105 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.263160, eval loss: 0.248437, acc: 0.944537.
+2018-06-07 16:46:14,541 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.285953, eval loss: 0.208131, acc: 0.954659.
+2018-06-07 16:46:14,633 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.044891, eval loss: 0.205732, acc: 0.956046.
+2018-06-07 16:46:15,064 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.171441, eval loss: 0.183183, acc: 0.957510.
+2018-06-07 16:46:15,566 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.156715, eval loss: 0.161781, acc: 0.963624.
+2018-06-07 16:46:16,150 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.152156, eval loss: 0.141660, acc: 0.967914.
+2018-06-07 16:46:16,878 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.090072, eval loss: 0.126350, acc: 0.969841.
+2018-06-07 16:46:17,476 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.086587, eval loss: 0.115469, acc: 0.970303.
+2018-06-07 16:46:18,033 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.171031, eval loss: 0.099540, acc: 0.976109.
+2018-06-07 16:46:18,121 - INFO - IntentModelTrainer - Epoch:  3, Step:      0, train loss: 0.170275, eval loss: 0.099042, acc: 0.975030.
+2018-06-07 16:46:18,639 - INFO - IntentModelTrainer - Epoch:  3, Step:    100, train loss: 0.053675, eval loss: 0.091107, acc: 0.977111.
+2018-06-07 16:46:19,246 - INFO - IntentModelTrainer - Epoch:  3, Step:    200, train loss: 0.197347, eval loss: 0.083720, acc: 0.981889.
+2018-06-07 16:46:19,900 - INFO - IntentModelTrainer - Epoch:  3, Step:    300, train loss: 0.087791, eval loss: 0.077626, acc: 0.980630.
+2018-06-07 16:46:20,449 - INFO - IntentModelTrainer - Epoch:  3, Step:    400, train loss: 0.066676, eval loss: 0.070680, acc: 0.982660.
+2018-06-07 16:46:20,983 - INFO - IntentModelTrainer - Epoch:  3, Step:    500, train loss: 0.172077, eval loss: 0.065120, acc: 0.985357.
+2018-06-07 16:46:21,555 - INFO - IntentModelTrainer - Epoch:  3, Step:    600, train loss: 0.085332, eval loss: 0.058127, acc: 0.986308.
+2018-06-07 16:46:21,663 - INFO - IntentModelTrainer - Epoch:  4, Step:      0, train loss: 0.075908, eval loss: 0.059130, acc: 0.986719.
+2018-06-07 16:46:22,227 - INFO - IntentModelTrainer - Epoch:  4, Step:    100, train loss: 0.093383, eval loss: 0.053950, acc: 0.987721.
+2018-06-07 16:46:22,866 - INFO - IntentModelTrainer - Epoch:  4, Step:    200, train loss: 0.054297, eval loss: 0.050641, acc: 0.987772.
+2018-06-07 16:46:23,553 - INFO - IntentModelTrainer - Epoch:  4, Step:    300, train loss: 0.051100, eval loss: 0.048167, acc: 0.989313.
+2018-06-07 16:46:24,126 - INFO - IntentModelTrainer - Epoch:  4, Step:    400, train loss: 0.048227, eval loss: 0.045224, acc: 0.988979.
+2018-06-07 16:46:24,596 - INFO - IntentModelTrainer - Epoch:  4, Step:    500, train loss: 0.009643, eval loss: 0.042271, acc: 0.989134.
+2018-06-07 16:46:25,100 - INFO - IntentModelTrainer - Epoch:  4, Step:    600, train loss: 0.086437, eval loss: 0.039431, acc: 0.991112.
+2018-06-07 16:57:31,891 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.356130, eval loss: 4.267758, acc: 0.081023.
+2018-06-07 16:57:31,891 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.356130, eval loss: 4.267758, acc: 0.081023.
+2018-06-07 16:57:32,396 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 0.897043, eval loss: 1.095212, acc: 0.780564.
+2018-06-07 16:57:32,396 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 0.897043, eval loss: 1.095212, acc: 0.780564.
+2018-06-07 16:57:32,924 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.455315, eval loss: 0.561922, acc: 0.887276.
+2018-06-07 16:57:32,924 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.455315, eval loss: 0.561922, acc: 0.887276.
+2018-06-07 16:57:33,480 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.489541, eval loss: 0.386012, acc: 0.916870.
+2018-06-07 16:57:33,480 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.489541, eval loss: 0.386012, acc: 0.916870.
+2018-06-07 16:57:34,020 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.274812, eval loss: 0.309473, acc: 0.929072.
+2018-06-07 16:57:34,020 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.274812, eval loss: 0.309473, acc: 0.929072.
+2018-06-07 16:57:34,492 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.317712, eval loss: 0.253436, acc: 0.941506.
+2018-06-07 16:57:34,492 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.317712, eval loss: 0.253436, acc: 0.941506.
+2018-06-07 16:57:34,982 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.471801, eval loss: 0.216421, acc: 0.948314.
+2018-06-07 16:57:34,982 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.471801, eval loss: 0.216421, acc: 0.948314.
+2018-06-07 16:57:35,097 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.393244, eval loss: 0.209377, acc: 0.950805.
+2018-06-07 16:57:35,097 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.393244, eval loss: 0.209377, acc: 0.950805.
+2018-06-07 16:57:35,693 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.118511, eval loss: 0.181818, acc: 0.958332.
+2018-06-07 16:57:35,693 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.118511, eval loss: 0.181818, acc: 0.958332.
+2018-06-07 16:57:43,892 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.417641, eval loss: 4.266459, acc: 0.064403.
+2018-06-07 16:57:44,462 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.200658, eval loss: 1.066781, acc: 0.799933.
+2018-06-07 16:57:45,001 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.654812, eval loss: 0.550051, acc: 0.889434.
+2018-06-07 16:57:45,459 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.532167, eval loss: 0.388308, acc: 0.913890.
+2018-06-07 16:57:45,910 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.095349, eval loss: 0.304917, acc: 0.933131.
+2018-06-07 16:57:46,411 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.150067, eval loss: 0.252051, acc: 0.942893.
+2018-06-07 16:57:46,883 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.546105, eval loss: 0.211504, acc: 0.953708.
+2018-06-07 16:57:46,979 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.292028, eval loss: 0.209166, acc: 0.954479.
+2018-06-07 16:57:47,621 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.422821, eval loss: 0.182691, acc: 0.958024.
+2018-06-07 16:57:48,166 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.291834, eval loss: 0.165434, acc: 0.958127.
+2018-06-07 16:57:48,827 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.143328, eval loss: 0.145985, acc: 0.968402.
+2018-06-07 16:57:49,558 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.021250, eval loss: 0.131110, acc: 0.967657.
+2018-06-07 16:57:50,113 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.259135, eval loss: 0.114952, acc: 0.975210.
+2018-06-07 16:57:50,771 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.026299, eval loss: 0.101871, acc: 0.976135.
+2018-06-07 17:02:13,763 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.455219, eval loss: 4.318730, acc: 0.020808.
+2018-06-07 17:02:13,763 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.455219, eval loss: 4.318730, acc: 0.020808.
+2018-06-07 17:02:13,763 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.455219, eval loss: 4.318730, acc: 0.020808.
+2018-06-07 17:02:14,221 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.208441, eval loss: 1.080500, acc: 0.802682.
+2018-06-07 17:02:14,221 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.208441, eval loss: 1.080500, acc: 0.802682.
+2018-06-07 17:02:14,221 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.208441, eval loss: 1.080500, acc: 0.802682.
+2018-06-07 17:02:14,682 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.684221, eval loss: 0.549181, acc: 0.887199.
+2018-06-07 17:02:14,682 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.684221, eval loss: 0.549181, acc: 0.887199.
+2018-06-07 17:02:14,682 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.684221, eval loss: 0.549181, acc: 0.887199.
+2018-06-07 17:02:15,200 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.368184, eval loss: 0.393445, acc: 0.913351.
+2018-06-07 17:02:15,200 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.368184, eval loss: 0.393445, acc: 0.913351.
+2018-06-07 17:02:15,200 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.368184, eval loss: 0.393445, acc: 0.913351.
+2018-06-07 17:02:15,789 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.294302, eval loss: 0.307779, acc: 0.936317.
+2018-06-07 17:02:15,789 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.294302, eval loss: 0.307779, acc: 0.936317.
+2018-06-07 17:02:15,789 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.294302, eval loss: 0.307779, acc: 0.936317.
+2018-06-07 17:02:16,280 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.286442, eval loss: 0.252965, acc: 0.942020.
+2018-06-07 17:02:16,280 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.286442, eval loss: 0.252965, acc: 0.942020.
+2018-06-07 17:02:16,280 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.286442, eval loss: 0.252965, acc: 0.942020.
+2018-06-07 17:02:16,750 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.351597, eval loss: 0.217138, acc: 0.951011.
+2018-06-07 17:02:16,750 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.351597, eval loss: 0.217138, acc: 0.951011.
+2018-06-07 17:02:16,750 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.351597, eval loss: 0.217138, acc: 0.951011.
+2018-06-07 17:02:16,860 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.262262, eval loss: 0.209768, acc: 0.950728.
+2018-06-07 17:02:16,860 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.262262, eval loss: 0.209768, acc: 0.950728.
+2018-06-07 17:02:16,860 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.262262, eval loss: 0.209768, acc: 0.950728.
+2018-06-07 17:02:17,351 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.135335, eval loss: 0.183688, acc: 0.957664.
+2018-06-07 17:02:17,351 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.135335, eval loss: 0.183688, acc: 0.957664.
+2018-06-07 17:02:17,351 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.135335, eval loss: 0.183688, acc: 0.957664.
+2018-06-07 17:02:17,847 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.171735, eval loss: 0.164991, acc: 0.963265.
+2018-06-07 17:02:17,847 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.171735, eval loss: 0.164991, acc: 0.963265.
+2018-06-07 17:02:17,847 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.171735, eval loss: 0.164991, acc: 0.963265.
+2018-06-07 17:02:18,497 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.198633, eval loss: 0.148495, acc: 0.963907.
+2018-06-07 17:02:18,497 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.198633, eval loss: 0.148495, acc: 0.963907.
+2018-06-07 17:02:18,497 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.198633, eval loss: 0.148495, acc: 0.963907.
+2018-06-07 17:02:19,052 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.109885, eval loss: 0.128135, acc: 0.971639.
+2018-06-07 17:02:19,052 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.109885, eval loss: 0.128135, acc: 0.971639.
+2018-06-07 17:02:19,052 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.109885, eval loss: 0.128135, acc: 0.971639.
+2018-06-07 17:02:19,621 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.044772, eval loss: 0.115371, acc: 0.973335.
+2018-06-07 17:02:19,621 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.044772, eval loss: 0.115371, acc: 0.973335.
+2018-06-07 17:02:19,621 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.044772, eval loss: 0.115371, acc: 0.973335.
+2018-06-07 17:02:20,114 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.345778, eval loss: 0.101655, acc: 0.975981.
+2018-06-07 17:02:20,114 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.345778, eval loss: 0.101655, acc: 0.975981.
+2018-06-07 17:02:20,114 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.345778, eval loss: 0.101655, acc: 0.975981.
+2018-06-07 17:06:28,918 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.429002, eval loss: 4.251342, acc: 0.023865.
+2018-06-07 17:06:29,552 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.309638, eval loss: 1.080810, acc: 0.793228.
+2018-06-07 17:06:30,025 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.520186, eval loss: 0.560882, acc: 0.886865.
+2018-06-07 17:06:30,435 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.608693, eval loss: 0.398334, acc: 0.910371.
+2018-06-07 17:06:30,884 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.437530, eval loss: 0.313758, acc: 0.926812.
+2018-06-07 17:06:31,355 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.308418, eval loss: 0.250966, acc: 0.942893.
+2018-06-07 17:06:32,043 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.234199, eval loss: 0.213594, acc: 0.952424.
+2018-06-07 17:06:32,152 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.065577, eval loss: 0.209900, acc: 0.950446.
+2018-06-07 17:06:32,694 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.161831, eval loss: 0.184610, acc: 0.957690.
+2018-06-07 17:06:33,232 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.295280, eval loss: 0.162957, acc: 0.961518.
+2018-06-07 17:06:33,892 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.073739, eval loss: 0.144131, acc: 0.965782.
+2018-06-07 17:06:34,642 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.079104, eval loss: 0.129592, acc: 0.969327.
+2018-06-07 17:06:35,211 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.053099, eval loss: 0.115132, acc: 0.972153.
+2018-06-07 17:06:35,680 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.249849, eval loss: 0.105714, acc: 0.974953.
+2018-06-07 17:06:35,776 - INFO - IntentModelTrainer - Epoch:  3, Step:      0, train loss: 0.209560, eval loss: 0.101381, acc: 0.977317.
+2018-06-07 17:06:36,251 - INFO - IntentModelTrainer - Epoch:  3, Step:    100, train loss: 0.065180, eval loss: 0.093378, acc: 0.977394.
+2018-06-07 17:06:36,819 - INFO - IntentModelTrainer - Epoch:  3, Step:    200, train loss: 0.024618, eval loss: 0.085381, acc: 0.979038.
+2018-06-07 17:06:37,325 - INFO - IntentModelTrainer - Epoch:  3, Step:    300, train loss: 0.054850, eval loss: 0.078663, acc: 0.982506.
+2018-06-07 17:06:37,957 - INFO - IntentModelTrainer - Epoch:  3, Step:    400, train loss: 0.123726, eval loss: 0.079931, acc: 0.978858.
+2018-06-07 17:06:38,463 - INFO - IntentModelTrainer - Epoch:  3, Step:    500, train loss: 0.004528, eval loss: 0.066679, acc: 0.984998.
+2018-06-07 17:06:38,898 - INFO - IntentModelTrainer - Epoch:  3, Step:    600, train loss: 0.005773, eval loss: 0.060111, acc: 0.985845.
+2018-06-07 17:06:38,988 - INFO - IntentModelTrainer - Epoch:  4, Step:      0, train loss: 0.030845, eval loss: 0.059230, acc: 0.985820.
+2018-06-07 17:06:39,446 - INFO - IntentModelTrainer - Epoch:  4, Step:    100, train loss: 0.040629, eval loss: 0.055838, acc: 0.986436.
+2018-06-07 17:06:39,994 - INFO - IntentModelTrainer - Epoch:  4, Step:    200, train loss: 0.056269, eval loss: 0.051529, acc: 0.988363.
+2018-06-07 17:06:40,534 - INFO - IntentModelTrainer - Epoch:  4, Step:    300, train loss: 0.047250, eval loss: 0.048376, acc: 0.988928.
+2018-06-07 17:06:41,193 - INFO - IntentModelTrainer - Epoch:  4, Step:    400, train loss: 0.072483, eval loss: 0.045534, acc: 0.989262.
+2018-06-07 17:06:41,742 - INFO - IntentModelTrainer - Epoch:  4, Step:    500, train loss: 0.021420, eval loss: 0.043132, acc: 0.989416.
+2018-06-07 17:06:42,256 - INFO - IntentModelTrainer - Epoch:  4, Step:    600, train loss: 0.054245, eval loss: 0.041522, acc: 0.990367.
+2018-06-08 14:20:13,590 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.431559, eval loss: 4.274711, acc: 0.036299.
+2018-06-08 14:20:13,590 - INFO - IntentModelTrainer - Epoch:  1, Step:      0, train loss: 4.431559, eval loss: 4.274711, acc: 0.036299.
+2018-06-08 14:20:14,088 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.192804, eval loss: 1.147806, acc: 0.780872.
+2018-06-08 14:20:14,088 - INFO - IntentModelTrainer - Epoch:  1, Step:    100, train loss: 1.192804, eval loss: 1.147806, acc: 0.780872.
+2018-06-08 14:20:14,639 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.751488, eval loss: 0.577349, acc: 0.886531.
+2018-06-08 14:20:14,639 - INFO - IntentModelTrainer - Epoch:  1, Step:    200, train loss: 0.751488, eval loss: 0.577349, acc: 0.886531.
+2018-06-08 14:20:15,143 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.246076, eval loss: 0.404124, acc: 0.914789.
+2018-06-08 14:20:15,143 - INFO - IntentModelTrainer - Epoch:  1, Step:    300, train loss: 0.246076, eval loss: 0.404124, acc: 0.914789.
+2018-06-08 14:20:15,818 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.564033, eval loss: 0.318211, acc: 0.930665.
+2018-06-08 14:20:15,818 - INFO - IntentModelTrainer - Epoch:  1, Step:    400, train loss: 0.564033, eval loss: 0.318211, acc: 0.930665.
+2018-06-08 14:20:16,362 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.166336, eval loss: 0.266041, acc: 0.936445.
+2018-06-08 14:20:16,362 - INFO - IntentModelTrainer - Epoch:  1, Step:    500, train loss: 0.166336, eval loss: 0.266041, acc: 0.936445.
+2018-06-08 14:20:16,937 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.281025, eval loss: 0.216151, acc: 0.950626.
+2018-06-08 14:20:16,937 - INFO - IntentModelTrainer - Epoch:  1, Step:    600, train loss: 0.281025, eval loss: 0.216151, acc: 0.950626.
+2018-06-08 14:20:17,070 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.106293, eval loss: 0.223284, acc: 0.944923.
+2018-06-08 14:20:17,070 - INFO - IntentModelTrainer - Epoch:  2, Step:      0, train loss: 0.106293, eval loss: 0.223284, acc: 0.944923.
+2018-06-08 14:20:17,624 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.170051, eval loss: 0.188013, acc: 0.956611.
+2018-06-08 14:20:17,624 - INFO - IntentModelTrainer - Epoch:  2, Step:    100, train loss: 0.170051, eval loss: 0.188013, acc: 0.956611.
+2018-06-08 14:20:18,223 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.157435, eval loss: 0.164122, acc: 0.959334.
+2018-06-08 14:20:18,223 - INFO - IntentModelTrainer - Epoch:  2, Step:    200, train loss: 0.157435, eval loss: 0.164122, acc: 0.959334.
+2018-06-08 14:20:18,936 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.114959, eval loss: 0.147713, acc: 0.964189.
+2018-06-08 14:20:18,936 - INFO - IntentModelTrainer - Epoch:  2, Step:    300, train loss: 0.114959, eval loss: 0.147713, acc: 0.964189.
+2018-06-08 14:20:19,658 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.123665, eval loss: 0.131340, acc: 0.966527.
+2018-06-08 14:20:19,658 - INFO - IntentModelTrainer - Epoch:  2, Step:    400, train loss: 0.123665, eval loss: 0.131340, acc: 0.966527.
+2018-06-08 14:20:20,323 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.303106, eval loss: 0.117318, acc: 0.971819.
+2018-06-08 14:20:20,323 - INFO - IntentModelTrainer - Epoch:  2, Step:    500, train loss: 0.303106, eval loss: 0.117318, acc: 0.971819.
+2018-06-08 14:20:20,861 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.198766, eval loss: 0.107734, acc: 0.972307.
+2018-06-08 14:20:20,861 - INFO - IntentModelTrainer - Epoch:  2, Step:    600, train loss: 0.198766, eval loss: 0.107734, acc: 0.972307.
+2018-06-08 14:20:20,959 - INFO - IntentModelTrainer - Epoch:  3, Step:      0, train loss: 0.161250, eval loss: 0.103266, acc: 0.975107.
+2018-06-08 14:20:20,959 - INFO - IntentModelTrainer - Epoch:  3, Step:      0, train loss: 0.161250, eval loss: 0.103266, acc: 0.975107.
+2018-06-08 14:20:21,530 - INFO - IntentModelTrainer - Epoch:  3, Step:    100, train loss: 0.239256, eval loss: 0.094640, acc: 0.977188.
+2018-06-08 14:20:21,530 - INFO - IntentModelTrainer - Epoch:  3, Step:    100, train loss: 0.239256, eval loss: 0.094640, acc: 0.977188.
+2018-06-08 14:20:22,091 - INFO - IntentModelTrainer - Epoch:  3, Step:    200, train loss: 0.029134, eval loss: 0.088003, acc: 0.979089.
+2018-06-08 14:20:22,091 - INFO - IntentModelTrainer - Epoch:  3, Step:    200, train loss: 0.029134, eval loss: 0.088003, acc: 0.979089.
+2018-06-08 14:20:22,714 - INFO - IntentModelTrainer - Epoch:  3, Step:    300, train loss: 0.093019, eval loss: 0.079216, acc: 0.982043.
+2018-06-08 14:20:22,714 - INFO - IntentModelTrainer - Epoch:  3, Step:    300, train loss: 0.093019, eval loss: 0.079216, acc: 0.982043.
+2018-06-08 14:20:23,374 - INFO - IntentModelTrainer - Epoch:  3, Step:    400, train loss: 0.069215, eval loss: 0.073354, acc: 0.981196.
+2018-06-08 14:20:23,374 - INFO - IntentModelTrainer - Epoch:  3, Step:    400, train loss: 0.069215, eval loss: 0.073354, acc: 0.981196.
+2018-06-08 14:20:24,009 - INFO - IntentModelTrainer - Epoch:  3, Step:    500, train loss: 0.126999, eval loss: 0.068444, acc: 0.984330.
+2018-06-08 14:20:24,009 - INFO - IntentModelTrainer - Epoch:  3, Step:    500, train loss: 0.126999, eval loss: 0.068444, acc: 0.984330.
+2018-06-08 14:20:24,543 - INFO - IntentModelTrainer - Epoch:  3, Step:    600, train loss: 0.194122, eval loss: 0.062008, acc: 0.986282.
+2018-06-08 14:20:24,543 - INFO - IntentModelTrainer - Epoch:  3, Step:    600, train loss: 0.194122, eval loss: 0.062008, acc: 0.986282.
+2018-06-08 14:20:24,655 - INFO - IntentModelTrainer - Epoch:  4, Step:      0, train loss: 0.041787, eval loss: 0.063381, acc: 0.986410.
+2018-06-08 14:20:24,655 - INFO - IntentModelTrainer - Epoch:  4, Step:      0, train loss: 0.041787, eval loss: 0.063381, acc: 0.986410.
+2018-06-08 14:20:25,199 - INFO - IntentModelTrainer - Epoch:  4, Step:    100, train loss: 0.019523, eval loss: 0.056631, acc: 0.987746.
+2018-06-08 14:20:25,199 - INFO - IntentModelTrainer - Epoch:  4, Step:    100, train loss: 0.019523, eval loss: 0.056631, acc: 0.987746.
+2018-06-08 14:20:25,808 - INFO - IntentModelTrainer - Epoch:  4, Step:    200, train loss: 0.097191, eval loss: 0.052899, acc: 0.987233.
+2018-06-08 14:20:25,808 - INFO - IntentModelTrainer - Epoch:  4, Step:    200, train loss: 0.097191, eval loss: 0.052899, acc: 0.987233.
+2018-06-08 14:20:26,437 - INFO - IntentModelTrainer - Epoch:  4, Step:    300, train loss: 0.129602, eval loss: 0.049021, acc: 0.988517.
+2018-06-08 14:20:26,437 - INFO - IntentModelTrainer - Epoch:  4, Step:    300, train loss: 0.129602, eval loss: 0.049021, acc: 0.988517.
+2018-06-08 14:20:27,072 - INFO - IntentModelTrainer - Epoch:  4, Step:    400, train loss: 0.117591, eval loss: 0.046104, acc: 0.988902.
+2018-06-08 14:20:27,072 - INFO - IntentModelTrainer - Epoch:  4, Step:    400, train loss: 0.117591, eval loss: 0.046104, acc: 0.988902.
+2018-06-08 14:20:27,650 - INFO - IntentModelTrainer - Epoch:  4, Step:    500, train loss: 0.104425, eval loss: 0.043641, acc: 0.989262.
+2018-06-08 14:20:27,650 - INFO - IntentModelTrainer - Epoch:  4, Step:    500, train loss: 0.104425, eval loss: 0.043641, acc: 0.989262.
+2018-06-08 14:20:28,243 - INFO - IntentModelTrainer - Epoch:  4, Step:    600, train loss: 0.051551, eval loss: 0.039252, acc: 0.990880.
+2018-06-08 14:20:28,243 - INFO - IntentModelTrainer - Epoch:  4, Step:    600, train loss: 0.051551, eval loss: 0.039252, acc: 0.990880.
+2018-06-08 16:27:37,871 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:27:37,871 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:27:37,871 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:29:13,368 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:29:13,368 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:29:13,368 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:32:33,480 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:35:10,935 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:39:46,975 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:40:18,326 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:41:06,595 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:41:06,595 - INFO - Vocabulary - Vocabulary can't training now
+2018-06-08 16:45:56,738 - INFO - /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/cparse/dictionary.py - Vocabulary can't training now
+2018-06-08 16:48:41,178 - INFO - /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/cparse/dictionary.py - Vocabulary can't training now
