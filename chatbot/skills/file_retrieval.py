@@ -2,11 +2,11 @@
 # @Time    : 18-6-6 上午10:02
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
-import datetime as dt
 from sklearn.externals.joblib import load
 import pandas as pd
 
-from chatbot.core.discarded.base_skill import BaseSkill
+from chatbot.core.skill import BaseSkill
+from chatbot.core.entity import TimeInterval, Location
 
 
 class FileRetrieval(BaseSkill):
@@ -19,20 +19,10 @@ class FileRetrieval(BaseSkill):
         self._limit_distance = limit_distance
 
     @property
-    def name(self):
-        return "file_retrieval"
-
-    @property
     def init_slots(self):
-        now = dt.datetime.now().date()
         return {
-            "location":
-                {"province": None, "city": None},
-            "time_interval":
-                {
-                    "start": str(now.replace(year=now.year-1)),
-                    "end": str(now)
-                }
+            Location.name(): Location(),
+            TimeInterval.name(): TimeInterval()
         }
 
     def __call__(self, context):
@@ -47,7 +37,12 @@ class FileRetrieval(BaseSkill):
         else:
             return question
 
-    def check_update_slots(self, entities):
+    def contain_slots(self, entities):
+        """
+
+        :param entities: <dict of list>, key: entity name, values: list of entity
+        :return:
+        """
         for k, v in entities.items():
             if k in self.init_slots.keys():
                 return True
@@ -59,14 +54,14 @@ class FileRetrieval(BaseSkill):
     def _act(self, context):
         q_tfidf = self._tfidf.transform([context["text_cut"]]).toarray()
         search_result = self._ci.search(q_tfidf, k=self._k)[0]
-        slot = context["slots"][self.name]
+        slot = context["slots"][self.name()]
         if len(search_result) == 0:
             return self._not_find
         result = []
-        idx_time_limit = self._file[(self._file.date >= slot["time_interval"]["start"]) & \
-                               (self._file.date <= slot["time_interval"]["end"])].index.tolist()
-        idx_location_limit = self._file.index.tolist() if slot["location"]["province"] is None \
-            else self._file[(self._file.area==slot["location"]["province"])].index.tolist()
+        idx_time_limit = self._file[(self._file.date >= slot["TimeInterval"]["start"]) & \
+                               (self._file.date <= slot["TimeInterval"]["end"])].index.tolist()
+        idx_location_limit = self._file.index.tolist() if slot["Location"]["province"] is None \
+            else self._file[(self._file.area==slot["Location"]["province"])].index.tolist()
         idx_limit = set(idx_location_limit) & set(idx_time_limit)
         for (d, i) in search_result:
             if (d <= self._limit_distance) and (i in idx_limit):
@@ -79,9 +74,9 @@ class FileRetrieval(BaseSkill):
         if len(result) == 0:
             return self._not_find
         else:
-            head = self._response_head(slot["location"]["province"],
-                                       startdate=slot["time_interval"]["start"],
-                                       enddate=slot["time_interval"]["end"]
+            head = self._response_head(slot["Location"]["province"],
+                                       startdate=slot["TimeInterval"]["start"],
+                                       enddate=slot["TimeInterval"]["end"]
                                        )
             return head + "\n".join(result)
 
@@ -95,7 +90,7 @@ class FileRetrieval(BaseSkill):
         l = "不限" if location is None else location
         s = "不限" if enddate is None else startdate
         e = "不限" if enddate is None else enddate
-        return "您查询的地区{}, {}至{}相关文件如下: \n".format(l, s, e)
+        return "您查询的地区“{}”在{}至{}相关文件如下: \n".format(l, s, e)
 
     @property
     def _not_find(self):
@@ -109,10 +104,10 @@ if __name__ == "__main__":
 
     from chatbot.preprocessing.text import cut
 
-    context = {"text_cut": " ".join(cut("")),
-     "slots":{"file_retrieval":
+    context = {"text_cut": " ".join(cut("售电公司")),
+     "slots":{"FileRetrieval":
                   skill.init_slots
               }}
-    context["slots"]["file_retrieval"]["time_interval"]["end"]="2018-02-02"
-    context["slots"]["file_retrieval"]["time_interval"]["start"] = "2017-01-02"
+    context["slots"]["FileRetrieval"]["TimeInterval"]["end"]="2018-06-02"
+    context["slots"]["FileRetrieval"]["TimeInterval"]["start"] = "2014-01-02"
     print(skill(context))

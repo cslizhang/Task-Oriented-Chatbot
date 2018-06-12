@@ -19,13 +19,13 @@ class BaseSkill(object):
         """
         raise NotImplementedError
 
-    @property
-    def name(self):
+    @classmethod
+    def name(cls):
         """skill name
 
         :return: <String>
         """
-        raise NotImplementedError
+        return cls.__name__
 
     @property
     def init_slots(self):
@@ -42,3 +42,9 @@ class BaseSkill(object):
         :return: <bool> True包含，False不包含
         """
         raise NotImplementedError
+
+    def __str__(self):
+        return "Skill %s" % self.name()
+
+    def __repr__(self):
+        return self.__str__()

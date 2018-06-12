@@ -20,6 +20,7 @@ class Context(dict):
             history_intent=[],
             query=None,
             query_cut=None,
+            query_idx=None,
             intent=None,
             entities=None,
             slots=skill2slot,

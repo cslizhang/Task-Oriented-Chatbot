@@ -4,7 +4,7 @@
 # @Mail    : evilpsycho42@gmail.com
 import numpy as np
 
-from chatbot.cparse.constant import *
+from chatbot.config.constant import *
 from chatbot.utils.log import get_logger
 from chatbot.cparse.dictionary import Dictionary
 logger = get_logger(__name__)
@@ -20,19 +20,23 @@ class Vocabulary(Dictionary):
     def transform(self, x, max_length=None):
         """文本转换成id
 
-        :param x: <list of string> 以空格作为分割符号的句子组成的列表
+        :param x: <list of list> 最小元素为string,代表一个单词
         :param max_length: 固定返回的每个句子固定长度
         :return: <list of list> 最小元素为单词的idx
         """
         rst = []
         for sentence in x:
-            s_cut = sentence.split(" ")
-            rst_s = [self.word2idx.get(word, UNK_IDX) for word in s_cut]
-            if max_length is not None:
-                rst_s = rst_s[:max_length]
-                rst_s = [PAD_IDX] * (max_length - len(rst_s)) + rst_s
-            rst.append(rst_s)
+            rst_s = self.transform_one(sentence)
+        rst.append(rst_s)
         return rst
+
+    def transform_one(self, x, max_length=None):
+        rst_s = [self.word2idx.get(word, UNK_IDX) for word in x]
+        if max_length is not None:
+            rst_s = rst_s[:max_length]
+            rst_s = [PAD_IDX] * (max_length - len(rst_s)) + rst_s
+        return rst_s
+
 
     def reverse(self, x):
         """
@@ -80,11 +84,12 @@ if __name__ == "__main__":
     vocab = Vocabulary()
     vocab.save("test")
     vocab.fit(sentences1)
-    vocab.transform(sentences1, max_length=10)
+    vocab.transform_one(sentences1[1], max_length=10)
     vocab.training = False
     vocab.fit(sentences2)
-    vocab.transform(sentences2)
+    vocab.transform(sentences2, max_length=10)
     vocab.reverse(vocab.transform(sentences2))
     vocab.save("test")
     t=Vocabulary.load("test")
     print(t)
+

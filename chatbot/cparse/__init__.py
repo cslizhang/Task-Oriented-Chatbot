@@ -5,4 +5,4 @@
 
 # corpus parse
 from chatbot.cparse.vocabulary import Vocabulary
-from chatbot.cparse.label import Label
+from chatbot.cparse.label import IntentLabel

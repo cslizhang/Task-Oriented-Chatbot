@@ -1,5 +1,7 @@
 gensim==3.4.0
 opencc==0.2
 jieba==0.39
+pandas
+sklearn
 torch
 wxpy

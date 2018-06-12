@@ -2,15 +2,18 @@
 # @Time    : 18-6-7 上午10:51
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
+from chatbot.core.estimator import Estimator
 
 
-class RuleNer(object):
+class NerRuleV1(Estimator):
     def __init__(self):
+        super().__init__()
+
+    def infer(self, query):
+        """
+
+        :param query: <string>
+        :return: <dict of list> {"TimeInterval": [t1, t2, ...], "Location": []}
+        """
         pass
 
-    def predict(self, text):
-        r1 = {
-            "location": {"city": "乐山", "province": "全国"},
-            "time_interval": {"start": "2018-01-02", "end": "2018-05-01"}
-        }
-        return r1

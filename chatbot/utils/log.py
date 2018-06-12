@@ -6,7 +6,7 @@
 import logging.config
 from pathlib import Path
 
-from chatbot.utils.path import root
+from chatbot.utils.path import ROOT_PATH
 
 DEBUG_LOG = 'debug.log'
 INFO_LOG = 'info.log'
@@ -19,13 +19,13 @@ def get_logger(logger_name):
     logger.setLevel(logging.DEBUG)
     fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
     # debug log define
-    debug_path = Path(root, DEBUG_LOG).resolve()
+    debug_path = Path(ROOT_PATH, DEBUG_LOG).resolve()
     debug_hdl = logging.FileHandler(debug_path)
     debug_hdl.setLevel(logging.DEBUG)
     debug_hdl.setFormatter(fmt)
     logger.addHandler(debug_hdl)
     # info log define
-    info_path = Path(root, INFO_LOG).resolve()
+    info_path = Path(ROOT_PATH, INFO_LOG).resolve()
     info_hdl = logging.FileHandler(info_path)
     info_hdl.setFormatter(fmt)
     info_hdl.setLevel(logging.INFO)

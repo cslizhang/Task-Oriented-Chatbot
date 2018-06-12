@@ -2,17 +2,18 @@
 # @Time    : 18-5-15 下午4:16
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
+import torch
 from torch import nn
+from torch.nn import functional as F
+from chatbot.intent.models.base_intent_model import BaseIntentModel
 
 
-class FastText(nn.Module):
+class FastText(BaseIntentModel):
     def __init__(self, param: dict):
-        super().__init__()
+        super().__init__(param)
         embed_dim = param['embed_dim']
         vocab_size = param['vocab_size']
         class_num = param['class_num']
-        # hidden_size = param["hidden_size"]
-        self.param = param
         self.embed = nn.Embedding(vocab_size, embed_dim)
         self.fc = nn.Linear(embed_dim, class_num)
 
@@ -25,25 +26,19 @@ class FastText(nn.Module):
 
 
 if __name__ == "__main__":
-    from chatbot.core.trainer import IntentModelTrainer
-    import sys
-    from pathlib import Path
-    p = str(Path(".", "..", "..", "..").resolve())
-    sys.path.append(p)
+    import numpy as np
+    from chatbot.utils.path import ROOT_PATH, MODEL_PATH
     from chatbot.utils.data import read_fasttext_file
     from chatbot.cparse.vocabulary import Vocabulary
-    from chatbot.cparse.label import Label
-    from chatbot.intent.models.pytorch import *
+    from chatbot.cparse.label import IntentLabel
 
-
-
-    p = root.parent / "corpus" / "intent" / "fastText"
+    p = ROOT_PATH.parent / "corpus" / "intent" / "fastText"
     train_x, train_y = read_fasttext_file(str(p / "demo.train.txt"))
     test_x, test_y = read_fasttext_file(str(p / "demo.train.txt"))
     vocab = Vocabulary()
-    vocab.update(train_x)
-    label = Label()
-    label.update(train_y)
+    vocab.fit(train_x)
+    label = IntentLabel()
+    label.fit(train_y)
     train_x = np.array(vocab.transform(train_x, max_length=10))
     test_x = np.array(vocab.transform(test_x, max_length=10))
     train_y = np.array(label.transform(train_y))
@@ -53,8 +48,13 @@ if __name__ == "__main__":
         "vocab_size": len(vocab),
         "embed_dim": 60,
         "class_num": len(label),
+        "lr": 0.01,
         # "dropout": 0.5,
     }
     model = FastText(fasttext_param)
-    trainer = IntentModelTrainer(model=model)
-    trainer.train(train_x, train_y, test_x, test_y, 4, 64, save_best=True)
+    # trainer = IntentModelTrainer(model=model)
+    # trainer.train(train_x, train_y, test_x, test_y, 4, 64, save_best=True)
+    model.fit(train_x, train_y, test_x, test_y, 1, 64, save_best=False)
+    model.save("test")
+    x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
+    x.infer(train_x[9])
