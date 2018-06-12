@@ -6,5 +6,4 @@ from chatbot.core.skill import BaseSkill
 
 
 class BotQA(BaseSkill):
-    # TODO 参照file_retrieval完成BotQA检索
     pass

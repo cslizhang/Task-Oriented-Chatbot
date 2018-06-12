@@ -3,7 +3,7 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 from chatbot.core.skill import BaseSkill
-
+# TODO:tanmx 回复逻辑 & 对应的样本
 
 class LeaveMessage(BaseSkill):
     pass
