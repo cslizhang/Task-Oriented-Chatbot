@@ -37,6 +37,9 @@ class IntentLabel(Dictionary):
     def reverse(self, labels_ids):
         return [self.idx2word.get(l, UNDEFINE_IDX) for l in labels_ids]
 
+    def reverse_one(self, label_idx):
+        return self.idx2word.get(label_idx, UNDEFINE_IDX)
+
 
 if __name__ == "__main__":
     label = IntentLabel()

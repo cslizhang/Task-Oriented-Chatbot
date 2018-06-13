@@ -52,9 +52,14 @@ if __name__ == "__main__":
         # "dropout": 0.5,
     }
     model = FastText(fasttext_param)
-    # trainer = IntentModelTrainer(model=model)
-    # trainer.train(train_x, train_y, test_x, test_y, 4, 64, save_best=True)
     model.fit(train_x, train_y, test_x, test_y, 1, 64, save_best=False)
-    model.save("test")
-    x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
-    x.infer(train_x[9])
+    # model.save("test")
+    # x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
+    s = ["你真是可爱阿", "你很喜欢学习哦", "我再也不想理你了",
+         "吃饭没", "明天会下雨马", "你哥哥是谁", "你有哥哥么", "弟弟是谁",
+         "我想买手机", "我是你主人"
+         ]
+    from chatbot.preprocessing.text import cut
+    for i in s:
+        print(i, label.reverse_one(model.infer(np.array(vocab.transform_one(cut(i), max_length=10)))[0]))
+
