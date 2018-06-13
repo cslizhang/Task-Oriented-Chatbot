@@ -74,7 +74,7 @@ if __name__ == "__main__":
     model = AttRCNN(param)
     model.fit(train_x, train_y, test_x, test_y, 2, 32, save_best=False)
     model.param["lr"] = 0.003
-    model.fit(train_x, train_y, test_x, test_y, 1, 64, save_best=False)
+    model.fit(train_x, train_y, test_x, test_y, 4, 64, save_best=False)
     # model.save("test")
     # x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
     s = ["你真是可爱阿", "你很喜欢学习哦", "我再也不想理你了",
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     for i in s:
         print(i, label.reverse_one(model.infer(np.array(vocab.transform_one(cut(i), max_length=10)))[0]))
     from chatbot.evaluate.plot import plot_attention_1d
-    idx=1000
+    idx=1300
     att = model.get_attention(torch.tensor(np.array(vocab.transform_one(train_x[idx], max_length=10)).reshape(-1, 10)))
     print(label.reverse_one(model.infer(train_x[idx])[0]))
     plot_attention_1d([vocab.reverse_one(train_x[idx]).split(" ")],
