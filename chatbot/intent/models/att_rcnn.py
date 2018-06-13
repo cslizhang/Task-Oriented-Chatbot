@@ -51,6 +51,8 @@ if __name__ == "__main__":
 
     p = ROOT_PATH.parent / "corpus" / "intent" / "fastText"
     train_x, train_y = read_fasttext_file(str(p / "demo.train.txt"))
+    import copy
+    x = copy.deepcopy(train_x)
     test_x, test_y = read_fasttext_file(str(p / "demo.train.txt"))
     vocab = Vocabulary()
     vocab.fit(train_x)
@@ -71,16 +73,21 @@ if __name__ == "__main__":
     }
     model = AttRCNN(param)
     model.fit(train_x, train_y, test_x, test_y, 2, 32, save_best=False)
-    # model.param["lr"] = 0.003
-    # model.fit(train_x, train_y, test_x, test_y, 5, 32, save_best=False)
+    model.param["lr"] = 0.003
+    model.fit(train_x, train_y, test_x, test_y, 1, 64, save_best=False)
     # model.save("test")
     # x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
     s = ["你真是可爱阿", "你很喜欢学习哦", "我再也不想理你了",
          "吃饭没", "明天会下雨马", "你哥哥是谁", "你有哥哥么", "弟弟是谁",
-         "我想买手机", "我是你主人"
+         "我想买手机", "我是你主人", "我可以给你打分吗，评价"
          ]
     from chatbot.preprocessing.text import cut
 
     for i in s:
         print(i, label.reverse_one(model.infer(np.array(vocab.transform_one(cut(i), max_length=10)))[0]))
-
+    from chatbot.evaluate.plot import plot_attention_1d
+    idx=1000
+    att = model.get_attention(torch.tensor(np.array(vocab.transform_one(train_x[idx], max_length=10)).reshape(-1, 10)))
+    print(label.reverse_one(model.infer(train_x[idx])[0]))
+    plot_attention_1d([vocab.reverse_one(train_x[idx]).split(" ")],
+                      att.detach().numpy())

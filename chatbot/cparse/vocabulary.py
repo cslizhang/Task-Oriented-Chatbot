@@ -37,6 +37,18 @@ class Vocabulary(Dictionary):
             rst_s = [PAD_IDX] * (max_length - len(rst_s)) + rst_s
         return rst_s
 
+    def reverse_one(self, x):
+        """
+
+        :param x:
+        :return:
+        """
+        rst = []
+        for idx in x:
+            rst.append(self.idx2word.get(idx, UNK_IDX))
+        rst = " ".join(rst)
+        return rst
+
     def reverse(self, x):
         """
 
