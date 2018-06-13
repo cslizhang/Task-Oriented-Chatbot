@@ -73,8 +73,8 @@ if __name__ == "__main__":
     }
     model = AttRCNN(param)
     model.fit(train_x, train_y, test_x, test_y, 2, 32, save_best=False)
-    model.param["lr"] = 0.003
-    model.fit(train_x, train_y, test_x, test_y, 4, 64, save_best=False)
+    # model.param["lr"] = 0.003
+    # model.fit(train_x, train_y, test_x, test_y, 4, 64, save_best=False)
     # model.save("test")
     # x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
     s = ["你真是可爱阿", "你很喜欢学习哦", "我再也不想理你了",
