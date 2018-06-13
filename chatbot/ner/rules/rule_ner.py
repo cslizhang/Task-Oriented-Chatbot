@@ -3,18 +3,37 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 from chatbot.core.estimator import Estimator
+from chatbot.core.entity import TimeInterval
 
 
-class NerRuleV1(Estimator):
+class NerRuleV1:
     def __init__(self):
         super().__init__()
 
-    def infer(self, context):
+    def extract(self, context):
+        """
+
+        :param context: context["query"]
+        :return: <dict of list>
+        {"TimeInterval": ["", ""]}
+
+        """
+        rst = {}
+        ext_time = self._extract_time(context)
+        if ext_time is not None:
+            rst["TimeInterval"] = ext_time
+
+        return rst
+
+    def _extract_time(self, context):
         """
 
         :param context:
-        :return: <dict of list> {"TimeInterval": [t1, t2, ...], "Location": []}
+        :return: 假如没有实体，返回None，
         """
+        pass
+
+    def transform(self):
         pass
 
     def _infer_time_entity(self, context):
