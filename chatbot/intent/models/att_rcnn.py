@@ -1,5 +1,5 @@
-# coding:utf8
-# @Time    : 18-5-15 下午4:16
+# -*- coding: utf-8 -*-
+# @Time    : 6/13/18 10:06
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 import torch
@@ -8,21 +8,38 @@ from torch.nn import functional as F
 from chatbot.intent.models.base_intent_model import BaseIntentModel
 
 
-class FastText(BaseIntentModel):
-    def __init__(self, param: dict):
-        super().__init__(param)
-        embed_dim = param['embed_dim']
-        vocab_size = param['vocab_size']
-        class_num = param['class_num']
-        self.embed = nn.Embedding(vocab_size, embed_dim)
-        self.fc = nn.Linear(embed_dim, class_num)
+class AttRCNN(BaseIntentModel):
+    def __init__(self, param, *args, **kwargs):
+        super().__init__(param, *args, **kwargs)
+        self.lookup = nn.Embedding(param["vocab_size"], param["embed_dim"])
+        self.conv11 = nn.Conv2d(1, 4, kernel_size=(3, param["embed_dim"]), padding=(1, 0))
+        self.conv12 = nn.Conv2d(1, 4, kernel_size=(5, param["embed_dim"]), padding=(2, 0))
+        self.rnn = nn.GRU(param["embed_dim"], param["hidden_dim"], batch_first=True)
+        self.fc = nn.Linear(param["hidden_dim"], param["class_num"])
 
     def forward(self, x):
-        x = self.embed(x)
-        x = torch.mean(x, dim=1, keepdim=False)
-        output = self.fc(x)
-        output = F.log_softmax(output, dim=1)
-        return output
+        embed = self.lookup(x)
+        att = self._attention(embed)
+        o, h = self.rnn(embed)
+        att = att.unsqueeze(2).expand_as(o)
+        att_o = att * o
+        att_o = torch.sum(att_o, dim=1, keepdim=False)
+        logit = F.log_softmax(self.fc(att_o), 1)
+        return logit
+
+    def _attention(self, x_embed):
+        x_embed = x_embed.unsqueeze(1)
+        a1 = F.relu(self.conv11(x_embed).squeeze(3))
+        a2 = F.relu(self.conv12(x_embed).squeeze(3))
+        # a1, a2 shape: (batch, kernel_num, seq_lenth)
+        a = torch.cat([a1, a2], 1)
+        a = torch.mean(a, dim=1, keepdim=False)
+        return F.softmax(a, 1)
+
+    def get_attention(self, x):
+        x_embed = self.lookup(x)
+        att = self._attention(x_embed)
+        return att
 
 
 if __name__ == "__main__":
@@ -44,15 +61,18 @@ if __name__ == "__main__":
     train_y = np.array(label.transform(train_y))
     test_y = np.array(label.transform(test_y))
 
-    fasttext_param = {
+    param = {
         "vocab_size": len(vocab),
         "embed_dim": 60,
         "class_num": len(label),
         "lr": 0.01,
+        "hidden_dim": 10,
         # "dropout": 0.5,
     }
-    model = FastText(fasttext_param)
-    model.fit(train_x, train_y, test_x, test_y, 1, 64, save_best=False)
+    model = AttRCNN(param)
+    model.fit(train_x, train_y, test_x, test_y, 2, 32, save_best=False)
+    # model.param["lr"] = 0.003
+    # model.fit(train_x, train_y, test_x, test_y, 5, 32, save_best=False)
     # model.save("test")
     # x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
     s = ["你真是可爱阿", "你很喜欢学习哦", "我再也不想理你了",
@@ -60,6 +80,7 @@ if __name__ == "__main__":
          "我想买手机", "我是你主人"
          ]
     from chatbot.preprocessing.text import cut
+
     for i in s:
         print(i, label.reverse_one(model.infer(np.array(vocab.transform_one(cut(i), max_length=10)))[0]))
 

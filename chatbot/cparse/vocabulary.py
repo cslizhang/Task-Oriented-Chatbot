@@ -26,8 +26,8 @@ class Vocabulary(Dictionary):
         """
         rst = []
         for sentence in x:
-            rst_s = self.transform_one(sentence)
-        rst.append(rst_s)
+            rst_s = self.transform_one(sentence, max_length=max_length)
+            rst.append(rst_s)
         return rst
 
     def transform_one(self, x, max_length=None):
@@ -36,7 +36,6 @@ class Vocabulary(Dictionary):
             rst_s = rst_s[:max_length]
             rst_s = [PAD_IDX] * (max_length - len(rst_s)) + rst_s
         return rst_s
-
 
     def reverse(self, x):
         """
