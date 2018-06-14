@@ -24,7 +24,6 @@ class NerRuleV1:
         """
         rst = {}
         ext_time = self._extract_time(context)
-        print(ext_time)
         if ext_time is not None:
             rst["TimeInterval"] = ext_time
         return rst
@@ -91,7 +90,6 @@ class NerRuleV1:
         :param context:
         :return: <list of time entity>
         """
-        # TODO: linjing
         pass
 
     def _infer_location_entity(self, context):
@@ -99,9 +97,25 @@ class NerRuleV1:
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     context = {'query':'下个月月度交易几号开'}
     a = NerRuleV1()
     b = a.extract(context)
     print (b)
+=======
+    context = {'query':'上周五用电量'}
+    contexts = [
+        {'query': '上周五用电量'},
+        {'query': '2018年3月，2018年到2019年电量'},
+        {'query': '2017用电量'},
+        {'query': '上个月'},
+        {'query': '上周五用电量'},
+        {'query': '上周五用电量'},
+        {'query': '上周五用电量'},
+    ]
+    ner = NerRuleV1()
+    for c in contexts:
+        print(ner.extract(c))
+>>>>>>> 99f79ae537ca648f962718513d7a6a452b62f2c2
     # d = a.transform(context)
     # print(d)

@@ -4,6 +4,18 @@
 # @Mail    : evilpsycho42@gmail.com
 import re
 import copy
+from chatbot.ner.rules.rule_ner import NerRuleV1
+
+
+def inser_ner_time_extract(name, query, extract_result):
+    path = "/home/zhouzr/ner_time_extract.txt"
+    with open(path, "a") as f:
+        f.write(name)
+        f.write("\t")
+        f.write(query)
+        f.write("\t")
+        f.write(extract_result)
+        f.write("\t")
 
 def insert(text, intent, name):
     path = "/home/zhouzr/intent_corpus.txt"
@@ -46,6 +58,7 @@ if __name__ == "__main__":
     my_friend = bot.friends()
     my_groups = bot.groups()
     print(my_groups)
+    ner = NerRuleV1()
 
     @bot.register(my_groups)
     def reply_my_group(msg):
@@ -53,7 +66,8 @@ if __name__ == "__main__":
         if text.startswith("小益"):
             text = re.sub("^小益[,.!！，。？ ]{0,3}", "", text)
             if text == "任务":
-                return "今日需求意图样本：闲聊，文件检索，用电查询，公司咨询，业务咨询\n\n" \
+                return "测试时间提取模块，请输入类似这样的询问<小益 测试 上周用电量>\n" \
+                       "今日需求意图样本：闲聊，文件检索，用电查询，公司咨询，业务咨询\n\n" \
                        "如有疑问，请输入：<小益，对应类别名称>进行询问\n\n" \
                        "添加对应类别样本，输入格式如下：\n\n<小益+空格+类别名称+空格+模拟句子>\n"
             elif text == "提示":
@@ -87,9 +101,21 @@ if __name__ == "__main__":
 
             elif text in ["打招呼","再见","肯定","否定","批评","表扬","感谢", "留言"]:
                 return "当前意图暂不需要，请输入<小益，任务>查看最新需求"
-            elif (len(text.split(" ")) == 2) and (text.split(" ")[0] in ALL_INTENT):
-                insert(text.split(" ")[0], "".join(text.split(" ")[1:]), msg.member.name)
-                return "谢谢{},成功添加一条意图识别样本".format(msg.member.name)
+            elif len(text.split(" ")) == 2:
+                if text.split(" ")[0] in ALL_INTENT:
+                    insert(text.split(" ")[0], "".join(text.split(" ")[1:]), msg.member.name)
+                    return "谢谢{},成功添加一条意图识别样本".format(msg.member.name)
+                elif text.split(" ")[0] == "测试":
+                    time_ner = ner.extract({"query": text.split(" ")[1]})
+                    inser_ner_time_extract(msg.member.name, text, str(time_ner))
+                    return str(time_ner)
+                else:
+                    try:
+                        tu = tuling(text)
+                        return tu + "\n\n" + "闲聊固然有趣，但小益更希望你能帮我哦，请输入<小益，任务>进行查看"
+                    except:
+                        return "小益今天聊不动拉。。小益更希望你能帮我哦，请输入<小益，任务>进行查看"
+
             else:
                 try:
                     tu = tuling(text)
