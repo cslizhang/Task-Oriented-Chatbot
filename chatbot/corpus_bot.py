@@ -6,7 +6,7 @@ import re
 import copy
 
 def insert(text, intent, name):
-    path = "/home/zhouzr/project/Task-Oriented-Chatbot/corpus/intent_corpus.txt"
+    path = "/home/zhouzr/intent_corpus.txt"
     with open(path, 'a') as f:
         s = " ".join([name, intent, text, "\n"])
         f.write(s)
@@ -53,7 +53,7 @@ if __name__ == "__main__":
         if text.startswith("小益"):
             text = re.sub("^小益[,.!！，。？ ]{0,3}", "", text)
             if text == "任务":
-                return "今日需求意图样本：文件检索，用电查询，公司咨询，业务咨询\n\n" \
+                return "今日需求意图样本：闲聊，文件检索，用电查询，公司咨询，业务咨询\n\n" \
                        "如有疑问，请输入：<小益，对应类别名称>进行询问\n\n" \
                        "添加对应类别样本，输入格式如下：\n\n<小益+空格+类别名称+空格+模拟句子>\n"
             elif text == "提示":
@@ -80,6 +80,11 @@ if __name__ == "__main__":
                 return "业务咨询,指客户对万益或华宇的产品或服务咨询\n" \
                        "例子1：<小益 公司咨询 你们卖什么？>\n" \
                        "例子2：<小益 公司咨询 提供什么服务？>"
+            elif text == "闲聊":
+                return "除了其他意图外的所有问题\n" \
+                       "例子1：<小益 闲聊 姚明有多高>\n" \
+                       "例子2：<小益 闲聊 长城有多长>"
+
             elif text in ["打招呼","再见","肯定","否定","批评","表扬","感谢", "留言"]:
                 return "当前意图暂不需要，请输入<小益，任务>查看最新需求"
             elif (len(text.split(" ")) == 2) and (text.split(" ")[0] in ALL_INTENT):
