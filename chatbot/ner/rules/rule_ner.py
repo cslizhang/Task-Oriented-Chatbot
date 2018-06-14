@@ -7,8 +7,7 @@ import calendar
 import re
 import datetime
 
-from chatbot.core.estimator import Estimator
-from chatbot.core.entity import TimeInterval
+
 
 
 class NerRuleV1:
@@ -97,25 +96,18 @@ class NerRuleV1:
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    context = {'query':'下个月月度交易几号开'}
-    a = NerRuleV1()
-    b = a.extract(context)
-    print (b)
-=======
+    with open("/home/zhouzr/ner_time_extract.txt", 'r') as f:
+        d = f.read().split("\t")
+    text = []
+    text += ["上周二用电"]
+    for idx, i in enumerate(d):
+        if (idx - 1) % 3 == 0:
+            text.append(i)
     context = {'query':'上周五用电量'}
-    contexts = [
-        {'query': '上周五用电量'},
-        {'query': '2018年3月，2018年到2019年电量'},
-        {'query': '2017用电量'},
-        {'query': '上个月'},
-        {'query': '上周五用电量'},
-        {'query': '上周五用电量'},
-        {'query': '上周五用电量'},
-    ]
+    contexts = [{"query": i} for i in text]
     ner = NerRuleV1()
     for c in contexts:
-        print(ner.extract(c))
->>>>>>> 99f79ae537ca648f962718513d7a6a452b62f2c2
+        print(c["query"], ner.extract(c), "\n")
+
     # d = a.transform(context)
     # print(d)
