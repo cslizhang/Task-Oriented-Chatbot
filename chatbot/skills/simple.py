@@ -5,8 +5,8 @@
 import random
 from chatbot.core.skill import BaseSkill
 from chatbot.utils.path import ROOT_PATH
-# D:\Users\tanmx\chatbot\Task-Oriented-Chatbot\chatbot
 # TODO:tanmx 回复逻辑 & 对应的样本
+
 
 class LeaveMessage(BaseSkill):
     pass
@@ -193,7 +193,8 @@ class Praise(BaseSkill):
         :return: <bool> True包含，False不包含
         """
         return False
-    
+
+
 class Criticize(BaseSkill):
     """Criticize回复逻辑封装
 
@@ -239,24 +240,6 @@ class Criticize(BaseSkill):
         """
         return False
     
-    
-#context = {"query": "哈哈", "user": "周"}    
-#sayhi = SayHi() 
-#goodbye = GoodBye()    
-#thanks = Thanks()
-#praise = Praise()
-#criticize = Criticize()  
-# 
-#sayhi(context)
-#sayhi.init_slots()
-#
-#goodbye(context)
-#
-#thanks(context)
-#
-#praise(context)
-#
-#criticize(context)
 
 
 
