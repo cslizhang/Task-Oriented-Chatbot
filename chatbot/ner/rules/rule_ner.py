@@ -93,18 +93,26 @@ class NerRuleV1:
 
 
 if __name__ == "__main__":
-    with open("/home/zhouzr/ner_time_extract.txt", 'r') as f:
-        d = f.read().split("\t")
-    text = []
-    text += ["上周二用电"]
-    for idx, i in enumerate(d):
-        if (idx - 1) % 3 == 0:
-            text.append(i)
-    context = {'query':'帮我查下前天就是25号的电量'}
-    contexts = [{"query": i} for i in text]
-    ner = NerRuleV1()
-    for c in contexts:
-        print(c["query"], ner.extract(c), "\n")
-
-    # d = a.transform(context)
-    # print(d)
+    # with open("/home/zhouzr/ner_time_extract.txt", 'r') as f:
+    #     d = f.read().split("\t")
+    # text = []
+    # text += ["上周二用电"]
+    # for idx, i in enumerate(d):
+    #     if (idx - 1) % 3 == 0:
+    #         text.append(i)
+    # context = {'query':'帮我查下前天就是25号的电量'}
+    # contexts = [{"query": i} for i in text]
+    # ner = NerRuleV1()
+    # for c in contexts:
+    #     print(c["query"], ner.extract(c), "\n")
+    for line in open("test.txt", 'r'):
+        context = {}
+        context['query'] = line.split(' ')[0]
+        print(context)
+        a = NerRuleV1()
+        b = a.extract(context)
+        print(b)
+        if str(b['TimeInterval']).replace(', ', ',') == line.split(' ')[1].strip('\n'):
+            print('True', '\n')
+        else:
+            print('False', '\n')
