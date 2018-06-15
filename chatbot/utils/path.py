@@ -8,3 +8,5 @@ from pathlib import Path
 
 ROOT_PATH = Path(Path(__file__).resolve().parent, "..").resolve()
 MODEL_PATH = ROOT_PATH / "results"
+#print (ROOT_PATH,'|',MODEL_PATH)        
+#print (ROOT_PATH.parent)

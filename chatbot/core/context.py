@@ -18,10 +18,10 @@ class Context(dict):
             history_query=[],
             history_resp=[],
             history_intent=[],
-            query=None,
-            query_cut=None,
-            query_idx=None,
-            intent=None,
+            query=None, # utterance of customer
+            query_cut=None, # tokens
+            query_idx=None, # token id
+            intent=None, # skill id
             entities=None,
             slots=skill2slot,
             last_query_time=now,
