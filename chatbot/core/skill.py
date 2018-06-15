@@ -18,18 +18,6 @@ class BaseSkill(object):
         :return: <String> 回复信息
         """
         raise NotImplementedError
-
-    def read_txt(self,path):
-        """read txt
-
-        :return: <list>
-        """        
-#        path = "D:\\Users\\tanmx\\chatbot\\Task-Oriented-Chatbot\\corpus\\skill\\GoodBye_response.txt"
-        with open(path, "r") as f:
-            txts = f.readlines()
-        # remove chomp, blank
-        sents = [item.strip().split(' ')[-1] for item in txts if len(item)>1]
-        return sents
         
     @classmethod
     def name(cls):
