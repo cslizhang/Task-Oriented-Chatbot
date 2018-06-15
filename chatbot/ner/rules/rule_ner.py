@@ -70,7 +70,7 @@ class NerRuleV1:
                 if isinstance(result_origin[0][0], tuple):
                     for q in range(len(result_origin[0])):
                         res_deal = list(result_origin[0][q])
-                        while '' in a:
+                        while '' in res_deal:
                             res_deal.remove('')
                         extract_result.append(res_deal[0])
         if len(extract_result) == 0:
