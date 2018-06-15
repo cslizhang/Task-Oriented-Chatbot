@@ -4,6 +4,8 @@
 # @Mail    : evilpsycho42@gmail.com
 import re
 import copy
+import sys
+sys.path.append("/home/zhouzr/project/Task-Oriented-Chatbot")
 from chatbot.ner.rules.rule_ner import NerRuleV1
 
 
@@ -15,7 +17,7 @@ def inser_ner_time_extract(name, query, extract_result):
         f.write(query)
         f.write("\t")
         f.write(extract_result)
-        f.write("\t")
+        f.write("\n")
 
 def insert(text, intent, name):
     path = "/home/zhouzr/intent_corpus.txt"
