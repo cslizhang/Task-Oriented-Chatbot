@@ -7,6 +7,18 @@ from chatbot.core.skill import BaseSkill
 from chatbot.utils.path import ROOT_PATH
 # D:\Users\tanmx\chatbot\Task-Oriented-Chatbot\chatbot
 # TODO:tanmx 回复逻辑 & 对应的样本
+  
+def read_txt(path):
+        """read txt
+
+        :return: <list>
+        """        
+#        path = "D:\\Users\\tanmx\\chatbot\\Task-Oriented-Chatbot\\corpus\\skill\\GoodBye_response.txt"
+        with open(path, "r",encoding='UTF-8') as f:
+            txts = f.readlines()
+        # remove chomp, blank
+        sents = [item.strip().split(' ')[-1] for item in txts if len(item)>1]
+        return sents
 
 class LeaveMessage(BaseSkill):
     pass
@@ -29,7 +41,7 @@ class SayHi(BaseSkill):
         """
         print("loading response for SayHi...")
         path = str(ROOT_PATH.parent / "corpus"/"intent"/"skill"/"SayHi_response.txt")
-        self.reps = self.read_txt(path)
+        self.reps = read_txt(path)
 
     def __call__(self, context):
         """skill回复逻辑封装
@@ -47,7 +59,7 @@ class SayHi(BaseSkill):
 
         :return: <dict> slots dict
         """
-        return dict
+        return {}
 
     def contain_slots(self, entities):
         """判断是否包含skill所需词槽
@@ -75,7 +87,7 @@ class GoodBye(BaseSkill):
         """
         print("loading response for GoodBye...")
         path = str(ROOT_PATH.parent / "corpus"/"intent"/"skill"/"GoodBye_response.txt")
-        self.reps = self.read_txt(path)
+        self.reps = read_txt(path)
 
     def __call__(self, context):
         """skill回复逻辑封装
@@ -93,7 +105,7 @@ class GoodBye(BaseSkill):
 
         :return: <dict> slots dict
         """
-        return dict
+        return {}
 
     def contain_slots(self, entities):
         """判断是否包含skill所需词槽
@@ -121,7 +133,7 @@ class Thanks(BaseSkill):
         """
         print("loading response for Thanks...")
         path = str(ROOT_PATH.parent / "corpus"/"intent"/"skill"/"Thanks_response.txt")
-        self.reps = self.read_txt(path)
+        self.reps = read_txt(path)
 
     def __call__(self, context):
         """skill回复逻辑封装
@@ -139,7 +151,7 @@ class Thanks(BaseSkill):
 
         :return: <dict> slots dict
         """
-        return dict
+        return {}
 
     def contain_slots(self, entities):
         """判断是否包含skill所需词槽
@@ -166,7 +178,7 @@ class Praise(BaseSkill):
         """
         print("loading response for Praise...")
         path = str(ROOT_PATH.parent / "corpus"/"intent"/"skill"/"Praise_response.txt")
-        self.reps = self.read_txt(path)
+        self.reps = read_txt(path)
 
     def __call__(self, context):
         """skill回复逻辑封装
@@ -184,7 +196,7 @@ class Praise(BaseSkill):
 
         :return: <dict> slots dict
         """
-        return dict
+        return {}
 
     def contain_slots(self, entities):
         """判断是否包含skill所需词槽
@@ -211,7 +223,7 @@ class Criticize(BaseSkill):
         """
         print("loading response for Criticize...")
         path = str(ROOT_PATH.parent / "corpus"/"intent"/"skill"/"Criticize_response.txt")
-        self.reps = self.read_txt(path)
+        self.reps = read_txt(path)
 
     def __call__(self, context):
         """skill回复逻辑封装
@@ -229,7 +241,7 @@ class Criticize(BaseSkill):
 
         :return: <dict> slots dict
         """
-        return dict
+        return {}
 
     def contain_slots(self, entities):
         """判断是否包含skill所需词槽
