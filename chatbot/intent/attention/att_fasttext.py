@@ -27,10 +27,16 @@ class AttFastText(BaseIntentModel):
         score = F.softmax(score, 1)
         return score
 
+    def get_attention(self, x, mask=None):
+        x = torch.tensor(x)
+        x =self.embed(x)
+        score = self._score(x, mask)
+        return score
+
     def forward(self, x):
         x = self.embed(x)
         score = self._score(x)
-        print(score[0])
+        # print(score[0])
         # x = torch.mean(x, dim=1, keepdim=False)
         x_att = torch.sum(score.unsqueeze(2).expand_as(x) * x, dim=1, keepdim=False)
         output = self.fc(x_att)
@@ -45,18 +51,20 @@ if __name__ == "__main__":
     from chatbot.cparse.label import IntentLabel
 
     p = ROOT_PATH.parent / "corpus" / "intent" / "fastText"
-    x, y = read_fasttext_file(str(p / "corpus"))
+    x, y = read_fasttext_file(str(p / "amazon.txt"))
     train_x, train_y = x[:7000], y[:7000]
     test_x, test_y = x[7000:], y[7000:]
-    import copy
-    x = copy.deepcopy(train_x)
+
+    # train_x, train_y = read_fasttext_file(str(p/"demo.train.txt"))
     # test_x, test_y = read_fasttext_file(str(p / "demo.train.txt"))
+
+
     vocab = Vocabulary()
     vocab.fit(train_x)
     label = IntentLabel()
     label.fit(train_y)
-    train_x = np.array(vocab.transform(train_x, max_length=10))
-    test_x = np.array(vocab.transform(test_x, max_length=10))
+    train_x = np.array(vocab.transform(train_x, max_length=50))
+    test_x = np.array(vocab.transform(test_x, max_length=50))
     train_y = np.array(label.transform(train_y))
     test_y = np.array(label.transform(test_y))
 
@@ -69,21 +77,17 @@ if __name__ == "__main__":
     }
     model = AttFastText(p)
     model.fit(train_x, train_y, test_x, test_y, 2, 32, save_best=False)
+    model.param["lr"] = 0.005
+    model.fit(train_x, train_y, test_x, test_y, 2, 32, save_best=False)
     # model.param["lr"] = 0.003
-    # model.fit(train_x, train_y, test_x, test_y, 4, 64, save_best=False)
-    # model.save("test")
-    # x = FastText.load(str(MODEL_PATH / "intent" / "test.FastText"))
-    s = ["你真是可爱阿", "你很喜欢学习哦", "我再也不想理你了",
-         "吃饭没", "明天会下雨马", "你哥哥是谁", "你有哥哥么", "弟弟是谁",
-         "我想买手机", "我是你主人", "我可以给你打分吗，评价"
-         ]
-    from chatbot.preprocessing.text import cut
+    # model.fit(train_x, train_y, test_x, test_y, 4, 32, save_best=False)
+    # model.get_attention(train_x[0].reshape(1, -1))
 
-    for i in s:
-        print(i, label.reverse_one(model.infer(np.array(vocab.transform_one(cut(i), max_length=10)))[0]))
-    from chatbot.evaluate.plot import plot_attention_1d
-    idx=1200
-    att = model._score(torch.tensor(np.array(vocab.transform_one(train_x[idx], max_length=10)).reshape(-1, 10)))
-    print(label.reverse_one(model.infer(train_x[idx])[0]))
-    plot_attention_1d([vocab.reverse_one(train_x[idx]).split(" ")],
-                      att.detach().numpy())
+    from chatbot.evaluate.plot import plot_attention
+    idx = np.random.randint(1000, 2000, 5)
+    att = model.get_attention(train_x[idx].reshape(-1, 50))
+    print(label.reverse(torch.max(model(torch.tensor(train_x[idx])), 1)[1].numpy()))
+    plot_attention([i.split(" ") for i in vocab.reverse(train_x[idx])],
+                      att.detach().numpy(),
+                   [i.strip("__label__") for i in label.reverse(torch.max(model(torch.tensor(train_x[idx])), 1)[1].numpy())],
+                   figsize=(15, 8))

@@ -7,8 +7,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import matplotlib as mpl
-zhfont = mpl.font_manager.FontProperties(fname='/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc')
-
+# zhfont = mpl.font_manager.FontProperties(fname='/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc')
+def getChineseFont():
+    return mpl.font_manager.FontProperties(fname='/System/Library/Fonts/PingFang.ttc')
 
 def plot_confusion_matrix(y_true, y_test, classes,
                           normalize=False,
@@ -43,37 +44,25 @@ def plot_confusion_matrix(y_true, y_test, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
-import seaborn as sns
 
-def plot_attention_1d(values, attentions, **kwargs):
-    if attentions.ndim == 1:
-        attentions = attentions.reshape(1, -1)
-        values = [values]
+def plot_attention(sentences, attentions, labels, **kwargs):
     fig, ax = plt.subplots(**kwargs)
     im = ax.imshow(attentions, interpolation='nearest',
                    vmin=attentions.min(), vmax=attentions.max())
-    plt.colorbar(im, shrink=0.5, ticks=[0,1], cmap=plt.cm.summer)
-
-    # We want to show all ticks...
-    # ax.set_xticks(np.arange(len(attentions)))
-    # ax.set_yticks(np.arange(len(attentions)))
-    # ... and label them with the respective list entries
-    # ax.set_xticklabels(farmers)
-    # ax.set_yticklabels(vegetables)
-
-    # Rotate the tick labels and set their alignment.
+    plt.colorbar(im, shrink=0.5, ticks=[0, 1])
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
              rotation_mode="anchor")
-
+    ax.set_yticks(range(len(labels)))
+    ax.set_yticklabels(labels, fontproperties=getChineseFont())
     # Loop over data dimensions and create text annotations.
     for i in range(attentions.shape[0]):
         for j in range(attentions.shape[1]):
-            text = ax.text(j, i, values[i][j],
-                           ha="center", va="center", color="w", size=10, fontproperties=zhfont)
+            text = ax.text(j, i, sentences[i][j],
+                           ha="center", va="center", color="b", size=10,
+                           fontproperties=getChineseFont())
 
-    ax.set_title("Atention 可视化", fontproperties=zhfont)
+    ax.set_title("Attention Visual")
     fig.tight_layout()
     plt.show()
 
-# plot_attention_1d([str(i) for i in range(10)], np.abs(np.random.rand(10)), )
 
