@@ -37,14 +37,13 @@ class NerRuleV1:
                    r'(\d{2,4}年\d{1,2}月\d{1,2}[日|号])|'
                    r'(.[去年|明年|后年|前年|今年][\d|一|二|三|四|五|六|七|八|九|十][月].\d[日|号])|(.[去年|明年|后年|前年|今年]\d{1,2}[月])|'
                    r'([去年|明年|后年|前年|今年](.*)季度)|([今|明|昨|去|前|后][年][今|明|昨|前|后][天|日])|([今|明|昨|去|前|后][天|年|日])|'
-                   r'(\d{2,4}[年].*[季度]$)|(\d{4}[年][第].[季度].)|([第].[季度].)|([\d|一|二|三|四][季度].)|([本|上|下][月].*[日|号])|'
+                   r'(\d{2,4}[年][\d|一|二|三|四][季度].)|(\d{4}[年][第].[季度].)|([第].[季度].)|([\d|一|二|三|四][季度].)|([本|上|下][月].*[日|号])|'
                    r'(^[下个月|上个月|这个月].*\d{2}[日|号])|([上|下|本][月|年])|([下个|上个|这个].[月])|([过去|未来].*?[月|天|日])|'
                    r'(\d{2,4}年\d{1,2}月)|(\d{1,2}月\d{1,2}[日|号])|([一|二|三|四|五|六|七|八|九|十|十一|十二]{1,2}月\d{1,2}[日|号])|'
                    r'(\d{1,2}[月])|([一|二|三|四|五|六|七|八|九|十|十一|十二]{1,2}[月])|(\d{1,2}[号|日])|([一|二|三|四|五|六|七|八|九|十][号|日])|'
                    r'(\d{2,4}[年])|([上|下|这|本][周][[一|二|三|四|五|六|天|\d])|([上|下|这|本][星期|礼拜].. *?)|(^[上一|下一].[周|天|年])|'
                    r'([上|下|这|本][周])|([周][\d|一|二|三|四|五])|(.[下个|上个|这个][星期|礼拜].[\d|一|二三|四|五|六|七|天])|'
                    r'(.[下个|上个|这个][星期|礼拜].)|([本|下|上][季度].)|(.[下个|上个|这个][季度].)']
-
         result_origin = []
         for i in range(len(pattern)):
             res = re.findall(pattern[i], context['query'], re.S)
@@ -113,8 +112,12 @@ class NerRuleV1:
         res3 = self._infer_time_minxed(context)
         res4 = self._infer_time_contact(context)
         if res is not None:
-            if len(res4) == 0:
+            if len(res4) == 0 :
                 res = res1 + res2 + res3
+            elif len(res4) == 1 and len(res2) == 2:
+                res = res4
+            elif len(res4) == 1 and len(res3) == 2:
+                res = res4
             else:
                 res = res4 + res2 + res3
             return res
@@ -160,8 +163,7 @@ class NerRuleV1:
             # user_param = TEST()
             for i in result:
                 i = self._numtransform(i)
-                if self._hasNumbers(
-                        i) is True and '周' not in i and '星期' not in i and '礼拜' not in i and '季' not in i and '去年' not in i and '今年' not in i and '前年' not in i and '后年' not in i and '明年' not in i and '上' not in i and '下' not in i and '本' not in i and '这' not in i and '过去' not in i and '未来' not in i:
+                if self._hasNumbers(i) is True and '周' not in i and '星期' not in i and '礼拜' not in i and '季' not in i and '去年' not in i and '今年' not in i and '前年' not in i and '后年' not in i and '明年' not in i and '上' not in i and '下' not in i and '本' not in i and '这' not in i and '过去' not in i and '未来' not in i:
                     '''时间格式的映射'''
                     if '.' in i or '-' in i or '/' in i:
                         if '.' in i:
@@ -310,9 +312,7 @@ class NerRuleV1:
             convert_result = []
             for i in result:
                 i = self._numtransform(i)
-                if (self._hasNumbers(i) is True and (
-                                                                '本年' in i or '去年' in i or '今年' in i or '前年' in i or '后年' in i or '明年' in i or '上' in i or '下' in i or '本' in i or '这' in i or '过去' in i or '未来' in i)) or (
-                            self._hasNumbers(i) is True and '年' in i and '季' in i):
+                if (self._hasNumbers(i) is True and ('本年' in i or '去年' in i or '今年' in i or '前年' in i or '后年' in i or '明年' in i or '上' in i or '下' in i or '本' in i or '这' in i or '过去' in i or '未来' in i)) or (self._hasNumbers(i) is True and '季' in i):
                     if '年' in i and '月' in i and '日' not in i and '号' not in i:
                         months = re.search(r'(\d{1,2})月', i, re.S).group(1)
                         if int(months) < 10 and len(months) == 1:
@@ -366,7 +366,7 @@ class NerRuleV1:
                             days = days
                         years = str(datetime.datetime.now().year)
                         if '上' in i:
-                            months = str(months + 1)
+                            months = str(months - 1)
                             if int(months) < 10 and len(months) == 1:
                                 months = '0' + months
                             else:
@@ -377,7 +377,7 @@ class NerRuleV1:
                             else:
                                 months = months
                         if '下' in i:
-                            months = str(months - 1)
+                            months = str(months + 1)
                             if int(months) < 10 and len(months) == 1:
                                 months = '0' + months
                             else:
@@ -412,8 +412,22 @@ class NerRuleV1:
                         if num == 4:
                             months = ['10', '12']
                         month_range = calendar.monthrange(int(years), int(months[1]))
-                        time_convert = years + '-' + months[0] + '-01' + '~' + years + '-' + months[1] + '-' + str(
-                            month_range[1])
+                        time_convert = years + '-' + months[0] + '-01' + '~' + years + '-' + months[1] + '-' + str(month_range[1])
+                    if '年' not in i and '季' in i:
+                        num = int(re.search(r'(\d)[季]', i, re.S).group(1))
+                        if num == 1:
+                            months = ['01', '02', '03']
+                        if num == 2:
+                            months = ['04', '05', '06']
+                        if num == 3:
+                            months = ['07', '08', '09']
+                        if num == 4:
+                            months = ['10', '11', '12']
+                        years = str(datetime.datetime.now().year)
+                        res = [years + '-' + x for x in months]
+                        month_range = calendar.monthrange(int(years), int(months[2]))
+                        days = [str(month_range[1])]
+                        time_convert = res[0] + '-01' + '~' + res[2] + '-' + days[0]
                     if '周' in i or '星期' in i or '礼拜' in i:
                         if '上' in i:
                             week_day = int(datetime.datetime.now().isoweekday())
@@ -505,8 +519,7 @@ class NerRuleV1:
             convert_result2 = []
             for i in result:
                 i = self._numtransform(i)
-                if self._hasNumbers(i) is False and (
-                                            '周' in i or '星期' in i or '礼拜' in i or '季' in i or '年' in i or '天' in i or '月' in i):
+                if self._hasNumbers(i) is False and ('周' in i or '星期' in i or '礼拜' in i or '季' in i or '年' in i or '天' in i or '月' in i):
                     '''天的转换'''
                     if i == '今天':
                         time_convert = (datetime.datetime.now()).strftime('%Y-%m-%d')
@@ -589,46 +602,22 @@ class NerRuleV1:
                     if '周' in i or '星期' in i or '礼拜' in i:
                         if "本" in i or "这" in i:
                             week_day = int(datetime.datetime.now().isoweekday())
-                            start_time = (datetime.datetime.now() + datetime.timedelta(days=-week_day + 1)).strftime(
-                                '%Y-%m-%d')
-                            end_time = (
-                            datetime.datetime.strptime(start_time, '%Y-%m-%d') + datetime.timedelta(days=6)).strftime(
-                                '%Y-%m-%d')
+                            start_time = (datetime.datetime.now() + datetime.timedelta(days=-week_day + 1)).strftime('%Y-%m-%d')
+                            end_time = (datetime.datetime.strptime(start_time, '%Y-%m-%d') + datetime.timedelta(days=6)).strftime('%Y-%m-%d')
                             time_convert = start_time + '~' + end_time
                         if '上' in i:
                             week_day = int(datetime.datetime.now().isoweekday())
-                            start_time = (datetime.datetime.now() + datetime.timedelta(days=-week_day)).strftime(
-                                '%Y-%m-%d')
-                            end_time = (
-                            datetime.datetime.strptime(start_time, '%Y-%m-%d') + datetime.timedelta(days=-6)).strftime(
-                                '%Y-%m-%d')
+                            start_time = (datetime.datetime.now() + datetime.timedelta(days=-week_day)).strftime('%Y-%m-%d')
+                            end_time = (datetime.datetime.strptime(start_time, '%Y-%m-%d') + datetime.timedelta(days=-6)).strftime('%Y-%m-%d')
                             time_convert = end_time + '~' + start_time
                         if '下' in i:
                             week_day = int(datetime.datetime.now().weekday())
                             d_day = 7 - week_day
-                            start_time = (datetime.datetime.now() + datetime.timedelta(days=d_day + 1)).strftime(
-                                '%Y-%m-%d')
-                            end_time = (
-                            datetime.datetime.strptime(start_time, '%Y-%m-%d') + datetime.timedelta(days=6)).strftime(
-                                '%Y-%m-%d')
+                            start_time = (datetime.datetime.now() + datetime.timedelta(days=d_day + 1)).strftime('%Y-%m-%d')
+                            end_time = (datetime.datetime.strptime(start_time, '%Y-%m-%d') + datetime.timedelta(days=6)).strftime('%Y-%m-%d')
                             time_convert = start_time + '~' + end_time
                     '''季度的转换'''
                     if '季度' in i:
-                        if self._hasNumbers(i) is True:
-                            num = int(re.findall(r'\d+', i)[0])
-                            if num == 1:
-                                months = ['01', '02', '03']
-                            if num == 2:
-                                months = ['04', '05', '06']
-                            if num == 3:
-                                months = ['07', '08', '09']
-                            if num == 4:
-                                months = ['10', '11', '12']
-                            years = str(datetime.datetime.now().year)
-                            res = [years + '-' + x for x in months]
-                            month_range = calendar.monthrange(int(years), int(months[2]))
-                            days = [str(month_range[1])]
-                            time_convert = res[0] + '-01' + '~' + res[2] + '-' + days[0]
                         if self._hasNumbers(i) is False:
                             if '本' in i or '这' in i:
                                 years = str(datetime.datetime.now().year)
@@ -690,24 +679,32 @@ class NerRuleV1:
         mixed = self._infer_time_minxed(context)
         anglicize = self._infer_time_anglicize(context)
         convert_result4 = []
-        if result is not None and len(result) ==2:
-            if len(standard)==2:
+        if result is not None :
+            if len(result) ==2 and (len(standard)==2 or len(mixed)==2 or len(anglicize)==2):
+                if len(standard)==2:
+                    standard = standard
+                if len(mixed)==2:
+                    standard = mixed
+                if len(anglicize)==2:
+                    standard = anglicize
                 patterns = (result[0] + '(.*?)' + result[1])
                 link = re.search(patterns, context['query'], re.S).group(1)
                 if '到' in link  or '至' in link or link=='~' or  link=='-':
-                    if result[1][0:4].isdigit() is False:
+                    if result[1][0:4].isdigit() is False and '今年' not in result[1] and '去年' not in result[1] and '明年' not in result[1] and '后年' not in result[1] and '前年' not in result[1]:
                         years = result[0][0:4]
                         months_start = standard[0].split('-')[1]
-                        months_end = standard[1].split('-')[1]
                         days = standard[1].split('-')[2]
                         if '~' in standard[0] and '~' not in standard[1]:
+                            months_end = standard[1].split('-')[1]
                             time_convert = years +'-'+ months_start +'-01' +'~'+years + '-'+months_end + '-'+ days
                         elif '~' in standard[0] and '~' in standard[1]:
+                            months_end = standard[1].split('~')[1].split('-')[1]
                             month_range = calendar.monthrange(int(years), int(months_end[1]))
                             time_convert = years + '-' + months_start + '-01' + '~' + years + '-'+ months_end + '-' + str(month_range[1])
                         elif  '~' not in standard[0] and '~' not in standard[1]:
                             time_convert = standard[0] + '~' + standard[1]
                         elif '~' not in standard[0] and '~' in standard[1]:
+                            months_end = standard[1].split('~')[1].split('-')[1]
                             month_range = calendar.monthrange(int(years), int(months_end[1]))
                             time_convert = standard[0] + '~' + years + '-'+ months_end + '-' + str(month_range[1])
                     else:
@@ -721,18 +718,9 @@ class NerRuleV1:
                             end_time = standard[1]
                         time_convert =  start_time +'~'+ end_time
                     convert_result4.append(time_convert)
-            if len(result) == 2 and len(mixed) ==2:
-                if '到' in link or '至' in link or link == '~' or link == '-':
-                    time_convert = mixed[0] + '~' + mixed[1]
-                    convert_result4.append(time_convert)
-            if len(result) == 2 and len(anglicize) ==2:
-                if '到' in link or '至' in link or link == '~' or link == '-':
-                    time_convert = anglicize[0] + '~' + anglicize[1]
-                    convert_result4.append(time_convert)
             return convert_result4
         else:
             return None
-
 
     def _infer_location_entity(self, context):
         pass
@@ -751,6 +739,8 @@ if __name__ == "__main__":
     # ner = NerRuleV1()
     # for c in contexts:
     #     print(c["query"], ner.extract(c), "\n")
+
+    '''测试test文件'''
     for line in open("test.txt", 'r'):
         contexts = dict()
         contexts['query'] = line.split(' ')[0]
@@ -764,3 +754,12 @@ if __name__ == "__main__":
         #     print('False', '\n')
         d = a.transform(contexts)
         print(d,'\n')
+
+    '''单独调试'''
+    # context = {'query': '上月25号电量多少'}
+    # a = NerRuleV1()
+    # b = b = a.extract(context)
+    # print(b)
+    # c = a.transform(context)
+    # print(c)
+
