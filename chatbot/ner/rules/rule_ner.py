@@ -723,7 +723,6 @@ class NerRuleV1:
         else:
             return None
 
-
     def _infer_location_entity(self, context):
         pass
 
@@ -752,5 +751,5 @@ if __name__ == "__main__":
         #     print('True', '\n')
         # else:
         #     print('False', '\n')
-        d = a.transform(contexts)
+        d = a._infer_time_standard(contexts)
         print(d,'\n')
