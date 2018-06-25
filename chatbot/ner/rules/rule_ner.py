@@ -687,9 +687,11 @@ class NerRuleV1:
         '''判断时间实体之间的关系，确定输出结果为时间区间还是时间点'''
         result = self._extract_time(context)
         standard = self._infer_time_standard(context)
+        mixed = self._infer_time_minxed(context)
+        anglicize = self._infer_time_anglicize(context)
         convert_result4 = []
-        if result is not None:
-            if len(result) ==2 and len(standard)==2:
+        if result is not None and len(result) ==2:
+            if len(standard)==2:
                 patterns = (result[0] + '(.*?)' + result[1])
                 link = re.search(patterns, context['query'], re.S).group(1)
                 if '到' in link  or '至' in link or link=='~' or  link=='-':
@@ -718,6 +720,14 @@ class NerRuleV1:
                         else:
                             end_time = standard[1]
                         time_convert =  start_time +'~'+ end_time
+                    convert_result4.append(time_convert)
+            if len(result) == 2 and len(mixed) ==2:
+                if '到' in link or '至' in link or link == '~' or link == '-':
+                    time_convert = mixed[0] + '~' + mixed[1]
+                    convert_result4.append(time_convert)
+            if len(result) == 2 and len(anglicize) ==2:
+                if '到' in link or '至' in link or link == '~' or link == '-':
+                    time_convert = anglicize[0] + '~' + anglicize[1]
                     convert_result4.append(time_convert)
             return convert_result4
         else:
