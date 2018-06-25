@@ -4,7 +4,6 @@
 # @Mail    : evilpsycho42@gmail.com
 import calendar
 import re
-
 import datetime
 
 
@@ -32,13 +31,118 @@ class NerRuleV1:
         :param context: context["query"]
         :return: 假如没有实体，返回None，
         """
+
         pattern = [r'(\d{2,4}-\d{1,2}-\d{1,2})|(\d{8})|(\d{6})|(\d{2,4}/\d{1,2}/\d{1,2})|(\d{2,4}\.\d{1,2}\.\d{1,2})|'
                    r'(\d{2,4}\.\d{1,2})|(\d{1,2}\.\d{1,2})|(\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2})|(\d{2,4}年\d{1,2}月)|'
-                   r'(\d{2,4}年\d{1,2}月\d{1,2}[日|号])|(.[去年|明年|后年|前年|今年][\d|一|二|三|四|五|六|七|八|九|十][月].\d[日|号])|'
-                   r'(.[去年|明年|后年|前年|今年]\d{1,2}[月])|([去年|明年|后年|前年|今年](.*)季度)|([今|明|昨|去|前|后][年][今|明|昨|前|后][天|日])|'
-                   r'([今|明|昨|去|前|后][天|年|日])|(\d{2,4}[年].*[季度]$)|(\d{4}[年][第].[季度].)|([第].[季度].)|([\d|一|二|三|四][季度].)|'
-                   r'([本|上|下][月].*[日|号])|(^[下个月|上个月|这个月].*\d{2}[日|号])|([上|下|本][月|年])|([下个|上个|这个].[月])|'
-                   r'([过去|未来].*?[月|天|日])|(\d{2,4}年\d{1,2}月)|(\d{1,2}月\d{1,2}[日|号])|'
+                   r'(\d{2,4}年\d{1,2}月\d{1,2}[日|号])|'
+                   r'(.[去年|明年|后年|前年|今年][\d|一|二|三|四|五|六|七|八|九|十][月].\d[日|号])|(.[去年|明年|后年|前年|今年]\d{1,2}[月])|'
+                   r'([去年|明年|后年|前年|今年](.*)季度)|([今|明|昨|去|前|后][年][今|明|昨|前|后][天|日])|([今|明|昨|去|前|后][天|年|日])|'
+                   r'(\d{2,4}[年].*[季度]$)|(\d{4}[年][第].[季度].)|([第].[季度].)|([\d|一|二|三|四][季度].)|([本|上|下][月].*[日|号])|'
+                   r'(^[下个月|上个月|这个月].*\d{2}[日|号])|([上|下|本][月|年])|([下个|上个|这个].[月])|([过去|未来].*?[月|天|日])|'
+                   r'(\d{2,4}年\d{1,2}月)|(\d{1,2}月\d{1,2}[日|号])|([一|二|三|四|五|六|七|八|九|十|十一|十二]{1,2}月\d{1,2}[日|号])|'
+                   r'(\d{1,2}[月])|([一|二|三|四|五|六|七|八|九|十|十一|十二]{1,2}[月])|(\d{1,2}[号|日])|([一|二|三|四|五|六|七|八|九|十][号|日])|'
+                   r'(\d{2,4}[年])|([上|下|这|本][周][[一|二|三|四|五|六|天|\d])|([上|下|这|本][星期|礼拜].. *?)|(^[上一|下一].[周|天|年])|'
+                   r'([上|下|这|本][周])|([周][\d|一|二|三|四|五])|(.[下个|上个|这个][星期|礼拜].[\d|一|二三|四|五|六|七|天])|'
+                   r'(.[下个|上个|这个][星期|礼拜].)|([本|下|上][季度].)|(.[下个|上个|这个][季度].)']
+
+        result_origin = []
+        for i in range(len(pattern)):
+            res = re.findall(pattern[i], context['query'], re.S)
+            if len(res) != 0:
+                result_origin.append(res)
+            else:
+                continue
+        extract_result = []
+        for i in range(len(result_origin)):
+            if len(result_origin) > 1:
+                if isinstance(result_origin[i][0], str):
+                    for k in range(len(result_origin[i])):
+                        extract_result.append(result_origin[i][k])
+                if isinstance(result_origin[i][0], tuple):
+                    for j in range(len(result_origin[i])):
+                        res_a = list(result_origin[i][j])
+                        while '' in a:
+                            res_a.remove('')
+                        extract_result.append(res_a[0])
+            else:
+                if isinstance(result_origin[0][0], str):
+                    extract_result.append(result_origin[0][0])
+                if isinstance(result_origin[0][0], tuple):
+                    for q in range(len(result_origin[0])):
+                        res_deal = list(result_origin[0][q])
+                        while '' in res_deal:
+                            res_deal.remove('')
+                        extract_result.append(res_deal[0])
+        if len(extract_result) == 0:
+            return None
+        else:
+            return extract_result
+
+    def transform(self, context):
+        '''
+        :param context: context['query']
+        :return: dict of list
+        [{'end':'2018-06-13','start':'2018-06-13'}]
+        '''
+        output_result = []
+        trans_time = self._infer_time_entity(context)
+        if trans_time is not None:
+            for i in range(len(trans_time)):
+                transform = {}
+                if '~' in trans_time[i]:
+                    transform['end'] = trans_time[i].split('~')[1]
+                    transform['start'] = trans_time[i].split('~')[0]
+                else:
+                    transform['end'] = trans_time[i]
+                    transform['start'] = trans_time[i]
+                output_result.append(transform)
+            # if trans_time is not None:
+            #     transform["TimeInterval"] = transform
+            return output_result
+        else:
+            return None
+
+    def _infer_time_entity(self, context):
+        """
+        :param context:
+        :return: <list of time entity>
+        """
+        res = self._extract_time(context)
+        res1 = self._infer_time_standard(context)
+        res2 = self._infer_time_anglicize(context)
+        res3 = self._infer_time_minxed(context)
+        res4 = self._infer_time_contact(context)
+        if res is not None:
+            if len(res4) == 0:
+                res = res1 + res2 + res3
+            else:
+                res = res4 + res2 + res3
+            return res
+        else:
+            return None
+
+    def _hasNumbers(self, inputString):
+        return any(char.isdigit() for char in inputString)
+
+    def _numtransform(self, i):
+        '''中文大写数字转换阿拉伯数字'''
+        if (
+                                                        '一' in i or '二' in i or '两' in i or '三' in i or '四' in i or '五' in i or '六' in i or '七' in i or '八' in i or '九' in i or '十' in i or '天' in i):
+            try:
+                i = i.replace('十一', '11')
+                i = i.replace('十二', '12')
+                i = i.replace('一', '1')
+                i = i.replace('二', '2')
+                i = i.replace('两', '2')
+                i = i.replace('三', '3')
+                i = i.replace('四', '4')
+                i = i.replace('五', '5')
+                i = i.replace('六', '6')
+                i = i.replace('七', '7')
+                if '星期' in i or '礼拜' in i or '周' in i:
+                    i = i.replace('天', '7')
+                i = i.replace('八', '8')
+                i = i.replace('九', '9')
                 i = i.replace('十', '10')
             except Exception as e:
                 print(e)
@@ -585,26 +689,25 @@ class NerRuleV1:
         standard = self._infer_time_standard(context)
         convert_result4 = []
         if result is not None:
-            if len(result) == 2 and len(standard) == 2:
+            if len(result) ==2 and len(standard)==2:
                 patterns = (result[0] + '(.*?)' + result[1])
                 link = re.search(patterns, context['query'], re.S).group(1)
-                if '到' in link or '至' in link or link == '~' or link == '-':
+                if '到' in link  or '至' in link or link=='~' or  link=='-':
                     if result[1][0:4].isdigit() is False:
                         years = result[0][0:4]
                         months_start = standard[0].split('-')[1]
                         months_end = standard[1].split('-')[1]
                         days = standard[1].split('-')[2]
                         if '~' in standard[0] and '~' not in standard[1]:
-                            time_convert = years + '-' + months_start + '-01' + '~' + years + '-' + months_end + '-' + days
+                            time_convert = years +'-'+ months_start +'-01' +'~'+years + '-'+months_end + '-'+ days
                         elif '~' in standard[0] and '~' in standard[1]:
                             month_range = calendar.monthrange(int(years), int(months_end[1]))
-                            time_convert = years + '-' + months_start + '-01' + '~' + years + '-' + months_end + '-' + str(
-                                month_range[1])
-                        elif '~' not in standard[0] and '~' not in standard[1]:
+                            time_convert = years + '-' + months_start + '-01' + '~' + years + '-'+ months_end + '-' + str(month_range[1])
+                        elif  '~' not in standard[0] and '~' not in standard[1]:
                             time_convert = standard[0] + '~' + standard[1]
                         elif '~' not in standard[0] and '~' in standard[1]:
                             month_range = calendar.monthrange(int(years), int(months_end[1]))
-                            time_convert = standard[0] + '~' + years + '-' + months_end + '-' + str(month_range[1])
+                            time_convert = standard[0] + '~' + years + '-'+ months_end + '-' + str(month_range[1])
                     else:
                         if '~' in standard[0]:
                             start_time = standard[0].split('~')[0]
@@ -614,11 +717,12 @@ class NerRuleV1:
                             end_time = standard[1].split('~')[1]
                         else:
                             end_time = standard[1]
-                        time_convert = start_time + '~' + end_time
+                        time_convert =  start_time +'~'+ end_time
                     convert_result4.append(time_convert)
             return convert_result4
         else:
             return None
+
 
     def _infer_location_entity(self, context):
         pass
