@@ -3787,3 +3787,51 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-06-25 10:43:59,223 - INFO - __main__ - Vocabulary can't training now
 2018-06-25 10:49:37,264 - INFO - __main__ - Vocabulary can't training now
 2018-06-25 10:54:12,726 - INFO - __main__ - Vocabulary can't training now
+2018-06-25 11:53:01,532 - INFO - intent model - Epoch:  1, Step:      0, train loss: 2.617004, eval loss: 2.435745, acc: 0.200000.
+2018-06-25 11:53:01,541 - INFO - intent model - Epoch:  2, Step:      0, train loss: 2.107779, eval loss: 2.193048, acc: 0.303030.
+2018-06-25 11:53:01,550 - INFO - intent model - Epoch:  3, Step:      0, train loss: 2.171393, eval loss: 2.170742, acc: 0.303030.
+2018-06-25 11:53:01,559 - INFO - intent model - Epoch:  4, Step:      0, train loss: 1.887795, eval loss: 2.022075, acc: 0.312121.
+2018-06-25 11:53:01,566 - INFO - intent model - Epoch:  5, Step:      0, train loss: 1.847501, eval loss: 1.946003, acc: 0.421212.
+2018-06-25 11:53:01,587 - INFO - intent model - Epoch:  6, Step:      0, train loss: 1.486793, eval loss: 1.847059, acc: 0.409091.
+2018-06-25 11:53:07,258 - INFO - intent model - Epoch:  7, Step:      0, train loss: 1.501815, eval loss: 1.795682, acc: 0.521212.
+2018-06-25 11:53:07,270 - INFO - intent model - Epoch:  8, Step:      0, train loss: 1.264584, eval loss: 1.651516, acc: 0.521212.
+2018-06-25 11:53:07,280 - INFO - intent model - Epoch:  9, Step:      0, train loss: 1.022229, eval loss: 1.539696, acc: 0.542424.
+2018-06-25 11:53:07,287 - INFO - intent model - Epoch: 10, Step:      0, train loss: 1.031183, eval loss: 1.465350, acc: 0.621212.
+2018-06-25 11:53:07,294 - INFO - intent model - Epoch: 11, Step:      0, train loss: 0.756397, eval loss: 1.381633, acc: 0.712121.
+2018-06-25 11:53:07,302 - INFO - intent model - Epoch: 12, Step:      0, train loss: 0.810088, eval loss: 1.285221, acc: 0.706061.
+2018-06-25 11:53:14,463 - INFO - intent model - Epoch: 13, Step:      0, train loss: 0.498975, eval loss: 1.245456, acc: 0.696970.
+2018-06-25 11:53:14,511 - INFO - intent model - Epoch: 14, Step:      0, train loss: 0.863971, eval loss: 0.995301, acc: 0.760606.
+2018-06-25 11:53:14,537 - INFO - intent model - Epoch: 15, Step:      0, train loss: 0.423300, eval loss: 0.804614, acc: 0.884848.
+2018-06-25 11:53:14,569 - INFO - intent model - Epoch: 16, Step:      0, train loss: 0.296252, eval loss: 0.721302, acc: 0.875758.
+2018-06-25 11:53:14,587 - INFO - intent model - Epoch: 17, Step:      0, train loss: 0.259365, eval loss: 0.657470, acc: 0.830303.
+2018-06-25 11:53:14,609 - INFO - intent model - Epoch: 18, Step:      0, train loss: 0.222130, eval loss: 0.509862, acc: 0.921212.
+2018-06-25 11:54:29,421 - INFO - intent model - Epoch: 19, Step:      0, train loss: 0.014305, eval loss: 0.457009, acc: 0.918182.
+2018-06-25 11:54:33,607 - INFO - intent model - Epoch: 20, Step:      0, train loss: 0.031853, eval loss: 0.378510, acc: 0.930303.
+2018-06-25 13:44:42,243 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:44:42,243 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:44:48,450 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:45:05,461 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:46:06,095 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:46:06,095 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:47:07,491 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:47:07,491 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:47:07,491 - INFO - __main__ - IntentLabel can't training now
+2018-06-25 13:50:10,756 - INFO - intent model - Epoch:  1, Step:      0, train loss: 2.738489, eval loss: 2.688322, acc: 0.066667.
+2018-06-25 13:50:18,862 - INFO - intent model - Epoch:  2, Step:      0, train loss: 2.194876, eval loss: 1.777258, acc: 0.560606.
+2018-06-25 13:50:18,949 - INFO - intent model - Epoch:  3, Step:      0, train loss: 1.407503, eval loss: 1.223294, acc: 0.624242.
+2018-06-25 13:50:18,975 - INFO - intent model - Epoch:  4, Step:      0, train loss: 0.726494, eval loss: 0.864658, acc: 0.766667.
+2018-06-25 13:50:19,018 - INFO - intent model - Epoch:  5, Step:      0, train loss: 0.592249, eval loss: 0.615824, acc: 0.863636.
+2018-06-25 13:50:19,040 - INFO - intent model - Epoch:  6, Step:      0, train loss: 0.491824, eval loss: 0.452103, acc: 0.890909.
+2018-06-25 13:50:19,067 - INFO - intent model - Epoch:  7, Step:      0, train loss: 0.110406, eval loss: 0.318997, acc: 0.927273.
+2018-06-25 13:50:19,090 - INFO - intent model - Epoch:  8, Step:      0, train loss: 0.325423, eval loss: 0.219915, acc: 0.972727.
+2018-06-25 13:50:19,109 - INFO - intent model - Epoch:  9, Step:      0, train loss: 0.202660, eval loss: 0.160617, acc: 0.984848.
+2018-06-25 13:50:19,131 - INFO - intent model - Epoch: 10, Step:      0, train loss: 0.078707, eval loss: 0.120583, acc: 0.987879.
+2018-06-25 13:50:19,154 - INFO - intent model - Epoch: 11, Step:      0, train loss: 0.048970, eval loss: 0.089132, acc: 0.993939.
+2018-06-25 13:51:23,862 - INFO - intent model - Epoch:  1, Step:      0, train loss: 2.924021, eval loss: 2.765677, acc: 0.075758.
+2018-06-25 13:51:23,913 - INFO - intent model - Epoch:  2, Step:      0, train loss: 1.740677, eval loss: 1.781577, acc: 0.460606.
+2018-06-25 13:51:23,950 - INFO - intent model - Epoch:  3, Step:      0, train loss: 0.928451, eval loss: 1.330724, acc: 0.606061.
+2018-06-25 13:51:23,989 - INFO - intent model - Epoch:  4, Step:      0, train loss: 0.946543, eval loss: 0.884847, acc: 0.760606.
+2018-06-25 13:51:24,016 - INFO - intent model - Epoch:  5, Step:      0, train loss: 0.556198, eval loss: 0.625352, acc: 0.872727.
+2018-06-25 13:51:33,408 - INFO - intent model - Epoch:  6, Step:      0, train loss: 0.465065, eval loss: 0.450638, acc: 0.912121.
+2018-06-25 13:51:33,442 - INFO - intent model - Epoch:  7, Step:      0, train loss: 0.165782, eval loss: 0.326228, acc: 0.933333.
+2018-06-25 13:53:56,265 - INFO - intent model - success save model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText

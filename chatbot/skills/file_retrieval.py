@@ -98,9 +98,10 @@ class FileRetrieval(BaseSkill):
 
 
 if __name__ == "__main__":
-    skill = FileRetrieval("/home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/tfidf",
-                          "/home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/cluster_index",
-                          "/home/zhouzr/project/Task-Oriented-Chatbot/corpus/policy_file.utf8.csv")
+    from chatbot.utils.path import MODEL_PATH
+    skill = FileRetrieval(str(MODEL_PATH/"v0.2"/"file_retrieval"/"tfidf"),
+                          str(MODEL_PATH/"v0.2"/"file_retrieval"/"cluster_index"),
+                          str(MODEL_PATH/"v0.2"/"file_retrieval"/"policy_file.utf8.csv"))
 
     from chatbot.preprocessing.text import cut
 

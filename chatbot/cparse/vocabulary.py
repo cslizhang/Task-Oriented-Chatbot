@@ -65,8 +65,7 @@ class Vocabulary(Dictionary):
         assert isinstance(x[0][0], str), ValueError
         rst = []
         for sentence in x:
-            for word in sentence:
-                rst.append(self.transform_sentence(word, max_length))
+            rst.append(self.transform_sentence(sentence, max_length))
         return rst
 
     def transform_sentence(self, x, max_length=None):

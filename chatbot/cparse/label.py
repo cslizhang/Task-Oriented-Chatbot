@@ -23,6 +23,11 @@ class IntentLabel(Dictionary):
         # TODO: init class for config intent
         super().__init__()
 
+    def init_from_config(self):
+        for label in intent_labels:
+            self._add_one(label)
+        self.training = False
+
     def fit(self, x):
         """
 
@@ -76,8 +81,9 @@ class IntentLabel(Dictionary):
 
 
 if __name__ == "__main__":
-    label = IntentLabel()
-    s = ["谢谢", "你好"]
-    label.fit(s)
-    print(label.transform(s))
-    print(label.transform_one(s[0]))
+    intent_label = IntentLabel()
+    intent_label.init_from_config()
+    s = ["数据查询", "你好"]
+    intent_label.fit(s)
+    print(intent_label.transform(s))
+    print(intent_label.transform_one(s[0]))
