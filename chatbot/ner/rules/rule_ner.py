@@ -322,15 +322,15 @@ class NerRuleV1:
                         years = str(datetime.datetime.now().year)
                         month_range = calendar.monthrange(int(years), int(months))
                         days = ['01', str(month_range[1])]
-                        if i == '今年':
+                        if '今年' in i:
                             years = years
-                        if i == '明年':
+                        if '明年' in i:
                             years = str(datetime.datetime.now().year + 1)
-                        if i == '前年':
+                        if '前年' in i:
                             years = str(datetime.datetime.now().year - 2)
-                        if i == '后年':
+                        if '后年' in i:
                             years = str(datetime.datetime.now().year + 2)
-                        if i == '去年':
+                        if '去年' in i:
                             years = str(datetime.datetime.now().year - 1)
                         res = [years + '-' + months + '-' + day for day in days]
                         time_convert = res[0] + '~' + res[1]
@@ -756,10 +756,11 @@ if __name__ == "__main__":
         print(d,'\n')
 
     '''单独调试'''
-    # context = {'query': '上月25号电量多少'}
+    # context = {'query': '去年12月到今年2月电量多少'}
     # a = NerRuleV1()
-    # b = b = a.extract(context)
+    # b = a.extract(context)
     # print(b)
     # c = a.transform(context)
     # print(c)
-
+    # d = a._infer_time_minxed(context)
+    # print(d)
