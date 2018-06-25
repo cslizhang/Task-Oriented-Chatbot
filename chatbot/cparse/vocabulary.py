@@ -17,18 +17,56 @@ class Vocabulary(Dictionary):
         self.idx2word = {v: k for k, v in self.word2idx.items()}
         self.idx = len(self.word2idx)
 
+    def fit(self, x):
+        """
+
+        :param x: string, list of string, list of list of string
+        :return: id or list of id, or list of list of id
+        """
+        if self.training:
+            if isinstance(x, str):
+                self._add_one(x)
+            elif isinstance(x, list):
+                if isinstance(x[0], str):
+                    for w in x:
+                        self._add_one(w)
+                elif isinstance(x[0], list):
+                    for s in x:
+                        for w in s:
+                            self._add_one(w)
+                else:
+                    raise ValueError
+            else:
+                raise ValueError("input error")
+        else:
+            logger.info("{} can't training now".format(self.__class__.__name__))
+
+    def _transform_input_error(self):
+        raise ValueError("required list of string or list of list of string")
+
     def transform(self, x, max_length=None):
         """文本转换成id
 
-        :param x: <list of list> 最小元素为string,代表一个单词
+        :param x: string of int or <list of list of string> 最小元素为string,代表一个单词
         :param max_length: 固定返回的每个句子固定长度
         :return: <list of list> 最小元素为单词的idx
         """
-        rst = []
-        for sentence in x:
-            rst_s = self.transform_one(sentence, max_length=max_length)
-            rst.append(rst_s)
-        return rst
+        if isinstance(x, list):
+            if isinstance(x[0], str):
+                return self.transform_one(x)
+            elif isinstance(x[0], list):
+                if isinstance(x[0][0], str):
+                    rst = []
+                    for sentence in x:
+                        rst_s = self.transform_one(sentence, max_length=max_length)
+                        rst.append(rst_s)
+                    return rst
+                else:
+                    self._transform_input_error()
+            else:
+                self._transform_input_error()
+        else:
+            raise ValueError("required list of string or list of list of string")
 
     def transform_one(self, x, max_length=None):
         rst_s = [self.word2idx.get(word, UNK_IDX) for word in x]

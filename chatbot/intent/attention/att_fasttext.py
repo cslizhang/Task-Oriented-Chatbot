@@ -43,6 +43,7 @@ class AttFastText(BaseIntentModel):
         output = F.log_softmax(output, dim=1)
         return output
 
+
 if __name__ == "__main__":
     import numpy as np
     from chatbot.utils.path import ROOT_PATH, MODEL_PATH

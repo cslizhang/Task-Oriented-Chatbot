@@ -27,6 +27,13 @@ def _cut2str(x):
 
 # @time_counter
 def cut(x, n_job=None, join=False):
+    """
+
+    :param x: list of sentence or sentence
+    :param n_job:
+    :param join: return " ".join() result
+    :return:
+    """
     assert isinstance(x, str) or isinstance(x, list)
     if isinstance(x, str):
         # logger.info("String input, user 1 cpu core")
@@ -55,5 +62,9 @@ def cut(x, n_job=None, join=False):
 if __name__ == "__main__":
     texts = ["我很好才怪\n", "市场化交易下的售电公司如何发展？"] * 20000
     print(cut(texts, n_job=1))
-    print(cut(texts[0], n_job=4, join=True))
+    print(cut(texts[0], n_job=4, join=1))
+    cut("我很好")
+    cut("我很好", join=True)
+    cut(["我很好"] * 2, join=True)
+    cut(["我很好"] * 2, join=False)
     # cut(texts)

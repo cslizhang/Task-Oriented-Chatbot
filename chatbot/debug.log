@@ -3750,3 +3750,6 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-06-20 12:29:37,638 - INFO - intent model - Epoch:  4, Step:      0, train loss: 0.026115, eval loss: 0.492435, acc: 0.789000.
 2018-06-20 12:29:40,490 - INFO - intent model - Epoch:  4, Step:    100, train loss: 0.057944, eval loss: 0.511396, acc: 0.783333.
 2018-06-20 12:29:43,319 - INFO - intent model - Epoch:  4, Step:    200, train loss: 0.043678, eval loss: 0.532845, acc: 0.781333.
+2018-06-22 11:28:42,570 - INFO - __main__ - Vocabulary can't training now
+2018-06-22 11:28:42,570 - INFO - __main__ - Vocabulary can't training now
+2018-06-22 11:28:42,570 - INFO - __main__ - Vocabulary can't training now

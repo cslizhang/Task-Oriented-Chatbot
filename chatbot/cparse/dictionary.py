@@ -26,21 +26,11 @@ class Dictionary(Serializable, Transformer, Trainable):
             self.idx2word[self.idx] = word
             self.idx += 1
 
+    def size(self):
+        return self.idx
+
     def fit(self, x):
-        if self.training:
-            if isinstance(x, str):
-                self._add_one(x)
-            elif isinstance(x, list) and isinstance(x[0], str):
-                for w in x:
-                    self._add_one(w)
-            elif isinstance(x, list) and isinstance(x[0], list):
-                for s in x:
-                    for w in s:
-                        self._add_one(w)
-            else:
-                raise ValueError("input error")
-        else:
-            logger.info("{} can't training now".format(self.__class__.__name__))
+        raise NotImplementedError
 
     def transform(self, *args, **kwargs):
         raise NotImplementedError
