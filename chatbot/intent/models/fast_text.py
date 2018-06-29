@@ -46,7 +46,7 @@ if __name__ == "__main__":
     vocab = Vocabulary()
     vocab.fit(x)
     label = IntentLabel()
-    label.init_from_config()
+    label.init_from_config("intent.v0.2.cfg")
     # label.fit(y)
     train_x = np.array(vocab.transform(x, max_length=10))
     test_x = np.array(vocab.transform(x, max_length=10))
@@ -61,7 +61,7 @@ if __name__ == "__main__":
         # "dropout": 0.5,
     }
     model = FastText(fasttext_param)
-    model.fit(train_x, train_y, test_x, test_y, 2, 8, save_best=False)
+    model.fit(train_x, train_y, test_x, test_y, 8, 8, save_best=False)
 
     def test(s):
         s = vocab.transform_sentence(cut(s), max_length=10)

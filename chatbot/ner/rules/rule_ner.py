@@ -83,6 +83,7 @@ class NerRuleV1:
         :return: dict of list
         [{'end':'2018-06-13','start':'2018-06-13'}]
         '''
+        rst = {}
         output_result = []
         trans_time = self._infer_time_entity(context)
         if trans_time is not None:
@@ -97,7 +98,8 @@ class NerRuleV1:
                 output_result.append(transform)
             # if trans_time is not None:
             #     transform["TimeInterval"] = transform
-            return output_result
+            rst["TimeInterval"] = output_result[0]
+            return rst
         else:
             return None
 
@@ -747,7 +749,7 @@ if __name__ == "__main__":
         print(contexts)
         a = NerRuleV1()
         b = a.extract(contexts)
-        print(b)
+        print("b", b)
         # if str(b['TimeInterval']).replace(', ', ',') == line.split(' ')[1].strip('\n'):
         #     print('True', '\n')
         # else:

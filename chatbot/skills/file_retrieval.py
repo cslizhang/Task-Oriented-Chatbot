@@ -18,7 +18,6 @@ class FileRetrieval(BaseSkill):
         self._k = k
         self._limit_distance = limit_distance
 
-    @property
     def init_slots(self):
         return {
             Location.name(): Location(),
@@ -44,7 +43,7 @@ class FileRetrieval(BaseSkill):
         :return:
         """
         for k, v in entities.items():
-            if k in self.init_slots.keys():
+            if k in self.init_slots().keys():
                 return True
         return False
 
@@ -52,9 +51,9 @@ class FileRetrieval(BaseSkill):
         return True, None
 
     def _act(self, context):
-        q_tfidf = self._tfidf.transform([context["text_cut"]]).toarray()
+        q_tfidf = self._tfidf.transform([" ".join(context["query_cut"])]).toarray()
         search_result = self._ci.search(q_tfidf, k=self._k)[0]
-        slot = context["slots"][self.name()]
+        slot = context["slots"][context["intent"]]
         if len(search_result) == 0:
             return self._not_find
         result = []

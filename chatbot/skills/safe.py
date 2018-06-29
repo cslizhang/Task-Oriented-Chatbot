@@ -5,9 +5,9 @@
 from chatbot.core.skill import BaseSkill
 
 
-class BotQA(BaseSkill):
+class SafeResponse(BaseSkill):
     def __call__(self, context):
-        return "小益的相关信息回复..."
+        return "这个小益还没学会哦，请试试政策文件检索和电量数据查询功能吧 ：）"
 
     def contain_slots(self, entities):
         return False

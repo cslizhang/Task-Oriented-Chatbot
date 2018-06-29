@@ -8,13 +8,13 @@ from chatbot.cparse.dictionary import Dictionary
 from chatbot.utils.path import ROOT_PATH
 
 
-def get_intent_labels():
-    with open(str(ROOT_PATH / "config" / "intent.cfg"), "r") as f:
+def get_intent_labels(name):
+    with open(str(ROOT_PATH / "config" / name), "r") as f:
         labels = [l.rstrip("\n") for l in f.readlines()]
     return labels
 
 
-intent_labels = get_intent_labels()
+
 logger = get_logger(__name__)
 
 
@@ -23,7 +23,8 @@ class IntentLabel(Dictionary):
         # TODO: init class for config intent
         super().__init__()
 
-    def init_from_config(self):
+    def init_from_config(self, name):
+        intent_labels = get_intent_labels(name)
         for label in intent_labels:
             self._add_one(label)
         self.training = False
