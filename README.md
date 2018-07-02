@@ -20,6 +20,11 @@ A framework for Task-Oriented-Chatbot.
 14. 自我迭代机制嵌入
 15. 无标签语聊、分类语聊、ner语聊、rank语料、回复逻辑语聊、政策语聊
 
+## feature
+
++ 将推荐系统融入chatbot，在连接进入时候推荐相关咨询，在意图完毕后，推荐相关后续他问题等。
++ 将上下文融入意图识别模型，rnn，用上论会话的hidden state作为下论会话的init hidden state
+
 ## Skill
 + 数据查询  
 
