@@ -4,8 +4,8 @@ A framework for Task-Oriented-Chatbot.
 
 ## TODO
 
-1. 实体提取（location提取模块，时间提取模块优化{现在、最近}）
-2. 数据查询skill(时间、项目名、权限、业态、设备、指标)
+1. 实体提取（location提取模块，时间提取模块优化{最近、最新}）
+2. 数据查询skill(时间、项目名、权限、指标)
 3. 政策文件（数据源、清洗规则、标签集合、update机制）
 4. 政策查询skill优化
 5. 留言skill
