@@ -4229,3 +4229,15 @@ test - DEBUG - 2018-05-11 14:15:36,865 - debug
 2018-06-28 09:50:50,175 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
 2018-06-28 09:50:50,175 - INFO - chatbot - update context
 2018-06-28 09:50:50,176 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-02 17:27:44,284 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-02 17:27:44,299 - INFO - chatbot - new context
+2018-07-02 17:27:44,299 - INFO - chatbot - update context
+2018-07-02 17:27:44,326 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-02 17:27:44,327 - INFO - chatbot - update context
+2018-07-02 17:27:44,328 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-02 17:27:44,328 - INFO - chatbot - update context
+2018-07-02 17:27:44,328 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-02 17:27:44,328 - INFO - chatbot - update context
+2018-07-02 17:27:44,329 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-02 17:27:44,329 - INFO - chatbot - update context
+2018-07-02 17:27:44,329 - INFO - chatbot - intent: 文件检索, confidence: 1.0

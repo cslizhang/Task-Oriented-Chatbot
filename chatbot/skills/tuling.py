@@ -12,7 +12,6 @@ import random
 from wxpy.utils.misc import enhance_connection
 
 from chatbot.config.constant import TULING_KEY, TULING_LOC, TULING_URL, TULING_USERID
-from chatbot.core.discarded.message import Response
 from chatbot.core.skill import BaseSkill
 
 
