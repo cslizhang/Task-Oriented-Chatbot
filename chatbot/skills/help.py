@@ -5,9 +5,9 @@
 from chatbot.core.skill import BaseSkill
 
 
-class BotQA(BaseSkill):
+class Help(BaseSkill):
     def __call__(self, context):
-        return "小益的相关信息回复..."
+        return "帮助中心开发中..."
 
     def contain_slots(self, entities):
         return False

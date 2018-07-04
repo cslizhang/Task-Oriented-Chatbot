@@ -9,7 +9,6 @@ from chatbot.cparse.label import IntentLabel
 class IntentRuleV1(Estimator):
     def __init__(self):
         super().__init__()
-        self._intent_label = IntentLabel()
 
     def infer(self, query):
         """
@@ -18,13 +17,9 @@ class IntentRuleV1(Estimator):
         :return: <tuple> (class, prob)
         """
         if query.startswith("留言"):
-            rst = self._intent_label.transform_one("留言")
-            return rst, 1.0
-        elif query.startswith("意图"):
-            rst = self._intent_label.transform_one("意图语料收集")
-            return rst, 1.0
+            return "留言", 1.0
         else:
-            return self._intent_label.transform_one("闲聊"), 1.0
+            return None
 
 
 if __name__ == "__main__":

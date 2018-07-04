@@ -8,7 +8,7 @@ from chatbot.config.constant import TIMEOUT
 
 
 class Context(dict):
-    def __init__(self, user, app, skill2slot, context_id, right=None, timeout=TIMEOUT):
+    def __init__(self, user, app, intent2slots, context_id, right=None, timeout=TIMEOUT):
         self._timeout = timeout
         now = dt.datetime.now()
         super().__init__(
@@ -18,12 +18,12 @@ class Context(dict):
             history_query=[],
             history_resp=[],
             history_intent=[],
-            query=None, # utterance of customer
-            query_cut=None, # tokens
-            query_idx=None, # token id
-            intent=None, # skill id
+            query=None,
+            query_cut=None,
+            query_idx=None,
+            intent=None,
             entities=None,
-            slots=skill2slot,
+            slots=intent2slots,
             last_query_time=now,
             context_id=context_id
         )
@@ -41,4 +41,9 @@ class Context(dict):
 
 
 if __name__ == "__main__":
-    c = Context(user="zhouzr", app="web2.0", skill2slot=dict(), context_id="sad")
+    c = Context(user="zhouzr", app="web2.0", intent2slots=dict(), context_id="sad")
+    import pickle
+    with open("log", 'wb') as f:
+        pickle.dump(c, f)
+    with open("log", "rb") as f:
+        x = pickle.load(f)

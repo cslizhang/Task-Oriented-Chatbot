@@ -6,7 +6,8 @@ import random
 from chatbot.core.skill import BaseSkill
 from chatbot.utils.path import ROOT_PATH
 # TODO:tanmx 回复逻辑 & 对应的样本
-  
+
+
 def read_txt(path):
         """read txt
 
@@ -18,10 +19,6 @@ def read_txt(path):
         # remove chomp, blank
         sents = [item.strip().split(' ')[-1] for item in txts if len(item)>1]
         return sents
-
-
-class LeaveMessage(BaseSkill):
-    pass
 
 
 class SayHi(BaseSkill):
@@ -160,7 +157,8 @@ class Thanks(BaseSkill):
         :return: <bool> True包含，False不包含
         """
         return False
-    
+
+
 class Praise(BaseSkill):
     """Praise回复逻辑封装
 
