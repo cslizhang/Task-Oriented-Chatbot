@@ -5,6 +5,7 @@
 import random
 from chatbot.core.skill import BaseSkill
 from chatbot.utils.path import ROOT_PATH
+import codecs
 # TODO:tanmx 回复逻辑 & 对应的样本
 
 
