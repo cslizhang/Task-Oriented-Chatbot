@@ -520,6 +520,8 @@ class NerRuleV1:
                                     '个', ''), re.S).group(1)
                             month_start = (datetime.datetime.now() + datetime.timedelta(days=-int(num)*30)).month
                             month_end = (datetime.datetime.now() + datetime.timedelta(days=-30)).month
+                            year_start = (datetime.datetime.now() + datetime.timedelta(days=-int(num)*30)).year
+                            year_end = (datetime.datetime.now() + datetime.timedelta(days=-30)).year
                             if month_start < 10 and len(str(month_start)) == 1:
                                 month_start = '0' + str(month_start)
                             else:
@@ -529,16 +531,18 @@ class NerRuleV1:
                             else:
                                 month_end = month_end
                             month_range = calendar.monthrange(
-                                int(years), int(month_end))
-                            time_convert = str(years) + '-' + str(month_start) + '-01' + '~' + \
-                                str(years) + '-' + str(month_end) + '-' + str(month_range[1])
+                                int(year_end), int(month_end))
+                            time_convert = str(year_start) + '-' + str(month_start) + '-01' + '~' + \
+                                str(year_end) + '-' + str(month_end) + '-' + str(month_range[1])
                         if '日' in i or '天' in i:
                             num = re.search(
                                 r'(\d{1,2})[日|天]', i, re.S).group(1)
-                            day_now = datetime.datetime.now().day
-                            day_cal = (datetime.datetime.now() + datetime.timedelta(days=-int(num))).day
-                            time_convert = str(years) + '-' + str(months) + '-' + str(
-                                day_cal) + '~' + str(years) + '-' + str(months) + '-' + str(day_now - 1)
+                            start_day = (datetime.datetime.now() + datetime.timedelta(days=-int(num))).day
+                            end_day = (datetime.datetime.now() + datetime.timedelta(days=-1)).day
+                            start_month = (datetime.datetime.now() + datetime.timedelta(days=-int(num))).month
+                            end_month = (datetime.datetime.now() + datetime.timedelta(days=-1)).month
+                            time_convert = str(years) + '-' + str(start_month) + '-' + str(
+                                start_day) + '~' + str(years) + '-' + str(end_month) + '-' + str(end_day)
                     if '最近' in i and '年' in i:
                         num = re.search(r'(\d{1,2})年', i, re.S).group(1)
                         start_years = str(
@@ -560,6 +564,8 @@ class NerRuleV1:
                                     '个', ''), re.S).group(1)
                             month_start = (datetime.datetime.now() + datetime.timedelta(days=30)).month
                             month_end = (datetime.datetime.now() + datetime.timedelta(days=int(num)*30)).month
+                            year_start = (datetime.datetime.now() + datetime.timedelta(days=30)).year
+                            year_end = (datetime.datetime.now() + datetime.timedelta(days=int(num) * 30)).year
                             if month_start < 10 and len(str(month_start)) == 1:
                                 month_start = '0' + str(month_start)
                             else:
@@ -569,16 +575,18 @@ class NerRuleV1:
                             else:
                                 month_end = month_end
                             month_range = calendar.monthrange(
-                                int(years), int(month_end))
-                            time_convert = str(years) + '-' + str(month_start) + '-01' + '~' + str(
-                                years) + '-' + str(month_end) + '-' + str(month_range[1])
+                                int(year_end), int(month_end))
+                            time_convert = str(year_start) + '-' + str(month_start) + '-01' + '~' + str(
+                                year_end) + '-' + str(month_end) + '-' + str(month_range[1])
                         if '日' in i or '天' in i:
                             num = re.search(
                                 r'(\d{1,2})[日|天]', i, re.S).group(1)
-                            day_now = datetime.datetime.now().day
-                            day_cal = (datetime.datetime.now() + datetime.timedelta(days=int(num))).day
-                            time_convert = str(years) + '-' + str(months) + '-' + str(
-                                day_now + 1) + '~' + str(years) + '-' + str(months) + '-' + str(day_cal)
+                            day_end = (datetime.datetime.now() + datetime.timedelta(days=int(num))).day
+                            day_start = (datetime.datetime.now() + datetime.timedelta(days=1)).day
+                            month_end = (datetime.datetime.now() + datetime.timedelta(days=int(num))).month
+                            month_start = (datetime.datetime.now() + datetime.timedelta(days=1)).month
+                            time_convert = str(years) + '-' + str(month_start) + '-' + str(
+                                day_start) + '~' + str(years) + '-' + str(month_end) + '-' + str(day_end)
                     convert_result.append(time_convert)
             return convert_result
         else:
