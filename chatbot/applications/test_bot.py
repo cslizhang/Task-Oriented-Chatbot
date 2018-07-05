@@ -22,7 +22,7 @@ from chatbot.skills.leave_message import LeaveMessage
 from chatbot.skills.file_retrieval import FileRetrieval
 from chatbot.bot import ChatBot
 from chatbot.utils.path import MODEL_PATH
-from wxpy import Bot
+# from wxpy import Bot
 
 
 
