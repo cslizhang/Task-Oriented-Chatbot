@@ -14,11 +14,32 @@ def read_txt(path):
         :return: <list>
         """        
 #        path = "D:\\Users\\tanmx\\chatbot\\Task-Oriented-Chatbot\\corpus\\skill\\GoodBye_response.txt"
-        with open(path, "r",encoding='UTF-8') as f:
+        with open(path, "r", encoding='UTF-8') as f:
             txts = f.readlines()
         # remove chomp, blank
-        sents = [item.strip().split(' ')[-1] for item in txts if len(item)>1]
+        sents = [item.strip().split(' ')[-1] for item in txts if len(item) > 1]
         return sents
+
+
+class LeaveMessage(BaseSkill):
+    """LeaveMessage存储及回复封装
+      :param context: context
+      :return: <String> 回复信息,context{user:,query} to txt
+      """
+    def __call__(self, context):
+        print(context)
+        path = str(ROOT_PATH.parent / "corpus" / "intent" / "skill" / "leavemeasage.txt")
+        with codecs.open(path, "a+", "utf-8") as f:
+            f.write(context['context_id'] + '\t' + '\t' + context['app'] + '\t' + '\t' + context[
+                'last_query_time'] + '\t' + '\t' + context['user'] + '\t' + '\t' + context['query'] + '\n' + '\n')
+        f.close()
+        return "小益已经帮您记下啦"
+
+    def contain_slots(self, entities):
+        return False
+
+    def init_slots(self):
+        return {}
 
 
 class SayHi(BaseSkill):

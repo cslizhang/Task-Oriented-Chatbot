@@ -7,6 +7,7 @@ import re
 import datetime
 
 
+
 class NerRuleV1:
     def __init__(self):
         super().__init__()
