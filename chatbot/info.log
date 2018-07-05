@@ -4238,3 +4238,15 @@ test - WARNING - 2018-05-11 14:15:36,864 - warning
 2018-07-02 17:27:44,329 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
 2018-07-02 17:27:44,329 - INFO - chatbot - update context
 2018-07-02 17:27:44,329 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-05 10:51:43,670 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-05 10:51:43,678 - INFO - chatbot - new context
+2018-07-05 10:51:43,678 - INFO - chatbot - update context
+2018-07-05 10:51:43,686 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-05 10:51:43,687 - INFO - chatbot - update context
+2018-07-05 10:51:43,687 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-05 10:51:43,687 - INFO - chatbot - update context
+2018-07-05 10:51:43,687 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-05 10:51:43,687 - INFO - chatbot - update context
+2018-07-05 10:51:43,688 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-05 10:51:43,688 - INFO - chatbot - update context
+2018-07-05 10:51:43,688 - INFO - chatbot - intent: 文件检索, confidence: 1.0
