@@ -108,8 +108,10 @@ class NerRuleV1:
                 rst[TimeInterval.name()] = time_output_result[0]
         if trans_location is not None:
             transform_2 = Location()
-            transform_2['province'] = trans_location[0]['province']
-            transform_2['city'] = trans_location[0]['city']
+            if 'province' in trans_location[0]:
+                transform_2['province'] = trans_location[0]['province']
+            if 'city' in trans_location[0]:
+                transform_2['city'] = trans_location[0]['city']
             loc_output_result.append(transform_2)
             rst[Location.name()] = loc_output_result
         if trans_time is not None or trans_location is not None:
@@ -516,8 +518,8 @@ class NerRuleV1:
                             num = re.search(
                                 r'(\d{1,2})月', i.replace(
                                     '个', ''), re.S).group(1)
-                            month_start = int(months) - int(num)
-                            month_end = int(months) - 1
+                            month_start = (datetime.datetime.now() + datetime.timedelta(days=-int(num)*30)).month
+                            month_end = (datetime.datetime.now() + datetime.timedelta(days=-30)).month
                             if month_start < 10 and len(str(month_start)) == 1:
                                 month_start = '0' + str(month_start)
                             else:
@@ -534,7 +536,7 @@ class NerRuleV1:
                             num = re.search(
                                 r'(\d{1,2})[日|天]', i, re.S).group(1)
                             day_now = datetime.datetime.now().day
-                            day_cal = day_now - int(num)
+                            day_cal = (datetime.datetime.now() + datetime.timedelta(days=-int(num))).day
                             time_convert = str(years) + '-' + str(months) + '-' + str(
                                 day_cal) + '~' + str(years) + '-' + str(months) + '-' + str(day_now - 1)
                     if '最近' in i and '年' in i:
@@ -556,8 +558,8 @@ class NerRuleV1:
                             num = re.search(
                                 r'(\d{1,2})月', i.replace(
                                     '个', ''), re.S).group(1)
-                            month_start = int(months) + 1
-                            month_end = int(months) + int(num)
+                            month_start = (datetime.datetime.now() + datetime.timedelta(days=30)).month
+                            month_end = (datetime.datetime.now() + datetime.timedelta(days=int(num)*30)).month
                             if month_start < 10 and len(str(month_start)) == 1:
                                 month_start = '0' + str(month_start)
                             else:
@@ -574,7 +576,7 @@ class NerRuleV1:
                             num = re.search(
                                 r'(\d{1,2})[日|天]', i, re.S).group(1)
                             day_now = datetime.datetime.now().day
-                            day_cal = day_now + int(num)
+                            day_cal = (datetime.datetime.now() + datetime.timedelta(days=int(num))).day
                             time_convert = str(years) + '-' + str(months) + '-' + str(
                                 day_now + 1) + '~' + str(years) + '-' + str(months) + '-' + str(day_cal)
                     convert_result.append(time_convert)
@@ -1023,7 +1025,7 @@ if __name__ == "__main__":
         print(d, '\n')
 
     # '''单独调试'''
-    # contexts = {'query': '四川省成都市最新政策文件'}
+    # contexts = {'query': '未来三天用电量'}
     # a = NerRuleV1()
     # b = a.extract(contexts)
     # print(b)
