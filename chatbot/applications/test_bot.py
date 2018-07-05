@@ -107,7 +107,7 @@ queries = [
     },
 {
         "user": "zhouzr",
-        "text": "四川政策文件",
+        "text": "今年政策文件",
         "right": ["XM001"],
         "app": "test"
     }

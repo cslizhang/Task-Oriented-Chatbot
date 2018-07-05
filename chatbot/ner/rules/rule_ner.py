@@ -113,7 +113,7 @@ class NerRuleV1:
             if 'city' in trans_location[0]:
                 transform_2['city'] = trans_location[0]['city']
             loc_output_result.append(transform_2)
-            rst[Location.name()] = loc_output_result
+            rst[Location.name()] = loc_output_result[0]
         if trans_time is not None or trans_location is not None:
             return rst
         else:
@@ -1029,12 +1029,14 @@ if __name__ == "__main__":
         a = NerRuleV1()
         b = a.extract(contexts)
         print("b", b)
+        print(type(b))
         # if str(b['TimeInterval']).replace(', ', ',') == line.split(' ')[1].strip('\n'):
         #     print('True', '\n')
         # else:
         #     print('False', '\n')
         d = a.transform(contexts)
         print(d, '\n')
+        print(type(d))
 
     # '''单独调试'''
     # contexts = {'query': '未来三天用电量'}
