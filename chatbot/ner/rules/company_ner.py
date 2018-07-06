@@ -21,13 +21,20 @@ class CompanyNer(object):
 
     def extract(self, context):
         entities = self.fuzzy_match.match(context["query"])
-        return entities
+        if len(entities) == 0:
+            return None
+        else:
+            return entities
 
-    def transform(self, entities):
+    def transform(self, context):
+        entities = context["entities"]
         rst = []
-        for i in entities:
-            c = Company()
-            c["alias"] = i
-            c["id"] = self.alias2id[i]
-            rst.append(c)
-        return rst
+        if Company.name() in entities.keys():
+            for alias in entities[Company.name()]:
+                c = Company()
+                c["alias"] = alias
+                c["id"] = self.alias2id[alias]
+                rst.append(c)
+            return rst
+        else:
+            return None

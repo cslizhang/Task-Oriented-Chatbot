@@ -3,7 +3,7 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 from chatbot.core.skill import BaseSkill
-from chatbot.core.entity import TimeInterval
+from chatbot.core.entity import TimeInterval, Company
 
 
 class DataQuery(BaseSkill):
@@ -26,4 +26,4 @@ class DataQuery(BaseSkill):
         return False
 
     def init_slots(self):
-        return {TimeInterval.name(): TimeInterval()}
+        return {TimeInterval.name(): TimeInterval(), Company.name(): Company()}
