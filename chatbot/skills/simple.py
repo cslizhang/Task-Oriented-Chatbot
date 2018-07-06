@@ -3,10 +3,14 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 import random
+import codecs
+
 from chatbot.core.skill import BaseSkill
 from chatbot.utils.path import ROOT_PATH
-import codecs
-# TODO:tanmx 回复逻辑 & 对应的样本
+from chatbot.utils.log import get_logger
+
+
+logger = get_logger("simple skill")
 
 
 def read_txt(path):
@@ -27,10 +31,15 @@ class LeaveMessage(BaseSkill):
       :param context: context
       :return: <String> 回复信息,context{user:,query} to txt
       """
+    def __init__(self, path=None):
+        if path is None:
+            self.path = str(ROOT_PATH / "log" / "message")
+        else:
+            self.path = path
+        logger.debug("leave message save in %s" % self.path)
+
     def __call__(self, context):
-        print(context)
-        path = str(ROOT_PATH.parent / "corpus" / "intent" / "skill" / "leavemeasage.txt")
-        with codecs.open(path, "a+", "utf-8") as f:
+        with codecs.open(self.path, "a+", "utf-8") as f:
             f.write(context['context_id'] + '\t' + '\t' + context['app'] + '\t' + '\t' + context[
                 'last_query_time'] + '\t' + '\t' + context['user'] + '\t' + '\t' + context['query'] + '\n' + '\n')
         f.close()

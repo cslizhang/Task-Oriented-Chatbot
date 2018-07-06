@@ -1,0 +1,19 @@
+2018-07-06 10:06:11,393 - INFO - test - info
+2018-07-06 10:06:11,394 - WARNING - test - warning
+2018-07-06 10:06:21,168 - INFO - test - info
+2018-07-06 10:06:27,568 - INFO - test - info
+2018-07-06 10:06:27,568 - WARNING - test - warning
+2018-07-06 10:13:42,091 - INFO - test - info
+2018-07-06 10:13:42,092 - WARNING - test - warning
+2018-07-06 10:19:53,343 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:19:53,351 - INFO - chatbot - new context
+2018-07-06 10:19:53,351 - INFO - chatbot - update context
+2018-07-06 10:19:53,360 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:19:53,360 - INFO - chatbot - update context
+2018-07-06 10:19:53,360 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:19:53,360 - INFO - chatbot - update context
+2018-07-06 10:19:53,361 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:19:53,361 - INFO - chatbot - update context
+2018-07-06 10:19:53,361 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:19:53,361 - INFO - chatbot - update context
+2018-07-06 10:19:53,362 - INFO - chatbot - intent: 文件检索, confidence: 1.0
