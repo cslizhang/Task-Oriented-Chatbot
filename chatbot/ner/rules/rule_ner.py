@@ -5,12 +5,18 @@
 import calendar
 import re
 import datetime
-from chatbot.core.entity import TimeInterval, Location
+from chatbot.core.entity import TimeInterval, Location, Company
+from chatbot.ner.rules.company_ner import CompanyNer
+from chatbot.utils.log import get_logger
+
+
+logger = get_logger("NER")
 
 
 class NerRuleV1:
     def __init__(self):
         super().__init__()
+        self.ner_company = CompanyNer()
 
     def extract(self, context):
         """
@@ -22,10 +28,16 @@ class NerRuleV1:
         rst = {}
         ext_time = self._extract_time(context)
         ext_location = self._infer_location_entity(context)
+        ext_company = self.ner_company.extract(context)
         if ext_time is not None:
             rst[TimeInterval.name()] = ext_time
+            logger.debug("extract time %s" % " ".join(ext_time))
         if ext_location is not None:
             rst[Location.name()] = ext_location
+            logger.debug("extract loc {}".format(ext_location))
+        if ext_company is not None:
+            rst[Company.name()] = ext_company
+            logger.debug("extract company %s" % " ".join(ext_company))
         return rst
 
     @staticmethod
@@ -95,6 +107,7 @@ class NerRuleV1:
         loc_output_result = []
         trans_time = self._infer_time_entity(context)
         trans_location = self._infer_location_entity(context)
+        trans_company = self.ner_company.transform(context)
         if trans_time is not None:
             for i in range(len(trans_time)):
                 transform = TimeInterval()
@@ -114,7 +127,9 @@ class NerRuleV1:
                 transform_2['city'] = trans_location[0]['city']
             loc_output_result.append(transform_2)
             rst[Location.name()] = loc_output_result[0]
-        if trans_time is not None or trans_location is not None:
+        if trans_company is not None:
+            rst[Company.name()] = trans_company[0]
+        if len(rst) > 0:
             return rst
         else:
             return None

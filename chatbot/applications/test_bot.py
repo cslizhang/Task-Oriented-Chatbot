@@ -109,6 +109,18 @@ queries = [
         "text": "今年政策文件",
         "right": ["XM001"],
         "app": "test"
+    },
+{
+        "user": "zhouzr",
+        "text": "四川成都今年政策文件",
+        "right": ["XM001"],
+        "app": "test"
+    },
+{
+        "user": "zhouzr",
+        "text": "来福是用电量",
+        "right": ["XM001"],
+        "app": "test"
     }
 ]
 for i in queries:
