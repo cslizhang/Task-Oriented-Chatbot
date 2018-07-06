@@ -6,46 +6,7 @@
 import logging.config
 from pathlib import Path
 
-from chatbot.utils.path import ROOT_PATH
-
-DEBUG_LOG = 'debug.log'
-INFO_LOG = 'info.log'
-
-
-def get_debug_log(logger_name):
-    logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG)
-    fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
-    # debug log define
-    debug_path = Path(ROOT_PATH, DEBUG_LOG).resolve()
-    debug_hdl = logging.FileHandler(debug_path)
-    debug_hdl.setLevel(logging.DEBUG)
-    debug_hdl.setFormatter(fmt)
-    logger.addHandler(debug_hdl)
-    # stream log define
-    stream_hdl = logging.StreamHandler()
-    stream_hdl.setLevel(logging.INFO)
-    stream_hdl.setFormatter(fmt)
-    logger.addHandler(stream_hdl)
-    return logger
-
-
-def get_info_log(logger_name):
-    logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG)
-    fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
-    # info log define
-    info_path = Path(ROOT_PATH, INFO_LOG).resolve()
-    info_hdl = logging.FileHandler(info_path)
-    info_hdl.setFormatter(fmt)
-    info_hdl.setLevel(logging.INFO)
-    logger.addHandler(info_hdl)
-    # stream log define
-    stream_hdl = logging.StreamHandler()
-    stream_hdl.setLevel(logging.INFO)
-    stream_hdl.setFormatter(fmt)
-    logger.addHandler(stream_hdl)
-    return logger
+from chatbot.utils.path import LOG_PATH
 
 
 def get_logger(logger_name):
@@ -54,21 +15,16 @@ def get_logger(logger_name):
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.DEBUG)
     fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
-    # debug log define
-    debug_path = Path(ROOT_PATH, DEBUG_LOG).resolve()
-    debug_hdl = logging.FileHandler(debug_path)
-    debug_hdl.setLevel(logging.DEBUG)
-    debug_hdl.setFormatter(fmt)
-    logger.addHandler(debug_hdl)
     # info log define
-    info_path = Path(ROOT_PATH, INFO_LOG).resolve()
+    info_path = str(Path(LOG_PATH, 'log').resolve())
     info_hdl = logging.FileHandler(info_path)
     info_hdl.setFormatter(fmt)
     info_hdl.setLevel(logging.INFO)
     logger.addHandler(info_hdl)
+
     # stream log define
     stream_hdl = logging.StreamHandler()
-    stream_hdl.setLevel(logging.INFO)
+    stream_hdl.setLevel(logging.DEBUG)
     stream_hdl.setFormatter(fmt)
     logger.addHandler(stream_hdl)
     return logger

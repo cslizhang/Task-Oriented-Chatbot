@@ -11,18 +11,17 @@ from chatbot.intent.rules.rule_v1 import IntentRuleV1
 from chatbot.ner.rules.rule_ner import NerRuleV1
 from chatbot.cparse.label import IntentLabel
 from chatbot.cparse.vocabulary import Vocabulary
-from chatbot.skills.simple import SayHi, Thanks, Praise, Criticize, GoodBye
+from chatbot.skills.simple import SayHi, Thanks, Praise, Criticize, GoodBye, LeaveMessage
 from chatbot.skills.botQA import BotQA
 from chatbot.skills.wanyi import CompanyInfo, CompanyServe
 from chatbot.skills.data_query import DataQuery
 from chatbot.skills.help import Help
 from chatbot.skills.safe import SafeResponse
 from chatbot.skills.tuling import Tuling
-from chatbot.skills.leave_message import LeaveMessage
 from chatbot.skills.file_retrieval import FileRetrieval
 from chatbot.bot import ChatBot
 from chatbot.utils.path import MODEL_PATH
-from wxpy import Bot
+# from wxpy import Bot
 
 
 
@@ -107,7 +106,19 @@ queries = [
     },
 {
         "user": "zhouzr",
-        "text": "四川政策文件",
+        "text": "今年政策文件",
+        "right": ["XM001"],
+        "app": "test"
+    },
+{
+        "user": "zhouzr",
+        "text": "四川成都今年政策文件",
+        "right": ["XM001"],
+        "app": "test"
+    },
+{
+        "user": "zhouzr",
+        "text": "来福是用电量",
         "right": ["XM001"],
         "app": "test"
     }

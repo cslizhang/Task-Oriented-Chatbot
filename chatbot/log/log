@@ -1,0 +1,112 @@
+2018-07-06 10:06:11,393 - INFO - test - info
+2018-07-06 10:06:11,394 - WARNING - test - warning
+2018-07-06 10:06:21,168 - INFO - test - info
+2018-07-06 10:06:27,568 - INFO - test - info
+2018-07-06 10:06:27,568 - WARNING - test - warning
+2018-07-06 10:13:42,091 - INFO - test - info
+2018-07-06 10:13:42,092 - WARNING - test - warning
+2018-07-06 10:19:53,343 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:19:53,351 - INFO - chatbot - new context
+2018-07-06 10:19:53,351 - INFO - chatbot - update context
+2018-07-06 10:19:53,360 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:19:53,360 - INFO - chatbot - update context
+2018-07-06 10:19:53,360 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:19:53,360 - INFO - chatbot - update context
+2018-07-06 10:19:53,361 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:19:53,361 - INFO - chatbot - update context
+2018-07-06 10:19:53,361 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:19:53,361 - INFO - chatbot - update context
+2018-07-06 10:19:53,362 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:49:42,915 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:49:42,932 - INFO - chatbot - new context
+2018-07-06 10:49:42,932 - INFO - chatbot - update context
+2018-07-06 10:49:42,941 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:49:42,941 - INFO - chatbot - update context
+2018-07-06 10:49:42,942 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:49:42,942 - INFO - chatbot - update context
+2018-07-06 10:49:42,943 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:49:42,943 - INFO - chatbot - update context
+2018-07-06 10:49:42,944 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:49:42,944 - INFO - chatbot - update context
+2018-07-06 10:49:42,945 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:50:38,086 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:50:38,095 - INFO - chatbot - new context
+2018-07-06 10:50:38,095 - INFO - chatbot - update context
+2018-07-06 10:50:38,096 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:50:38,096 - INFO - chatbot - update context
+2018-07-06 10:50:38,097 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:50:38,097 - INFO - chatbot - update context
+2018-07-06 10:50:38,098 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:50:38,098 - INFO - chatbot - update context
+2018-07-06 10:50:38,099 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:50:38,099 - INFO - chatbot - update context
+2018-07-06 10:50:38,100 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:50:38,103 - INFO - chatbot - update context
+2018-07-06 10:50:38,104 - INFO - chatbot - intent: 文件检索, confidence: 0.9999986886978149
+2018-07-06 10:50:38,108 - INFO - chatbot - update context
+2018-07-06 10:50:38,109 - INFO - chatbot - intent: 数据查询, confidence: 0.800512433052063
+2018-07-06 10:53:16,850 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:53:16,867 - INFO - chatbot - new context
+2018-07-06 10:53:16,867 - INFO - chatbot - update context
+2018-07-06 10:53:16,876 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:53:16,876 - INFO - chatbot - update context
+2018-07-06 10:53:16,877 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:53:16,878 - INFO - chatbot - update context
+2018-07-06 10:53:16,878 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:53:16,879 - INFO - chatbot - update context
+2018-07-06 10:53:16,879 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:53:16,879 - INFO - chatbot - update context
+2018-07-06 10:53:16,880 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:53:16,883 - INFO - chatbot - update context
+2018-07-06 10:53:16,885 - INFO - chatbot - intent: 文件检索, confidence: 0.9999986886978149
+2018-07-06 10:53:16,888 - INFO - chatbot - update context
+2018-07-06 10:53:16,888 - INFO - chatbot - intent: 数据查询, confidence: 0.800512433052063
+2018-07-06 10:54:52,941 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:54:52,958 - INFO - chatbot - new context
+2018-07-06 10:54:52,958 - INFO - chatbot - update context
+2018-07-06 10:54:52,967 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:54:52,967 - INFO - chatbot - update context
+2018-07-06 10:54:52,968 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:54:52,968 - INFO - chatbot - update context
+2018-07-06 10:54:52,969 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:54:52,969 - INFO - chatbot - update context
+2018-07-06 10:54:52,970 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:54:52,970 - INFO - chatbot - update context
+2018-07-06 10:54:52,971 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:54:52,974 - INFO - chatbot - update context
+2018-07-06 10:54:52,975 - INFO - chatbot - intent: 文件检索, confidence: 0.9999986886978149
+2018-07-06 10:54:52,978 - INFO - chatbot - update context
+2018-07-06 10:54:52,979 - INFO - chatbot - intent: 数据查询, confidence: 0.800512433052063
+2018-07-06 10:54:52,979 - INFO - chatbot - cant update slots
+2018-07-06 10:56:12,016 - INFO - chatbot - new context
+2018-07-06 10:56:12,017 - INFO - chatbot - update context
+2018-07-06 10:56:12,018 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:56:12,019 - INFO - chatbot - update context
+2018-07-06 10:56:12,020 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:56:12,021 - INFO - chatbot - update context
+2018-07-06 10:56:12,022 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:56:12,022 - INFO - chatbot - update context
+2018-07-06 10:56:12,023 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:56:12,023 - INFO - chatbot - update context
+2018-07-06 10:56:12,024 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:56:12,028 - INFO - chatbot - update context
+2018-07-06 10:56:12,030 - INFO - chatbot - intent: 文件检索, confidence: 0.9999986886978149
+2018-07-06 10:56:12,033 - INFO - chatbot - update context
+2018-07-06 10:56:12,034 - INFO - chatbot - intent: 数据查询, confidence: 0.800512433052063
+2018-07-06 10:56:12,034 - INFO - chatbot - cant update slots
+2018-07-06 10:57:53,783 - INFO - intent model - success load model in /home/zhouzr/project/Task-Oriented-Chatbot/chatbot/results/v0.2/intent_model.FastText
+2018-07-06 10:57:53,800 - INFO - chatbot - new context
+2018-07-06 10:57:53,800 - INFO - chatbot - update context
+2018-07-06 10:57:53,809 - INFO - chatbot - intent: 数据查询, confidence: 0.9875170588493347
+2018-07-06 10:57:53,810 - INFO - chatbot - update context
+2018-07-06 10:57:53,810 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:57:53,811 - INFO - chatbot - update context
+2018-07-06 10:57:53,811 - INFO - chatbot - intent: 数据查询, confidence: -1.0
+2018-07-06 10:57:53,812 - INFO - chatbot - update context
+2018-07-06 10:57:53,812 - INFO - chatbot - intent: 打招呼, confidence: 0.5908334255218506
+2018-07-06 10:57:53,812 - INFO - chatbot - update context
+2018-07-06 10:57:53,813 - INFO - chatbot - intent: 文件检索, confidence: 1.0
+2018-07-06 10:57:53,816 - INFO - chatbot - update context
+2018-07-06 10:57:53,818 - INFO - chatbot - intent: 文件检索, confidence: 0.9999986886978149
+2018-07-06 10:57:53,821 - INFO - chatbot - update context
+2018-07-06 10:57:53,822 - INFO - chatbot - intent: 数据查询, confidence: 0.800512433052063

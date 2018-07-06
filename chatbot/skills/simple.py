@@ -3,9 +3,14 @@
 # @Author  : evilpsycho
 # @Mail    : evilpsycho42@gmail.com
 import random
+import codecs
+
 from chatbot.core.skill import BaseSkill
 from chatbot.utils.path import ROOT_PATH
-# TODO:tanmx 回复逻辑 & 对应的样本
+from chatbot.utils.log import get_logger
+
+
+logger = get_logger("simple skill")
 
 
 def read_txt(path):
@@ -14,11 +19,37 @@ def read_txt(path):
         :return: <list>
         """        
 #        path = "D:\\Users\\tanmx\\chatbot\\Task-Oriented-Chatbot\\corpus\\skill\\GoodBye_response.txt"
-        with open(path, "r",encoding='UTF-8') as f:
+        with open(path, "r", encoding='UTF-8') as f:
             txts = f.readlines()
         # remove chomp, blank
-        sents = [item.strip().split(' ')[-1] for item in txts if len(item)>1]
+        sents = [item.strip().split(' ')[-1] for item in txts if len(item) > 1]
         return sents
+
+
+class LeaveMessage(BaseSkill):
+    """LeaveMessage存储及回复封装
+      :param context: context
+      :return: <String> 回复信息,context{user:,query} to txt
+      """
+    def __init__(self, path=None):
+        if path is None:
+            self.path = str(ROOT_PATH / "log" / "message")
+        else:
+            self.path = path
+        logger.debug("leave message save in %s" % self.path)
+
+    def __call__(self, context):
+        with codecs.open(self.path, "a+", "utf-8") as f:
+            f.write(context['context_id'] + '\t' + '\t' + context['app'] + '\t' + '\t' + context[
+                'last_query_time'] + '\t' + '\t' + context['user'] + '\t' + '\t' + context['query'] + '\n' + '\n')
+        f.close()
+        return "小益已经帮您记下啦"
+
+    def contain_slots(self, entities):
+        return False
+
+    def init_slots(self):
+        return {}
 
 
 class SayHi(BaseSkill):

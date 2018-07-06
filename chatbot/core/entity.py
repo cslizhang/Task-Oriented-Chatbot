@@ -31,8 +31,18 @@ class Location(dict, Entity):
         )
 
 
+class Company(dict, Entity):
+    def __init__(self):
+        super().__init__(
+            alias=None,
+            name=None,
+            id=None,
+        )
+
+
 if __name__ == "__main__":
     t = TimeInterval()
     l = Location()
+    c = Company()
     print(l)
     print(t)
